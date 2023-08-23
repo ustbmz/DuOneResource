@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title></title>
+</head>
+
+<body>
+	<div class="bg-danger">
+		<div class="toast" data-autohide="false">
+			<div class="toast-header">
+				<strong class="mr-auto">Bootstrap</strong>
+				<small>11 mins ago</small>
+				<button class="close ml-2 mb-1" data-dismiss="toast">
+					<span>&times;</span>
+				</button>
+			</div>
+			<div class="toast-body">
+				Hello, world! This is a toast message.
+			</div>
+		</div>
+		<div class="toast" data-autohide="false">
+			<div class="toast-header">
+				<strong class="mr-auto">Bootstrap</strong>
+				<small>11 mins ago</small>
+				<button class="close ml-2 mb-1" data-dismiss="toast">
+					<span>&times;</span>
+				</button>
+			</div>
+			<div class="toast-body">
+				Hello, world! This is a toast message.
+			</div>
+		</div>
+	</div>
+
+	<!-- 位置 -->
+	<div class="d-flex mt-5 bg-dark p-5 justify-content-center">
+		<div class="toast" data-autohide="false">
+			<div class="toast-header">
+				<strong class="mr-auto">Bootstrap</strong>
+				<small>11 mins ago</small>
+				<button class="close ml-2 mb-1" data-dismiss="toast">
+					<span>&times;</span>
+				</button>
+			</div>
+			<div class="toast-body">
+				Hello, world! This is a toast message.
+			</div>
+		</div>
+	</div>
+
+	<!-- data-选项 -->
+	<div class="toast mt-5" data-autohide="true" data-animation="true" data-delay="5000">
+		<div class="toast-header">
+			<strong class="mr-auto">data-选项</strong>
+			<small>11 mins ago</small>
+			<button class="close ml-2 mb-1" data-dismiss="toast">
+				<span>&times;</span>
+			</button>
+		</div>
+		<div class="toast-body">
+			Hello, world! This is a toast message.
+		</div>
+	</div>
+
+	<!-- 方法与事件 -->
+	<div class="toast mt-5" data-autohide="false" id="myToast">
+		<div class="toast-header">
+			<strong class="mr-auto">方法与事件</strong>
+			<small>11 mins ago</small>
+			<button class="close ml-2 mb-1" data-dismiss="toast">
+				<span>&times;</span>
+			</button>
+		</div>
+		<div class="toast-body">
+			Hello, world! This is a toast message.
+		</div>
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+		</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+
+	<script>
+		//初始化推送消息框，必需要写这一步
+		/* $(function () {
+			$('.toast').toast('show');
+		}); */
+
+		//方法
+		$(function () {
+			$('#myToast').toast('show');
+			setTimeout(function(){
+				$('#myToast').toast('hide');
+			},3000);
+		});
+
+		//事件
+		$('#myToast').on('show.bs.toast', function () {
+			console.log('消息框要显示了');
+		});
+		$('#myToast').on('shown.bs.toast', function () {
+			console.log('消息框已经显示了');
+		});
+		$('#myToast').on('hide.bs.toast', function () {
+			console.log('消息框要隐藏了');
+		});
+		$('#myToast').on('hidden.bs.toast', function () {
+			console.log('消息框已经隐藏了');
+		});
+	</script>
+</body>
+
+</html>

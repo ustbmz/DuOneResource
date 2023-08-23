@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title></title>
+	<style>
+		.scrollBody {
+			position: relative;
+			height: 200px;
+			margin-top: .5rem;
+			overflow-y: scroll;
+		}
+		.scrollBody2{
+			position: relative;
+			height: 350px;
+			overflow-y: scroll;
+		}
+		.scrollBody3{
+			position: relative;
+			height: 200px;
+			margin-top: .5rem;
+			overflow: auto;	/* auto也是可以的 */
+		}
+	</style>
+</head>
+
+<body>
+	<!-- 
+		1、滚动条组件只能用在导航与列表组当中
+		2、如果滚动的是body以外的元素，需要给它身上添加height与overflow-y: scroll的样式
+		3、需要用到js
+	 -->
+	<div class="container">
+		<div class="row mt-5">
+			<div class="col">
+				<!-- 在导航当中的滚动 -->
+				<nav class="navbar navbar-light bg-light" id="scroll1">	<!-- 这个id是要与下面的内容相对应 -->
+					<a href="#" class="navbar-brand">Navbar</a>
+					<ul class="nav nav-pills">	<!-- 胶囊式导航 -->
+						<li class="nav-item">
+							<a class="nav-link" href="#fat">@fat</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#mdo">@mdo</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#one">one</a>
+								<a class="dropdown-item" href="#two">two</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#three">three</a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+				<!-- 
+					滚动元素
+						1、它不是body元素，所以身上要添加两条样式，heigh与overflow-y
+						2、data-spy="scroll"。让这个元素具有滚动监听的js功能
+						3、data-target="#scroll1"	监听的那个导航的id
+						4、data-offset="0"	计算滚动位置时的偏移量。值为0，就表示从0的位置就开始计算
+						5、上面结构中每一个导航都有一个#id。那在这块的内容区域就需要有一个标题具有一个id，与上面的值一一对应的
+				 -->
+				<div class="scrollBody" data-spy="scroll" data-target="#scroll1" data-offset="0">
+					<h4 id="fat">@fat</h4>
+					<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold
+						out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit
+						seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg
+						hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes
+						anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco
+						consequat.</p>
+					<h4 id="mdo">@mdo</h4>
+					<p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+						cupidatat mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla carles. Tattooed cosby
+						sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+						non aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+					</p>
+					<h4 id="one">one</h4>
+					<p>Occaecat commodo aliqua delectus. Fap craft beer deserunt skateboard ea. Lomo bicycle rights
+						adipisicing banh mi, velit ea sunt next level locavore single-origin coffee in magna veniam.
+						High life id vinyl, echo park consequat quis aliquip banh mi pitchfork. Vero VHS est
+						adipisicing. Consectetur nisi DIY minim messenger bag. Cred ex in, sustainable delectus
+						consectetur fanny pack iphone.</p>
+					<h4 id="two">two</h4>
+					<p>In incididunt echo park, officia deserunt mcsweeney's proident master cleanse thundercats
+						sapiente veniam. Excepteur VHS elit, proident shoreditch +1 biodiesel laborum craft beer.
+						Single-origin coffee wayfarers irure four loko, cupidatat terry richardson master cleanse.
+						Assumenda you probably haven't heard of them art party fanny pack, tattooed nulla cardigan
+						tempor ad. Proident wolf nesciunt sartorial keffiyeh eu banh mi sustainable. Elit wolf
+						voluptate, lo-fi ea portland before they sold out four loko. Locavore enim nostrud mlkshk
+						brooklyn nesciunt.</p>
+					<h4 id="three">three</h4>
+					<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold
+						out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit
+						seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg
+						hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes
+						anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco
+						consequat.</p>
+					<p>Keytar twee blog, culpa messenger bag marfa whatever delectus food truck. Sapiente synth id
+						assumenda. Locavore sed helvetica cliche irony, thundercats you probably haven't heard of them
+						consequat hoodie gluten-free lo-fi fap aliquip. Labore elit placeat before they sold out, terry
+						richardson proident brunch nesciunt quis cosby sweater pariatur keffiyeh ut helvetica artisan.
+						Cardigan craft beer seitan readymade velit. VHS chambray laboris tempor veniam. Anim mollit
+						minim commodo ullamco thundercats.</p>
+				</div>
+			</div>
+		</div>
+		<!-- 写完第1个后，演示一下。按钮点击后内容滚动到相应位置。滚动的时候，按钮会自动被选中。可以把下拉菜单打开，并滚动看看效果 -->
+
+
+		<!-- 嵌套的导航 -->
+		<div class="row mt-5">
+			<div class="col-4">
+				<nav class="navbar navbar-light bg-light flex-column" id="scroll2">
+					<a class="navbar-brand" href="#">Navbar</a>
+					<nav class="nav nav-pills flex-column">
+						<a class="nav-link" href="#item-1">Item 1</a>
+						<nav class="nav nav-pills flex-column">
+							<a class="nav-link ml-3 my-1" href="#item-1-1">Item 1-1</a>
+							<a class="nav-link ml-3 my-1" href="#item-1-2">Item 1-2</a>
+						</nav>
+						<a class="nav-link" href="#item-2">Item2</a>
+						<a class="nav-link" href="#item-3">Item3</a>
+						<nav class="nav nav-pills flex-column">
+							<a class="nav-link ml-3 my-1" href="#item-3-1">Item 3-1</a>
+							<a class="nav-link ml-3 my-1" href="#item-3-2">Item 3-2</a>
+						</nav>
+					</nav>
+				</nav>
+			</div>
+			<div class="col-8">
+				<div class="scrollBody2" data-spy="scroll" data-target="#scroll2" data-offset="0">
+					<h4 id="item-1">Item 1</h4>
+					<p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.</p>
+					<h5 id="item-1-1">Item 1-1</h5>
+					<p>Amet tempor mollit aliquip pariatur excepteur commodo do ea cillum commodo Lorem et occaecat elit qui et. Aliquip labore ex ex esse voluptate occaecat Lorem ullamco deserunt. Aliqua cillum excepteur irure consequat id quis ea. Sit proident ullamco aute magna pariatur nostrud labore. Reprehenderit aliqua commodo eiusmod aliquip est do duis amet proident magna consectetur consequat eu commodo fugiat non quis. Enim aliquip exercitation ullamco adipisicing voluptate excepteur minim exercitation minim minim commodo adipisicing exercitation officia nisi adipisicing. Anim id duis qui consequat labore adipisicing sint dolor elit cillum anim et fugiat.</p>
+					<h5 id="item-1-2">Item 1-2</h5>
+					<p>Cillum nisi deserunt magna eiusmod qui eiusmod velit voluptate pariatur laborum sunt enim. Irure laboris mollit consequat incididunt sint et culpa culpa incididunt adipisicing magna magna occaecat. Nulla ipsum cillum eiusmod sint elit excepteur ea labore enim consectetur in labore anim. Proident ullamco ipsum esse elit ut Lorem eiusmod dolor et eiusmod. Anim occaecat nulla in non consequat eiusmod velit incididunt.</p>
+					<h4 id="item-2">Item 2</h4>
+					<p>Quis magna Lorem anim amet ipsum do mollit sit cillum voluptate ex nulla tempor. Laborum consequat non elit enim exercitation cillum aliqua consequat id aliqua. Esse ex consectetur mollit voluptate est in duis laboris ad sit ipsum anim Lorem. Incididunt veniam velit elit elit veniam Lorem aliqua quis ullamco deserunt sit enim elit aliqua esse irure. Laborum nisi sit est tempor laborum mollit labore officia laborum excepteur commodo non commodo dolor excepteur commodo. Ipsum fugiat ex est consectetur ipsum commodo tempor sunt in proident.</p>
+					<h4 id="item-3">Item 3</h4>
+					<p>Quis anim sit do amet fugiat dolor velit sit ea ea do reprehenderit culpa duis. Nostrud aliqua ipsum fugiat minim proident occaecat excepteur aliquip culpa aute tempor reprehenderit. Deserunt tempor mollit elit ex pariatur dolore velit fugiat mollit culpa irure ullamco est ex ullamco excepteur.</p>
+					<h5 id="item-3-1">Item 3-1</h5>
+					<p>Deserunt quis elit Lorem eiusmod amet enim enim amet minim Lorem proident nostrud. Ea id dolore anim exercitation aute fugiat labore voluptate cillum do laboris labore. Ex velit exercitation nisi enim labore reprehenderit labore nostrud ut ut. Esse officia sunt duis aliquip ullamco tempor eiusmod deserunt irure nostrud irure. Ullamco proident veniam laboris ea consectetur magna sunt ex exercitation aliquip minim enim culpa occaecat exercitation. Est tempor excepteur aliquip laborum consequat do deserunt laborum esse eiusmod irure proident ipsum esse qui.</p>
+					<h5 id="item-3-2">Item 3-2</h5>
+					<p>Labore sit culpa commodo elit adipisicing sit aliquip elit proident voluptate minim mollit nostrud aute reprehenderit do. Mollit excepteur eu Lorem ipsum anim commodo sint labore Lorem in exercitation velit incididunt. Occaecat consectetur nisi in occaecat proident minim enim sunt reprehenderit exercitation cupidatat et do officia. Aliquip consequat ad labore labore mollit ut amet. Sit pariatur tempor proident in veniam culpa aliqua excepteur elit magna fugiat eiusmod amet officia.</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- 列表组 -->
+		<div class="row mt-5">
+			<div class="col-4">
+				<div class="list-group" id="list-example">
+					<!-- .list-group-item-action，这个是提供了链接的颜色以及hover时的颜色  -->
+					<a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+					<a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
+					<a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+					<a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+				</div>
+			</div>
+			<div class="col-8">
+				<div class="scrollBody3" data-spy="scroll" data-target="#list-example" data-offset="0">
+					<h4 id="list-item-1">Item 1</h4>
+					<p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.</p>
+					<h4 id="list-item-2">Item 2</h4>
+					<p>Quis magna Lorem anim amet ipsum do mollit sit cillum voluptate ex nulla tempor. Laborum consequat non elit enim exercitation cillum aliqua consequat id aliqua. Esse ex consectetur mollit voluptate est in duis laboris ad sit ipsum anim Lorem. Incididunt veniam velit elit elit veniam Lorem aliqua quis ullamco deserunt sit enim elit aliqua esse irure. Laborum nisi sit est tempor laborum mollit labore officia laborum excepteur commodo non commodo dolor excepteur commodo. Ipsum fugiat ex est consectetur ipsum commodo tempor sunt in proident.</p>
+					<h4 id="list-item-3">Item 3</h4>
+					<p>Quis anim sit do amet fugiat dolor velit sit ea ea do reprehenderit culpa duis. Nostrud aliqua ipsum fugiat minim proident occaecat excepteur aliquip culpa aute tempor reprehenderit. Deserunt tempor mollit elit ex pariatur dolore velit fugiat mollit culpa irure ullamco est ex ullamco excepteur.</p>
+					<h4 id="list-item-4">Item 4</h4>
+					<p>Quis anim sit do amet fugiat dolor velit sit ea ea do reprehenderit culpa duis. Nostrud aliqua ipsum fugiat minim proident occaecat excepteur aliquip culpa aute tempor reprehenderit. Deserunt tempor mollit elit ex pariatur dolore velit fugiat mollit culpa irure ullamco est ex ullamco excepteur.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+
+	<script>
+		//事件
+		$('[data-spy="scroll"]').on('activate.bs.scrollspy', function () {
+			// 每当滚动到一项的时候，就会触发
+			console.log(1);
+		})
+	</script>
+</body>
+
+</html>

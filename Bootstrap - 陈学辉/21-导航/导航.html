@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title></title>
+	<style>
+		body {
+			padding-bottom: 1000px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row mt-5">
+			<div class="col">
+				<ul class="nav">	<!-- 基础类，变成弹性盒模型 -->
+					<li>
+						<a class="nav-link" href="#">入门</a>	<!-- 变成块元素，并加了一个padding -->
+					</li>
+					<li>
+						<a class="nav-link" href="#">布局</a>
+					</li>
+					<li>
+						<a class="nav-link" href="#">内容</a>
+					</li>
+					<li>
+						<a class="nav-link" href="#">组件</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 使用nav标签 -->
+		<div class="row mt-5">
+			<div class="col">
+				<nav class="nav">
+					<a class="nav-link" href="#">使用nav标签</a>
+					<a class="nav-link" href="#">布局</a>
+					<a class="nav-link" href="#">内容</a>
+					<a class="nav-link" href="#">组件</a>
+				</nav>
+			</div>
+		</div>
+
+		<!-- 对齐 -->
+		<div class="row mt-5">
+			<div class="col">
+				<!-- 
+					1、justify-content-start
+					2、justify-content-center
+					3、justify-content-end
+					这三个都是弹性盒模型里的class（主轴上的对齐方式），把这三个分别演示一下
+				 -->
+				<ul class="nav justify-content-start">
+					<li>
+						<a class="nav-link" href="#">对齐</a>
+					</li>
+					<li>
+						<a class="nav-link" href="#">布局</a>
+					</li>
+					<li>
+						<a class="nav-link" href="#">内容</a>
+					</li>
+					<li>
+						<a class="nav-link" href="#">组件</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 垂直排列 -->
+		<div class="row mt-5">
+			<div class="col">
+				<!-- 
+					垂直排列的class都是弹性盒模型里的class（子元素排列方向）
+					1、flex-column
+					2、flex-sm-column
+				 -->
+				<ul class="nav flex-sm-column">
+					<li>
+						<a class="nav-link" href="#">垂直排列</a>
+					</li>
+					<li>
+						<a class="nav-link" href="#">布局</a>
+					</li>
+					<li>
+						<a class="nav-link" href="#">内容</a>
+					</li>
+					<li>
+						<a class="nav-link" href="#">组件</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- nav标签也可以实现垂直的导航 -->
+		<div class="row mt-5">
+			<div class="col">
+				<nav class="nav flex-column">
+					<a class="nav-link" href="#">垂直排列</a>
+					<a class="nav-link" href="#">布局</a>
+					<a class="nav-link" href="#">内容</a>
+					<a class="nav-link" href="#">组件</a>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Tabs标签 -->
+		<div class="row mt-5">
+			<div class="col">
+				<!-- 
+					1、nav-tabs
+					2、此时li就应该加上nav-item这个class了。它主要设置了mrgin-bottom。为了去掉当前项的底边框
+				 -->
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">tabs标签</a>	<!-- 当前激活项 -->
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">布局</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">内容</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#">组件</a>	<!-- 禁用，没有hover样式 -->
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<!-- 胶囊式（eugk）标签 -->
+		<div class="row mt-5">
+			<div class="col">
+				<ul class="nav nav-pills">	<!-- 通过nav-pills添加 -->
+					<li class="nav-item">
+						<a class="nav-link active" href="#">胶囊式标签</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">布局</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">内容</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#">组件</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<!-- 分配大小-宽高由内容而定 -->
+		<div class="row mt-5">
+			<div class="col">
+				<!-- 
+					1、.nav-fill会将.nav-item按照比例分配空间。会把一行的空间都给分配了。但是每一个导航项的宽度不一定一样。由内容来定
+				 -->
+				<ul class="nav nav-pills nav-fill">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">宽度由内容而定</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">布局</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">内容</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">组件</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- nav标签也可以使用nav-fill，但是请注意a标签身上需要添加.nav-item -->
+		<div class="row">
+			<div class="col">
+				<nav class="nav nav-pills nav-fill">
+					<a class="nav-link nav-item active" href="#">宽度由内容而定</a>
+					<a class="nav-link nav-item" href="#">布局</a>
+					<a class="nav-link nav-item" href="#">内容</a>
+					<a class="nav-link nav-item" href="#">组件</a>
+				</nav>
+			</div>
+		</div>
+
+		<!-- 分配大小-宽度为等宽 -->
+		<div class="row mt-5">
+			<div class="col">
+				<!-- 
+					1、.nav-justified会将.nav-item按照比例分配空间。会把一行的空间都给均分了。每一项导航的宽度都是一样的
+				-->
+				<ul class="nav nav-pills nav-justified">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">宽度为等宽</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">布局</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">内容</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">组件</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- nav标签也可以使用justified，但是请注意a标签身上需要添加.nav-item -->
+		<div class="row">
+			<div class="col">
+				<nav class="nav nav-pills nav-justified">
+					<a class="nav-link nav-item active" href="#">宽度为等宽</a>
+					<a class="nav-link nav-item" href="#">布局</a>
+					<a class="nav-link nav-item" href="#">内容</a>
+					<a class="nav-link nav-item" href="#">组件</a>
+				</nav>
+			</div>
+		</div>
+
+		<!-- 
+			弹性布局
+				1、这里使用的都是弹性布局里的class
+		 -->
+		<div class="row mt-5">
+			<div class="col">
+				<!-- 
+					1、flex-column，让子元素在任何尺寸下都变成垂直排列
+					2、flex-sm-row，让子元素在>=中等屏幕下横着排列
+					让所有尺寸下都是竖着排，当尺寸为小屏及以上的时候让它横着排
+				 -->
+				<nav class="nav nav-pills nav-justified flex-column flex-sm-row">
+					<a class="nav-item nav-link active" href="#">弹性布局</a>
+					<a class="nav-item nav-link" href="#">布局</a>
+					<a class="nav-item nav-link" href="#">内容</a>
+					<a class="nav-item nav-link disabled" href="#">组件</a>
+				</nav>
+			</div>
+		</div>
+
+		<!-- 结合下拉菜单 -->
+		<div class="row mt-5">
+			<div class="col">
+				<ul class="nav nav-tabs">	<!-- 最后把这个class换成.nav-pills后，它是一个胶囊式的按钮 -->
+					<li class="nav-item">
+						<a class="nav-link active" href="#">下拉菜单</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">城市</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">北京</a>
+							<a class="dropdown-item" href="#">上海</a>
+							<a class="dropdown-item" href="#">广州</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">深圳</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">布局</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">内容</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 选项卡 -->
+		<div class="row mt-5">
+			<div class="col">
+				<!-- <ul class="nav nav-tabs">	<!-- 然后这个class可以换成是.nav-pills 
+					<li class="nav-item">
+						<a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#profile">Profile</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#contact">Contact</a>
+					</li>
+				</ul> -->
+
+				<!-- 也可以使用nav标签 -->
+				<nav class="nav nav-tabs">
+					<a class="nav-item nav-link active" data-toggle="tab" href="#home">Home</a>
+					<a class="nav-item nav-link" data-toggle="tab" href="#profile">Profile</a>
+					<a class="nav-item nav-link" data-toggle="tab" href="#contact">Contact</a>
+				</nav>
+
+				<div class="tab-content">
+					<div class="tab-pane fade show active" id="home">
+						Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+					</div>
+					<div class="tab-pane fade" id="profile">
+						Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+					</div>
+					<div class="tab-pane fade" id="contact">
+						Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 垂直形式的选项卡 -->
+		<div class="row mt-5">
+			<div class="col-3">
+				<nav class="nav nav-pills flex-column">	<!-- 这里换两个class -->
+					<a class="nav-item nav-link active" data-toggle="tab" href="#home1">Home</a>	<!-- id要换 -->
+					<a class="nav-item nav-link" data-toggle="tab" href="#profile1">Profile</a>
+					<a class="nav-item nav-link" data-toggle="tab" href="#contact1">Contact</a>
+				</nav>
+			</div>
+			<div class="col-9">
+				<div class="tab-content">
+					<div class="tab-pane fade show active" id="home1">
+						Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+					</div>
+					<div class="tab-pane fade" id="profile1">
+						Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+					</div>
+					<div class="tab-pane fade" id="contact1">
+						Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 方法与事件 -->
+		<div class="row mt-5">
+			<div class="nav nav-pills " id="myTab">
+				<a class="nav-item nav-link active" href="#home2">Home</a>
+				<a class="nav-item nav-link" href="#profile2">Profile</a>
+				<a class="nav-item nav-link" href="#contact2">Contact</a>
+			</div>
+			<div class="tab-content">
+				<div class="tab-pane fade show active" id="home2">
+					Velit aute mollit ipsum ad dolor consectetur nulla officia culpa adipisicing exercitation fugiat tempor. Voluptate deserunt sit sunt nisi aliqua fugiat proident ea ut. Mollit voluptate reprehenderit occaecat nisi ad non minim tempor sunt voluptate consectetur exercitation id ut nulla. Ea et fugiat aliquip nostrud sunt incididunt consectetur culpa aliquip eiusmod dolor. Anim ad Lorem aliqua in cupidatat nisi enim eu nostrud do aliquip veniam minim.
+				</div>
+				<div class="tab-pane fade" id="profile2">
+					Cupidatat quis ad sint excepteur laborum in esse qui. Et excepteur consectetur ex nisi eu do cillum ad laborum. Mollit et eu officia dolore sunt Lorem culpa qui commodo velit ex amet id ex. Officia anim incididunt laboris deserunt anim aute dolor incididunt veniam aute dolore do exercitation. Dolor nisi culpa ex ad irure in elit eu dolore. Ad laboris ipsum reprehenderit irure non commodo enim culpa commodo veniam incididunt veniam ad.
+				</div>
+				<div class="tab-pane fade" id="contact2">
+					Ut ut do pariatur aliquip aliqua aliquip exercitation do nostrud commodo reprehenderit aute ipsum voluptate. Irure Lorem et laboris nostrud amet cupidatat cupidatat anim do ut velit mollit consequat enim tempor. Consectetur est minim nostrud nostrud consectetur irure labore voluptate irure. Ipsum id Lorem sit sint voluptate est pariatur eu ad cupidatat et deserunt culpa sit eiusmod deserunt. Consectetur et fugiat anim do eiusmod aliquip nulla laborum elit adipisicing pariatur cillum.
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	
+		<script>
+			//这里与列表组是一样的
+			//方法
+			$('#myTab a:last-child').tab('show'); 	//修改当前激活项
+	
+			$('#myTab a').on('click', function (e) {
+				e.preventDefault();
+				$(this).tab('show');
+			});
+	
+			//事件
+			$('#myTab a:nth-child(2)').on('show.bs.tab', function (e) {
+				console.log('该内容要显示了');
+			});
+			$('#myTab a:nth-child(2)').on('shown.bs.tab', function (e) {
+				console.log('该内容已经显示了');
+			});
+			
+			$('#myTab a:nth-child(2)').on('hide.bs.tab', function (e) {
+				console.log('该内容要隐藏了');
+			});
+			$('#myTab a:nth-child(2)').on('hidden.bs.tab', function (e) {
+				console.log('该内容已经隐藏了');
+			})
+		</script>
+</body>
+
+</html> 

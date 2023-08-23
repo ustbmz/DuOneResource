@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title></title>
+	<style>
+		body{
+			padding-bottom: 1000px;
+		}
+		.row div{
+			height: 100px;
+			background: green;
+			border: 1px solid #000;
+			color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-3">xl为超大屏。屏幕宽度>=1200，容器的宽度固定为1140px，一行可以设置12个列。屏幕尺寸<1200的时候，一行只能设置1列</div>
+			<div class="col-xl-3"></div>
+			<div class="col-xl-3"></div>
+			<div class="col-xl-3"></div>
+		</div>
+		<div class="row mt-5">
+			<div class="col-lg-4">lg为大屏。屏幕宽度>=992px，容器的宽度固定为960px，一行可以设置12个列。屏幕尺寸<992的时候，一行只能设置1列</div>
+			<div class="col-lg-4"></div>
+			<div class="col-lg-4"></div>
+		</div>
+		<div class="row mt-5">
+			<div class="col-md-6">md为中等屏。屏幕宽度>=768px，容器的宽度固定为720px，一行可以设置12个列。屏幕尺寸<768的时候，一行只能设置1列</div>
+			<div class="col-md-6"></div>
+		</div>
+		<div class="row mt-5">
+			<div class="col-sm-3">sm为小屏。屏幕宽度>=576px，容器的宽度固定为540px，一行可以设置12个列。屏幕尺寸<576的时候，一行只能设置1列</div>
+			<div class="col-sm-3"></div>
+			<div class="col-sm-3"></div>
+			<div class="col-sm-3"></div>
+		</div>
+		<div class="row mt-5">
+			<div class="col-4">col为超小屏。屏幕宽度<576px，容器的宽度为auto，一行永远可以设置12列</div>
+			<div class="col-4"></div>
+			<div class="col-4"></div>
+		</div>
+
+		<!-- 设置等宽列，平分宽度，通过.col的class去设置 -->
+		<div class="row mt-5">
+			<div class="col">等宽列</div>
+			<div class="col">等宽列</div>
+			<div class="col">等宽列</div>
+			<div class="col">等宽列</div>
+			<div class="col">等宽列</div>
+			<div class="col">等宽列</div>
+			<div class="col">等宽列</div>
+		</div>
+
+		<!-- 设置多行等宽列，在希望断开的地方添加一个.w-100的class，能够让后面的列换行 -->
+		<div class="row mt-5">
+			<div class="col">等宽列1</div>
+			<div class="col">等宽列2</div>
+			<div class="w-100" style="height: auto;border: none;"></div>	
+			<div class="col">等宽列3</div>
+			<div class="col">等宽列4</div>
+		</div>
+	</div>
+</body>
+
+</html>

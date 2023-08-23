@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title></title>
+</head>
+
+<body>
+	<div class="container">
+		<form action="#" class="needs-validation" novalidate>
+			<div class="form-row">
+				<div class="col-md-4 form-group">
+					<label for="surname">姓</label>
+					<input type="text" class="form-control" id="surname" placeholder="请输入姓" value="陈" required>
+					<div class="valid-feedback">	<!-- 验证成功对应的class -->
+						验证通过！
+					</div>
+					<div class="invalid-feedback">	<!-- 验证失败对应的class -->
+						验证失败！
+					</div>
+				</div>
+				
+				<div class="col-md-4 form-group">
+					<label for="name">名</label>
+					<input type="text" class="form-control" id="name" placeholder="请输入名" value="学辉" required>
+					<div class="valid-feedback">	<!-- 验证成功对应的class -->
+						验证通过！
+					</div>
+				</div>
+				
+				<div class="col-md-4 form-group">
+					<label for="usename">用户名</label>
+					<input type="text" class="form-control" id="usename" placeholder="请输入用户名" required>
+					<div class="invalid-feedback">请输入正确的用户名！</div>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="col-md-6 form-group">
+					<label for="homeAddress">家庭地址</label>
+					<input type="text" class="form-control" id="homeAddress" placeholder="请输入家庭地址" required>
+					<div class="invalid-feedback">请输入正确的家庭地址！</div>
+				</div>
+				<div class="col-md-6 form-group">
+					<label for="companyAddress">公司地址</label>
+					<input type="text" class="form-control" id="companyAddress" placeholder="请输入公司地址" required>
+					<div class="invalid-feedback">请输入正确的公司地址！</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" id="grid" required>
+					<label for="grid" class="form-check-label">同意所读内容</label>
+					<div class="invalid-feedback">你必需同意此内容后才能继续操作！</div>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary">提交</button>
+		</form>
+
+
+		<!-- 自定义表单 -->
+		<div class="row mt-5">
+			<div class="col">
+				<div class="form-group custom-control custom-checkbox">
+					<input type="checkbox" id="eat" class="custom-control-input">
+					<label for="eat" class="custom-control-label">吃饭</label>
+				</div>
+				<div class="form-group custom-control custom-radio">
+					<input type="radio" id="male" class="custom-control-input" name="sex">
+					<label for="male" class="custom-control-label">男</label>
+				</div>
+				<div class="form-group custom-control custom-radio">
+					<input type="radio" id="female" class="custom-control-input" name="sex">
+					<label for="female" class="custom-control-label">女</label>
+				</div>
+				
+				<!-- 在一行中排列，.custom-control-inline -->
+				<div class="form-group custom-control custom-radio custom-control-inline">
+					<input type="radio" id="male1" class="custom-control-input" name="sex1">
+					<label for="male1" class="custom-control-label">男</label>
+				</div>
+				<div class="form-group custom-control custom-radio custom-control-inline">
+					<input type="radio" id="female1" class="custom-control-input" name="sex1" disabled>	<!-- 禁用表单 -->
+					<label for="female1" class="custom-control-label">女</label>
+				</div>
+
+				<!-- 下拉菜单 -->
+				<select name="" id="" class="form-group custom-select">
+					<option value="">城市</option>
+					<option value="">北京</option>
+					<option value="">上海</option>
+					<option value="">广州</option>
+				</select>
+
+				<!-- 滑块 -->
+				<div class="form-group">
+					<label for="range1">滑块</label>
+					<input type="range" class="custom-range" id="range1">
+				</div>
+				<div class="form-group">
+					<label for="range2">有范围的滑块</label>
+					<input type="range" class="custom-range" min="0" max="5" id="range2">
+				</div>
+				<div class="form-group">
+					<label for="range3">规定步长的滑块</label>
+					<input type="range" class="custom-range" min="0" max="5" step="0.5" id="range3">
+				</div>
+
+				<!-- 文件选择 -->
+				<div class="form-group custom-file">
+					<input type="file" class="custom-file-input" id="file">
+					<label for="file" class="custom-file-label">Choose fild</label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		(function(){
+			var forms=document.querySelectorAll('.needs-validation');
+
+			forms.forEach(function(form,index){
+				form.addEventListener('submit',function(ev){
+					//console.log(1);
+					if(form.checkValidity()===false){	//如果表单验证成功，那这个方法会返回true
+						ev.preventDefault();
+						ev.stopPropagation();
+					}
+
+					form.classList.add('was-validated');	//提交事件发生后，不管验证是否成功，都需要给form身上添加这个class
+				});
+			});
+		})();
+	</script>
+</body>
+</html>

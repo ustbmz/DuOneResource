@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title></title>
+	<style>
+		body{
+			padding-bottom: 5000px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="alert alert-primary">alert-primary</div>
+		<div class="alert alert-secondary">alert-secondary</div>
+		<div class="alert alert-success">alert-success</div>
+		<div class="alert alert-danger">alert-danger</div>
+		<div class="alert alert-warning">alert-warning</div>
+		<div class="alert alert-info">alert-info</div>
+		<div class="alert alert-light">alert-light</div>
+		<div class="alert alert-dark">alert-dark</div>
+
+		<div class="alert alert-primary">
+			这是一个<a href="#" class="alert-link">链接</a>
+		</div>
+		<div class="alert alert-secondary">
+			这是一个<a href="#" class="alert-link">链接</a>
+		</div>
+		<div class="alert alert-success">
+			这是一个<a href="#" class="alert-link">链接</a>
+		</div>
+		<div class="alert alert-danger">
+			这是一个<a href="#" class="alert-link">链接</a>
+		</div>
+		<div class="alert alert-warning">
+			这是一个<a href="#" class="alert-link">链接</a>
+		</div>
+		<div class="alert alert-info">
+			这是一个<a href="#" class="alert-link">链接</a>
+		</div>
+		<div class="alert alert-light">
+			这是一个<a href="#" class="alert-link">链接</a>
+		</div>
+		<div class="alert alert-dark">
+			这是一个<a href="#" class="alert-link">链接</a>
+		</div>
+
+		<!-- 在警告框里添加额外的内容 -->
+		<div class="alert alert-success">
+			<h4 class="alert-heading">这是一个标题</h4>
+			<p>这是一段很长很长的内容这是一段很长很长的内容这是一段很长很长的内容这是一段很长很长的内容这是一段很长很长的内容这是一段很长很长的内容这是一段很长很长的内容这是一段很长很长的内容这是一段很长很长的内容这是一段很长很长的内容这是一段很长很长的内容这是一段很长很长的内容这是一段很长很长的内容这是一段很长很长的内容这是一段很长很长的内容</p>
+			<hr>
+			<p>下面还可以添加一个说明</p>
+		</div>
+
+		<!-- 可以关闭的警告框  -->
+		<div class="alert alert-warning alert-dismissible fade show">
+			这是一个可以关闭的警告框，但是需要想入jquery与bottstar.js
+			<button class="close" data-dismiss='alert'>&times;</button>
+		</div>
+
+		<div class="alert alert-danger fade show myAlert">
+			通过按钮关闭警告框 
+		</div>
+		<button class="closeBtn">关闭警告框</button>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<script>
+		//方法
+		$('.closeBtn').click(function(){
+			$('.myAlert').alert('close');
+		});
+
+		//事件
+		$('.myAlert').on('close.bs.alert',function(){
+			alert('close方法被调用了');
+		});
+		$('.myAlert').on('closed.bs.alert',function(){
+			alert('警告框关闭了');
+		});
+	</script>
+</body>
+
+</html>

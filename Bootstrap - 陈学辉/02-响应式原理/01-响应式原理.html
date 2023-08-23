@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		html {
+			font-size: 50px;
+		}
+
+		div {
+			font-size: 3rem;
+		}
+
+		@media all {
+			div {
+				font-size: 3rem;
+			}
+		}
+
+		@import url('css/bootstrap.css')(min-width:200px);
+
+		@media all and (min-width:400px){
+			div{
+				font-size: 100px;
+			}
+		}
+	</style>
+	<link rel="stylesheet" href="css/bootstrap.css" media="all">
+</head>
+
+<body>
+	<!--
+			响应式所具有的特点
+				1、网页的宽度自动调整
+				2、尽量少用绝对宽度
+				3、字体要使用rem、em做为单位
+				4、布局要使用浮动、弹性布局
+
+			@规则
+				@chartset	定义编码
+				@import		引入css文件（css模块化）
+				@font-face	自定义字体
+				@keyframes	animation里的关键帧
+				@media		媒体查询
+
+
+			媒体查询	根据一个或多个基于设备类型、具体特点和环境来应用样式
+				1、媒体类型
+				2、媒体特性
+				3、逻辑运算符
+
+				参考：https://drafts.csswg.org/mediaqueries/
+		-->
+	<div>陈学辉</div>
+</body>
+
+</html>

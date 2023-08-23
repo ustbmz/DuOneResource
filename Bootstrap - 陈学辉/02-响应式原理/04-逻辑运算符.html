@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				background: red;
+			}
+
+			/* 屏幕的尺寸比700大的时候以及横屏的时候满足 */
+			@media all and (min-width:700px) and (orientation: landscape){
+				div{
+					background: green;
+				}
+			}
+
+			/* 屏幕尺寸比800小，或者屏幕为横屏的时候满足 */
+			@media (max-width:800px),(orientation: landscape){
+				div{
+					background: pink;
+				}
+			}
+
+			/* 屏幕的尺寸要大于800的时候，整个才满足 */
+			@media not all and (max-width:800px){
+				div{
+					background: blue;
+				}
+			}
+
+			@media only screen and (min-width:1000px){
+				div{
+					background: grey;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 
+			逻辑运算符		用来做条件判断
+				and		合并多个媒体查询（并且的意思）
+				,		匹配某个媒体查询（或者的意思）
+				not		对媒体查询结果取反
+				only	仅在媒体查询匹配成功后应用样式（防范老旧浏览器）
+		 -->
+		<div>逻辑运算符</div>
+	</body>
+</html>

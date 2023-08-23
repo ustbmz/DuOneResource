@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>俄罗斯方块</title>
+    <style>
+        #root {
+            justify-content: center;
+            display: flex;
+        }
+
+        #panel {
+            background: #000;
+            position: relative;
+        }
+        #tip{
+            margin-left: 1em;
+        }
+        #next {
+            position: relative;
+        }
+        #score{
+            font-size: 4em;
+            font-weight: bold;
+            color:#f20;
+            text-align: center;
+        }
+        #msg{
+            position: absolute;
+            width:100%;
+            height: 100%;
+            background: rgba(255,255,255,.3);
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+        #msg p{
+            border: 2px solid #fff;
+            padding: 1em;
+            background: #f20;
+            color:#fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <div id="panel">
+
+            <div id="msg">
+                <p>
+                    游戏暂停
+                </p>
+            </div>
+        </div>
+        <div id="tip">
+            <div id="next"></div>
+            <div id="score">
+
+            </div>
+            <p>
+                使用键盘进行游戏：
+            </p>
+            <p>
+                ↑：旋转
+            </p>
+            <p>
+                ↓：向下
+            </p>
+            <p>
+                ←：左
+            </p>
+            <p>
+                →：右
+            </p>
+            <p>
+                空格：暂停/恢复/开始
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

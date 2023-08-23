@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				background: green;
+			}
+
+			@media print{
+				div{
+					font-size: 80px;
+				}
+			}
+
+			@media screen{
+				div{
+					width: 300px;
+					height: 300px;
+					background: pink;
+				}
+			}
+
+			@media all{
+				div{
+					width: 400px;
+					height: 400px;
+					background: grey;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			媒体类型
+				all				所有设备
+				print			打印机设备
+				screen			彩色的电脑屏幕
+				speech			听觉设备（针对有视力障碍的人士，可以把页面的内容以语音的方式呈现的设备）
+				注意：tty、tv、projection、handheld、braille、embossed、aural等几种类型在媒体查询4中已经废弃
+		-->
+		<div>媒体类型</div>
+	</body>
+</html>

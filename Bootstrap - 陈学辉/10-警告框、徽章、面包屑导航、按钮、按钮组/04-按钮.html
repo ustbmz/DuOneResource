@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title></title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row d-block mt-5">
+			<button class="btn btn-primary">按钮</button>
+			<button class="btn btn-secondary">按钮</button>
+			<button class="btn btn-success">按钮</button>
+			<button class="btn btn-danger">按钮</button>
+			<button class="btn btn-warning">按钮</button>
+			<button class="btn btn-info">按钮</button>
+			<button class="btn btn-light">按钮</button>
+			<button class="btn btn-dark">按钮</button>
+			<button class="btn btn-link">按钮</button>
+		</div>
+
+		<!-- 其它类型的按钮 -->
+		<div class="row mt-5 d-block">
+			<a href="#" class="btn btn-primary">a标签按钮</a>
+			<button type="submit" class="btn btn-secondary">button标签按钮</button>
+			<input type="button" value="input标签" class="btn btn-success">
+			<input type="submit" value="input标签" class="btn btn-danger">
+			<input type="reset" value="input标签" class="btn btn-warning">
+		</div>
+
+		<!-- 带边框的按钮 -->
+		<div class="row d-block mt-5">
+			<button class="btn btn-outline-primary">按钮</button>
+			<button class="btn btn-outline-secondary">按钮</button>
+			<button class="btn btn-outline-success">按钮</button>
+			<button class="btn btn-outline-danger">按钮</button>
+			<button class="btn btn-outline-warning">按钮</button>
+			<button class="btn btn-outline-info">按钮</button>
+			<button class="btn btn-outline-light">按钮</button>
+			<button class="btn btn-outline-dark">按钮</button>
+		</div>
+
+		<!-- 大小不同的按钮 -->
+		<div class="row d-block mt-5">
+			<button class="btn btn-primary btn-lg">大按钮</button>
+			<button class="btn btn-secondary">正常按钮</button>
+			<button class="btn btn-success btn-sm">小按钮</button>
+		</div>
+
+		<!-- block类型的按钮 -->
+		<div class="row d-block mt-5">
+			<button class="btn btn-primary btn-lg btn-block">块级按钮</button>
+			<button class="btn btn-secondary btn-block">块级按钮</button>
+		</div>
+
+		<!-- 启用与停用状态的按钮 -->
+		<div class="row d-block mt-5">
+			<button class="btn btn-primary active">启用状态</button>
+			<a href="#" class="btn btn-secondary active">启用状态</a>
+
+			<button class="btn btn-primary" disabled>停用状态</button>
+			<a href="#" class="btn btn-secondary disabled">停用状态</a>
+		</div>
+
+		<!-- 切换按钮的active状态 -->
+		<div class="row d-block mt-5">
+			<button class="btn btn-primary active" data-toggle='button'>点击切换状态</button>
+		</div>
+
+		<!-- 选项卡的效果 -->
+		<div class="row mt-5">
+			<div class="btn-group btn-group-toggle" data-toggle="buttons">
+				<label class="btn btn-secondary active">
+					<input type="radio" name="options" checked>Active
+				</label>
+				<label class="btn btn-secondary">
+					<input type="radio" name="options">Active
+				</label>
+				<label class="btn btn-secondary">
+					<input type="radio" name="options">Active
+				</label>
+			</div>
+		</div>
+
+		<!-- 切换按钮的active状态 -->
+		<div class="row d-block mt-5">
+			<button id="btn" class="btn btn-primary">点击切换状态</button>
+		</div>
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script>
+		$('#btn').button('toggle');
+	</script>
+</body>
+
+</html>

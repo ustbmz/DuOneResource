@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title></title>
+	<style>
+		body {
+			padding-bottom: 1000px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="form-row mt-5">
+			<div class="col">
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">@</span>
+					</div>
+					<input type="text" class="form-control" placeholder="用户名">
+				</div>
+
+				<div class="form-group input-group">
+					<input type="text" class="form-control" placeholder="邮箱名">
+					<div class="input-group-append">
+						<span class="input-group-text">@example.com</span>
+					</div>
+				</div>
+
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">$</span>
+					</div>
+					<input type="text" class="form-control">
+					<div class="input-group-append">
+						<span class="input-group-text">.00</span>
+					</div>
+				</div>
+
+				<!-- 左边，是网址 -->
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">https://example.com/users/</span>
+					</div>
+					<input type="text" class="form-control">
+				</div>
+
+				<!-- textarea -->
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">文本输入框</span>
+					</div>
+					<textarea class="form-control"></textarea>
+				</div>
+
+				<!-- 尺寸 -->
+				<div class="form-group input-group mt-5 input-group-lg">
+					<div class="input-group-prepend">
+						<span class="input-group-text">大尺寸</span>
+					</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">正常尺寸</span>
+					</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-group input-group  input-group-sm">
+					<div class="input-group-prepend">
+						<span class="input-group-text">小尺寸</span>
+					</div>
+					<input type="text" class="form-control">
+				</div>
+
+				<!-- 多选框和单选框 -->
+				<div class="form-group input-group mt-5">
+					<div class="input-group-prepend">
+						<span class="input-group-text">
+							<input type="radio">
+						</span>
+					</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">
+							<input type="checkbox">
+						</span>
+					</div>
+					<input type="text" class="form-control">
+				</div>
+
+				<!-- 多个输入框与多个额外组件 -->
+				<div class="form-group input-group mt-5">
+					<div class="input-group-prepend">
+						<span class="input-group-text">多个输入框</span>
+					</div>
+					<input type="text" class="form-control" placeholder="请输入姓">
+					<input type="text" class="form-control" placeholder="请输入名">
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-group input-group">
+					<input type="text" class="form-control">
+					<div class="input-group-append">
+						<span class="input-group-text">$</span>
+						<span class="input-group-text">0.00</span>
+					</div>
+				</div>
+
+				<!-- 按钮组合 -->
+				<div class="form-group input-group mt-5">
+					<div class="input-group-prepend">
+						<button class="btn btn-outline-secondary">左按钮</button>
+					</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-group input-group">
+					<input type="text" class="form-control">
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary">右按钮</button>
+					</div>
+				</div>
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<button class="btn btn-outline-secondary">左按钮</button>
+						<button class="btn btn-outline-secondary">左按钮</button>
+					</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-group input-group">
+					<input type="text" class="form-control">
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary">右按钮</button>
+						<button class="btn btn-outline-secondary">右按钮</button>
+					</div>
+				</div>
+
+				<!-- 带下拉列表的按钮组合 -->
+				<div class="form-group input-group mt-5">
+					<div class="input-group-prepend">
+						<button class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">左侧下拉菜单</button>
+						<div class="dropdown-menu">
+							<a href="#" class="dropdown-item">北京</a>
+							<a href="#" class="dropdown-item">上海</a>
+							<a href="#" class="dropdown-item">广州</a>
+							<div class="dropdown-divider"></div>
+							<a href="#" class="dropdown-item">深圳</a>
+						</div>
+					</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-group input-group">
+					<input type="text" class="form-control">
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">右侧下拉菜单</button>
+						<div class="dropdown-menu">
+							<a href="#" class="dropdown-item">北京</a>
+							<a href="#" class="dropdown-item">上海</a>
+							<a href="#" class="dropdown-item">广州</a>
+							<div class="dropdown-divider"></div>
+							<a href="#" class="dropdown-item">深圳</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- 分离式按钮与input组合 -->
+				<div class="form-group input-group mt-5">
+					<div class="input-group-prepend">
+						<button class="btn btn-outline-success">分离式左侧下拉菜单</button>
+						<button class="btn btn-outline-success dropdown-toggle dropdown-toggle-split"
+							data-toggle="dropdown"></button>
+						<div class="dropdown-menu">
+							<a href="#" class="dropdown-item">北京</a>
+							<a href="#" class="dropdown-item">上海</a>
+							<a href="#" class="dropdown-item">广州</a>
+							<div class="dropdown-divider"></div>
+							<a href="#" class="dropdown-item">深圳</a>
+						</div>
+					</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-group input-group">
+					<input type="text" class="form-control">
+					<div class="input-group-append">
+						<button class="btn btn-outline-success">分离式左侧下拉菜单</button>
+						<button class="btn btn-outline-success dropdown-toggle dropdown-toggle-split"
+							data-toggle="dropdown"></button>
+						<div class="dropdown-menu">
+							<a href="#" class="dropdown-item">北京</a>
+							<a href="#" class="dropdown-item">上海</a>
+							<a href="#" class="dropdown-item">广州</a>
+							<div class="dropdown-divider"></div>
+							<a href="#" class="dropdown-item">深圳</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- 自定义表单组合-自定义选择（下拉框） -->
+				<div class="form-group input-group mt-5">
+					<div class="input-group-prepend">
+						<label for="select1" class="input-group-text">label标签在左边</label>
+					</div>
+					<select class="custom-select" id="select1">
+						<option value="">城市</option>
+						<option value="">北京</option>
+						<option value="">上海</option>
+						<option value="">广州</option>
+					</select>
+				</div>
+				<div class="form-group input-group">
+					<select class="custom-select" id="select2">
+						<option value="">城市</option>
+						<option value="">北京</option>
+						<option value="">上海</option>
+						<option value="">广州</option>
+					</select>
+					<div class="input-group-append">
+						<label for="select2" class="input-group-text">label标签在右边</label>
+					</div>
+				</div>
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<button class="btn btn-outline-danger">button标签在左边</label>
+					</div>
+					<select class="custom-select">
+						<option value="">城市</option>
+						<option value="">北京</option>
+						<option value="">上海</option>
+						<option value="">广州</option>
+					</select>
+				</div>
+				<div class="form-group input-group">
+					<select class="custom-select">
+						<option value="">城市</option>
+						<option value="">北京</option>
+						<option value="">上海</option>
+						<option value="">广州</option>
+					</select>
+					<div class="input-group-append">
+						<button class="btn btn-outline-danger">button标签在右边</label>
+					</div>
+				</div>
+
+				<!-- 自定义表单组合-自定义文件 -->
+				<div class="form-group input-group mt-5">
+					<div class="input-group-prepend">
+						<span class="input-group-text">上传在左边</span>
+					</div>
+					<div class="custom-file">
+						<input type="file" class="custom-file-input" id="file1">
+						<label for="file1" class="custom-file-label"></label>
+					</div>
+				</div>
+				<div class="form-group input-group">
+					<div class="custom-file">
+						<input type="file" class="custom-file-input" id="file2">
+						<label for="file2" class="custom-file-label"></label>
+					</div>
+					<div class="input-group-append">
+						<span class="input-group-text">上传在右边</span>
+					</div>
+				</div>
+
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<button class="btn btn-outline-secondary">按钮在左边</span>
+					</div>
+					<div class="custom-file">
+						<input type="file" class="custom-file-input" id="file1">
+						<label for="file1" class="custom-file-label"></label>
+					</div>
+				</div>
+				<div class="form-group input-group">
+					<div class="custom-file">
+						<input type="file" class="custom-file-input" id="file2">
+						<label for="file2" class="custom-file-label"></label>
+					</div>
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary">按钮在右边</span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

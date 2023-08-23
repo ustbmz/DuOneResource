@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title></title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row mt-5">
+			<div class="col">
+				<button class="btn btn-secondary" data-toggle="tooltip" title="这个提示工具在上面显示" data-placement="top">上面弹出提示工具</button>
+				<button class="btn btn-info" data-toggle="tooltip" title="这个提示工具在右侧显示" data-placement="right">右侧弹出提示工具</button>
+				<button class="btn btn-primary" data-toggle="tooltip" title="这个提示工具在下面显示" data-placement="bottom">下面弹出提示工具</button>
+				<button class="btn btn-warning" data-toggle="tooltip" title="这个提示工具在左侧显示" data-placement="left">左侧弹出提示工具</button>
+			</div>
+		</div>
+
+		<div class="row mt-5">
+			<p>Tight pants next level keffiyeh <a href="#" data-toggle="tooltip" title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel have a terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan whatever keytar, scenester farm-to-table banksy Austin twitter handle freegan cred raw denim single-origin coffee viral.</p>
+		</div>
+
+		<div id="box"></div>
+
+		<div class="row mt-5">
+			<!-- 自定义HTML -->
+			<div class="col">
+				<button class="btn btn-success" data-toggle="tooltip" data-html="true" title="自<em>定</em>义<b>html</b>">自定义HTML</button>
+			</div>
+			<div class="col">
+				<span class="d-inline-block" data-toggle="tooltip" title="禁用的元素弹出提示工具，需要在外面添加一个层，把交互的功能添加到这个层上">
+					<button class="btn btn-primary" style="pointer-events: none;" disabled>禁用的按钮弹出提示工具</button>
+				</span>
+			</div>
+			<div class="col">
+				<button class="btn btn-success" data-toggle="tooltip" title="这是<em>标题</em>"
+					data-animation='true'
+					data-container='body'
+					data-delay='{ "show": 1000, "hide": 2000 }'
+					data-html="true"
+				>data-属性</button>
+			</div>
+			<!-- 方法与事件 -->
+			<div class="col">
+				<button class="btn btn-info" title="方法与事件" id="myTooltip">方法与事件</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+
+	<script>
+		//初始化提示框，必需要写这一步
+		$(function(){
+			$('[data-toggle="tooltip"]').tooltip();
+		});
+
+		//方法
+		/* $('#myTooltip').tooltip('show');	//显示提示框
+		setTimeout(function(){
+			$('#myTooltip').tooltip('hide');	//隐藏提示框
+		},1000); */
+
+		/* $('#myTooltip').tooltip('hide');
+		$('#myTooltip').tooltip('toggle');	//切换提示框 */
+
+
+		$('#myTooltip').tooltip('enable');	//添加提示框功能
+		$('#myTooltip').tooltip('disable');	//取消提示框功能
+		$('#myTooltip').tooltip('toggleEnabled')	//切换（enable与disable的功能）
+
+		
+		//事件
+		$('#myTooltip').on('show.bs.tooltip',function(){
+			console.log('提示工具要显示了');
+		});
+		$('#myTooltip').on('shown.bs.tooltip',function(){
+			console.log('提示工具已经完全显示了');
+		});
+		$('#myTooltip').on('hide.bs.tooltip',function(){
+			console.log('提示工具要隐藏了');
+		});
+		$('#myTooltip').on('hidden.bs.tooltip',function(){
+			console.log('提示工具已经完全隐藏了');
+		});
+		$('#myTooltip').on('inserted.bs.tooltip',function(){
+			console.log('提示工具DOM已经插入到页面里了');
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title></title>
+	<style>
+		.f div div,.pos div {
+			width: 5rem;
+			height: 5rem;
+			background: #ccc;
+		}
+		.pos div{
+			background: wheat;
+			border: 1px solid #000;
+		}
+		body{
+			height: 5000px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<!-- 浮动 -->
+		<div class="row border f">
+			<div class="col">
+				<!-- 3.x的版本里的浮动是.pull-left/.pull-right -->
+				<div class="float-left">左浮动</div>
+				<div class="float-right">右浮动</div>
+				<div class="float-left float-none">不浮动</div>
+			</div>
+		</div>
+		<!-- 响应式的浮动，float-{breakpoint}-left -->
+		<div class="row border f mt-1">
+			<div class="col">
+				<div class="float-md-left">中等屏幕以上会往左浮动</div>
+				<div class="float-sm-right">小屏幕以上会往右浮动</div>
+			</div>
+		</div>
+		<!-- 清除浮动,clearfix -->
+		<div class="row d-block border mt-1 clearfix">
+			<div class="float-left" style="width: 100px;height: 100px;background: #ccc;">左浮动</div>
+			<div class="float-right" style="width: 100px;height: 100px;background: #ccc;">右浮动</div>
+		</div>
+
+		<!-- 关闭图标 -->
+		<div class="row mt-5">
+			<button type="button" class="close">
+				<span>&times;</span>
+			</button>
+		</div>
+
+
+		<!-- 图像替换 -->
+		<div class="row mt-5">
+			<h1 class="text-hide" style="background-image: url('http://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg'); width: 50px; height: 50px;">Bootstrap</h1>
+		</div>
+
+
+		<!-- 内容溢出 -->
+		<div class="row mt-5">
+			<div style="width: 200px;height: 100px;" class="border overflow-auto">这是在具有设置宽度和高度尺寸的元素上使用 .overflow-auto 的示例。 此内容将垂直滚动。这是在具有设置宽度和高度尺寸的元素上使用 .overflow-auto 的示例。 此内容将垂直滚动。这是在具有设置宽度和高度尺寸的元素上使用 .overflow-auto 的示例。</div>
+			<div style="width: 200px;height: 100px;" class="border overflow-hidden">这是在具有设置宽度和高度尺寸的元素上使用 .overflow-hidden 的示例。这是在具有设置宽度和高度尺寸的元素上使用 .overflow-hidden 的示例。这是在具有设置宽度和高度尺寸的元素上使用 .overflow-hidden 的示例。</div>
+		</div>
+
+
+		<!-- 定位 -->
+		<div class="row mt-5 pos">
+			<div class="position-static">默认值，没有定位</div>
+			<div class="position-relative">相对定位</div>
+			<div class="position-absolute">绝对定位</div>
+			<div class="position-fixed">固定定位</div>
+			<div class="position-sticky">粘性定位</div>
+
+			<!-- <div class="fixed-top">固定在顶部</div>
+			<div class="fixed-bottom">固定在底部</div> -->
+			<!-- <div class="sticky-top">粘性置顶，放在这里是没有效果的，需要放在body下的第一层级</div> -->
+		</div>
+
+
+		<!-- 阴影 -->
+		<div class="row mt-5 justify-content-around">
+			<div class="bg-light rounded p-3 shadow-none">没有阴影</div>
+			<div class="bg-white rounded p-3 shadow-sm">小阴影</div>
+			<div class="bg-white rounded p-3 shadow">正常的阴影</div>
+			<div class="bg-white rounded p-3 shadow-lg">大的阴影</div>
+		</div>
+
+
+		<!-- 尺寸 -->
+		<div class="row mt-5 d-block"><!-- 宽度 -->
+			<div class="bg-info text-white p-3 w-25">Width 25%</div>
+			<div class="bg-info text-white p-3 w-50">Width 50%</div>
+			<div class="bg-info text-white p-3 w-75">Width 75%</div>
+			<div class="bg-info text-white p-3 w-100">Width 100%</div>
+			<div class="bg-info text-white p-3 w-auto">Width auto</div>
+		</div>
+		<!-- 高度 -->
+		<div class="row bg-dark mt-1 d-block" style="height: 100px;">
+			<div class="bg-success d-inline-block text-white p-3 h-25">Width 25%</div>
+			<div class="bg-success d-inline-block text-white p-3 h-50">Width 50%</div>
+			<div class="bg-success d-inline-block text-white p-3 h-75">Width 75%</div>
+			<div class="bg-success d-inline-block text-white p-3 h-100">Width 100%</div>
+			<div class="bg-success d-inline-block text-white p-3 h-auto">Width auto</div>
+		</div>
+		<!-- max-width -->
+		<div class="row d-block mt-1">
+			<div class="mw-100 bg-secondary text-white">宽度的最大值</div>
+		</div>
+		<!-- max-height -->
+		<div class="row d-block bg-dark mt-1" style="height: 100px;">
+			<div class="bg-success text-white mh-100" style="width: 100px; height: 200px;">高度的最大值</div>
+		</div>
+
+
+		<!-- 间距 -->
+		<div class="row border mt-5">
+			<div class="bg-danger text-white p-3 m-3">陈学辉</div>
+		</div>
+		<div class="row border mt-1">
+			<div class="bg-danger text-white p-3 mb-3">陈学辉</div>
+		</div>
+		<div class="row border mt-1">
+			<div class="bg-danger text-white py-3 my-3">陈学辉</div>
+		</div>
+		<div class="row border mt-1">
+			<div class="bg-danger text-white px-3 mx-3">陈学辉</div>
+		</div>
+		<div class="row border mt-1">
+			<!-- 3.x的版本居中是用.center-block -->
+			<div class="bg-danger text-white px-3 mx-auto">陈学辉</div>
+		</div>
+		<!-- 间距的响应式，{property}{sides}-{breakpoint}-{size} -->
+		<div class="row border mt-1">
+			<div class="bg-danger text-white p-3 my-lg-3">陈学辉</div>
+		</div>
+
+		<!-- 文本 -->
+		<div class="row border mt-5">
+			<p class="text-justify">这是一段很长很长的文字！这是一段很长很长的文字！这是一段很长很长的文字！这是一段很长很长的文字！这是一段很长很长的文字！这是一段很长很长的文字！这是一段很长很长的文字！这是一段很长很长的文字！这是一段很长很长的文字！这是一段很长很长的文字！这是一段很长很长的文字！</p>
+			<p class="col text-lg-center">这是一段很长很长的文字！</p>
+		</div>
+
+		<!-- 换行和内容溢出处理 -->
+		<div class="text-nowrap bg-info border text-truncate " style="width: 8rem;">
+			This text should overflow the parent.
+		</div>
+
+		<!-- 文字大小写转换 -->
+		<div class="row d-block mt-1">
+			<p class="text-lowercase">KAIVON</p>
+			<p class="text-uppercase">kaivon</p>
+			<p class="text-capitalize">kaivon chen</p>
+
+			<!-- 字体粗细和斜体 -->
+			<p class="font-weight-bold">加粗字体</p>
+			<p class="font-weight-normal">正常字体</p>
+			<p class="font-weight-light">更细的字体</p>
+			<p class="font-italic">倾斜字体</p>
+
+			<!-- 等宽字体 -->
+			<p class="text-monospace">This is in monospace</p>
+		</div>
+
+
+		<!-- 垂直对齐 -->
+		<div class="row mt-5 border mt-5 d-block" style="height: 100px;">
+			<span class="align-baseline">baseline</span>
+			<span class="align-top">top</span>
+			<span class="align-middle">middle</span>
+			<span class="align-bottom">bottom</span>
+			<span class="align-text-top">text-top</span>
+			<span class="align-text-bottom">text-bottom</span>
+		</div>
+
+
+		<!-- 可见性 -->
+		<div class="row mt-5 border">
+			<div class="bg-danger text-white p-3 visible">可以看见</div>
+			<div class="bg-danger text-white p-3 invisible">看不见，占据空间</div>
+			<div class="bg-danger text-white p-3 d-none">看不见，不占据空间</div>
+		</div>
+	</div>
+	<div class="sticky-top" style="width: 5rem;height: 5rem;background: green;">粘性定位，在这里是有效果的</div>
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title></title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row mt-5">
+			<!-- 单一按钮的下拉菜单 -->
+			<div class="col-2">
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">button标签下拉</button>
+					<div class="dropdown-menu">
+						<a href="#" class="dropdown-item">北京</a>
+						<a href="#" class="dropdown-item">上海</a>
+						<a href="#" class="dropdown-item">广州</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- 使用a标签 -->
+			<div class="col-2">
+				<div class="dropdown">
+					<a href="javascript:;" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">a标签下拉</a>
+					<div class="dropdown-menu">
+						<a href="#" class="dropdown-item">北京</a>
+						<a href="#" class="dropdown-item">上海</a>
+						<a href="#" class="dropdown-item">广州</a>
+						<div class="dropdown-divider"></div>
+						<a href="#" class="dropdown-item">深圳</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- 分离式按钮下拉菜单 -->
+			<div class="col-3">
+				<div class="btn-group dropdown">
+					<button class="btn btn-success btn-lg">分离式按钮下拉菜单</button>
+					<button class="btn btn-success btn-lg dropdown-toggle dropdown-toggle-split"
+						data-toggle="dropdown"></button>
+					<div class="dropdown-menu">
+						<a href="#" class="dropdown-item">北京</a>
+						<a href="#" class="dropdown-item">上海</a>
+						<a href="#" class="dropdown-item">广州</a>
+						<div class="dropdown-divider"></div>
+						<a href="#" class="dropdown-item">深圳</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- 下拉菜单尺寸 -->
+			<div class="col-3 d-flex">
+				<div class="dropdown">
+					<button class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown">大按钮</button>
+					<div class="dropdown-menu">
+						<a href="#" class="dropdown-item">北京</a>
+						<a href="#" class="dropdown-item">上海</a>
+						<a href="#" class="dropdown-item">广州</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="btn btn-danger btn-sm dropdown-toggle" data-toggle="dropdown">小按钮</button>
+					<div class="dropdown-menu">
+						<a href="#" class="dropdown-item">北京</a>
+						<a href="#" class="dropdown-item">上海</a>
+						<a href="#" class="dropdown-item">广州</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row mt-5">
+			<div class="col">
+				<div class="dropup">
+					<!-- 向上展开 -->
+					<button class="btn btn-info dropdown-toggle" data-toggle="dropdown">向上展开</button>
+					<div class="dropdown-menu">
+						<a href="#" class="dropdown-item">北京</a>
+						<a href="#" class="dropdown-item">上海</a>
+						<a href="#" class="dropdown-item">广州</a>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="dropright">
+					<!-- 向右展开 -->
+					<button class="btn btn-info dropdown-toggle" data-toggle="dropdown">向右展开</button>
+					<div class="dropdown-menu">
+						<a href="#" class="dropdown-item">北京</a>
+						<a href="#" class="dropdown-item">上海</a>
+						<a href="#" class="dropdown-item">广州</a>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="dropdown">
+					<!-- 向下展开 -->
+					<button class="btn btn-info dropdown-toggle" data-toggle="dropdown">向下展开</button>
+					<div class="dropdown-menu">
+						<a href="#" class="dropdown-item">北京</a>
+						<a href="#" class="dropdown-item">上海</a>
+						<a href="#" class="dropdown-item">广州</a>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="dropleft">
+					<!-- 向左展开 -->
+					<button class="btn btn-info dropdown-toggle" data-toggle="dropdown">向左展开</button>
+					<div class="dropdown-menu">
+						<a href="#" class="dropdown-item">北京</a>
+						<a href="#" class="dropdown-item">上海</a>
+						<a href="#" class="dropdown-item">广州</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- 菜单项 -->
+		<div class="row mt-5">
+			<div class="col">
+				<div class="dropdown">
+					<button class="btn btn-info dropdown-toggle" data-toggle="dropdown">菜单项使用了button标签</button>
+					<div class="dropdown-menu dropdown-menu-right">
+						<!-- 右对齐 -->
+						<a href="#" class="dropdown-item">北京</a>
+						<a href="#" class="dropdown-item">上海</a>
+						<a href="#" class="dropdown-item">广州</a>
+						<div class="dropdown-divider"></div>
+						<button class="dropdown-item">深圳</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 非交互式的下拉菜单 -->
+		<div class="row mt-5">
+			<div class="col">
+				<div class="dropdown">
+					<div class="dropdown-menu show">
+						<span class="dropdown-item-text">非点击的项</span>
+						<h4 class="dropdown-header">下拉菜单的标题</h4>
+						<a href="#" class="dropdown-item">北京</a>
+						<a href="#" class="dropdown-item active">上海</a> <!-- 当前的选项 -->
+						<a href="#" class="dropdown-item disabled">广州</a> <!-- 禁用的选项 -->
+						<div class="dropdown-divider"></div>
+						<button class="dropdown-item">深圳</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 偏移属性 -->
+		<div class="row mt-5" style="margin-top: 260px!important;">
+			<div class="col">
+				<div class="dropdown">
+					<button class="btn btn-info dropdown-toggle" data-toggle="dropdown" data-offset="10,20">偏移</button>
+					<div class="dropdown-menu">
+						<!-- 右对齐 -->
+						<a href="#" class="dropdown-item">北京</a>
+						<a href="#" class="dropdown-item">上海</a>
+						<a href="#" class="dropdown-item">广州</a>
+						<div class="dropdown-divider"></div>
+						<button class="dropdown-item">深圳</button>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="dropdown">
+					<button class="btn btn-info dropdown-toggle" data-toggle="dropdown">偏移</button>
+					<div class="dropdown-menu" data-reference="parent">
+						<!-- 右对齐 -->
+						<a href="#" class="dropdown-item">北京</a>
+						<a href="#" class="dropdown-item">上海</a>
+						<a href="#" class="dropdown-item">广州</a>
+						<div class="dropdown-divider"></div>
+						<button class="dropdown-item">深圳</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- js的方法与事件 -->
+		<div class="row mt-5">
+			<div class="col">
+				<div class="dropdown">
+					<button class="btn btn-danger dropdown-toggle" id="myBtn">方法</button>
+					<div class="dropdown-menu" id="myDropdown" data-reference="parent">
+						<!-- 右对齐 -->
+						<a href="#" class="dropdown-item">北京</a>
+						<a href="#" class="dropdown-item">上海</a>
+						<a href="#" class="dropdown-item">广州</a>
+						<div class="dropdown-divider"></div>
+						<button class="dropdown-item">深圳</button>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="dropdown" id="myDropdown1">	<!-- 注意，事件要放在这里！！！ -->
+					<button class="btn btn-info dropdown-toggle" data-toggle="dropdown">事件</button>
+					<div class="dropdown-menu" data-reference="parent">
+						<a href="#" class="dropdown-item">北京</a>
+						<a href="#" class="dropdown-item">上海</a>
+						<a href="#" class="dropdown-item">广州</a>
+						<div class="dropdown-divider"></div>
+						<button class="dropdown-item">深圳</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+
+	<script>
+		//方法
+		$('#myBtn').click(function () {
+			//$('#myDropdown').dropdown('show');
+			//$('#myDropdown').dropdown('hide');
+
+			//$('#myDropdown').dropdown('toggle');
+
+			//解决toggle的问题
+			$('#myDropdown').toggle(function () {
+				$('#myDropdown').dropdown('show');
+			}, function () {
+				$('#myDropdown').dropdown('hide');
+			});
+		});
+
+		//事件
+		$('#myDropdown1').on('show.bs.dropdown', function () {
+			console.log('调用了show方法');
+		});
+		$('#myDropdown1').on('shown.bs.dropdown', function () {
+			console.log('下拉列表完全显示了');
+		});
+
+		$('#myDropdown1').on('hide.bs.dropdown', function () {
+			console.log('调用了hide方法');
+		});
+		$('#myDropdown1').on('hidden.bs.dropdown', function () {
+			console.log('下拉列表完全隐藏了');
+		});
+	</script>
+</body>
+
+</html>

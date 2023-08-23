@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title></title>
+	<style>
+		body {
+			padding-bottom: 1000px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<img src="images/img_01.jpg" class="img-fluid" alt="">
+		</div>
+
+		<div class="row">
+			<!-- 缩略图：img-thumbnail -->
+			<div class="col-md-4">
+				<img src="images/img_01.jpg" class="img-thumbnail" alt="">
+			</div>
+
+			<!-- 圆角图片：rounded  -->
+			<div class="col-md-4">
+				<img src="images/img_01.jpg" class="rounded img-fluid" alt="">
+			</div>
+		</div>
+
+		<!-- 图片对齐方式，自己对齐的话通过浮动 -->
+		<div class="row mt-5">
+			<div class="col">
+				<img src="images/img_01.jpg" style="height: 200px;" class="float-left" alt="">
+				<img src="images/img_01.jpg" style="height: 200px;" class="float-right" alt="">
+			</div>
+		</div>
+		<!-- 通过父级调整对齐，使用文本的对齐方式 -->
+		<div class="row mt-5">
+			<div class="col text-right">
+				<img src="images/img_01.jpg" style="height: 200px;" alt="">
+				<img src="images/img_01.jpg" style="height: 200px;" alt="">
+			</div>
+		</div>
+		<!-- 自己居中，先要变成block，然后再使用margin:0 auto; -->
+		<div class="row mt-5">
+			<div class="col">
+				<img src="images/img_01.jpg" style="height: 200px;" class="d-block mx-auto" alt="">
+			</div>
+		</div>
+
+		<div class="row mt-5">
+			<picture>
+				<source media="(min-width:1200px)" srcset="images/1140.jpg">
+				<source media="(min-width:992px)" srcset="images/960.jpg">
+				<source media="(min-width:768px)" srcset="images/720.jpg">
+				<source media="(min-width:576px)" srcset="images/540.jpg">
+				<img src="images/img_01.jpg" alt="">	<!-- 当尺寸小于576的时候会显示这个图片 -->
+			</picture>
+			<!-- .webp	图片的格式 -->
+			<!-- 支持情况：>=ios9.3 || >android4.4 -->
+		</div>
+	</div>
+</body>
+
+</html>

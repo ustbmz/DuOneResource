@@ -1,0 +1,17 @@
+{
+    "scripts": {
+        "dev": "nodemon --watch src -e ts --exec ts-node src/index.ts",
+        "build": "rd /s /q dist & tsc"
+    },
+    "devDependencies": {
+        "@types/lodash": "^4.14.123",
+        "@types/node": "^11.13.8"
+    },
+    "dependencies": {
+        "axios": "^0.18.0",
+        "class-transformer": "^0.2.0",
+        "class-validator": "^0.9.1",
+        "lodash": "^4.17.11",
+        "reflect-metadata": "^0.1.13"
+    }
+}

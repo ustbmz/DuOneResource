@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				padding: 50px 0;
+				border: 1px solid #000800;
+			}
+			div:after{
+				content: '这是一所房子';
+			}
+
+			/* 小于1000的尺寸就满足 */
+			@media all and (max-width: 1000px){
+				div{
+					background: green;
+				}
+				div:after{
+					content: '哇，房子好大哦，可以放下坑了';
+				}
+			}
+
+			/* 小于800的时候就满足 */
+			@media all and (max-width:800px){
+				div{
+					background: khaki;
+				}
+				div:after{
+					content: '喔，房子变小了，只能放一张双人床';
+				}
+			}
+			
+			/* 尺寸小于500就满足 */
+			@media all and (max-width:500px){
+				div{
+					background: hotpink;
+				}
+				div:after{
+					content: '哎，房子更小了，只能放下一张单人床';
+				}
+			}
+
+			/* 小于300的时候满足 */
+			@media all and (max-width: 300px){
+				div{
+					background: turquoise;
+				}
+				div:after{
+					content: '咦，房子也忒小了，床都放不下';
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

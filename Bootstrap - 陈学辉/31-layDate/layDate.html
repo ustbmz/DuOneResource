@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title></title>
+</head>
+
+<body>
+	<!-- 
+		https://www.layui.com/laydate/
+	 -->
+
+	<div class="container">
+		<div class="row mt-5">
+			<div class="col">
+				<div class="form-group form-inline">
+					<label for="date">日期：</label>
+					<div type="text" class="form-control w-50" placeholder="请选择日期" id="date"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="laydate/laydate.js"></script>
+	<script>
+		var layDemo=laydate.render({	//初始化方法
+			//绑定元素
+			elem: '#date',
+
+			//控件选择类型
+			type: 'year',
+			type: 'month',
+			type: 'date',
+			type: 'time',
+			type: 'datetime',
+
+			//开启左右面板范围选择
+			//range:'*',
+
+			//自定义格式
+			format: 'yyyy-MM-dd HH:mm:ss',
+			format: 'yyyy年MM月dd日 HH时mm分ss秒',
+			format: 'yyyyMMdd',
+			format: 'dd/MM/yyyy',
+			format: 'yyyy年M月',
+			format: 'M月d日',
+			format: '北京时间：HH点mm分',
+			format: 'yyyy年的M月某天晚上，大概H点',
+			format: '亲，还记得yyyy年的M月d号那一天么？',
+			format: 'yyyy-MM-dd',
+
+			//初始值
+			/* value:'2008-08-08',
+			value:new Date(2008,7,8),
+			isInitValue :false, */
+
+			//最小/大范围内的日期时间值
+			/* min: '2019-1-1',
+			max: '2019-12-31',
+
+			min: '2019-12-11 12:30:00',
+			max: '2019-12-18 12:30:00',
+
+			min: -7,
+			max: 7,
+
+			min: '09:30:00',
+			max: '17:30:00', */
+
+			//自定义弹出控件的事件
+			trigger :'focus',
+
+
+			//默认显示
+			show:false,
+
+			//定位方式
+			position:'abolute',
+
+			//层叠顺序
+			zIndex:66666666,
+
+			//是否显示底部栏
+			showBottom :true,
+
+			//工具按钮
+			btns :['now', 'clear',  'confirm'],
+
+			//语言
+			lang:'cn',
+
+			//主题
+			theme :'default',
+			theme :'molv',
+			theme :'#f00',
+			theme :'grid',
+			theme :'kaivon',
+
+			// 是否显示公历节日
+			calendar:true,
+
+			//标注重要日子
+			mark :{
+				'0-5-3':'生日',
+				'0-9-1':'开学',
+				'0-0-10':'工资',
+				'2019-12-6':'入职',
+			},
+
+			//方法
+			//控件初始打开的回调
+			ready:function(date){
+				console.log(date);
+			},
+
+
+			//日期时间被切换后的回调
+			change:function(value,date,endDate){
+				console.log(value);
+				console.log(date);
+				console.log(endDate);
+
+				layDemo.hint(value);
+			},
+
+			//控件选择完毕后的回调
+			done:function(value,date,endDate){
+				console.log(value);
+				console.log(date);
+				console.log(endDate);
+			},
+		});
+
+		console.log(layDemo);
+
+		var endDay=laydate.getEndDate();
+		var endDay=laydate.getEndDate(2,2035);
+
+		console.log(endDay);
+	</script>
+</body>
+
+</html>

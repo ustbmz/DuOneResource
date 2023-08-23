@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				margin: 0;
+			}
+			div{
+				width: 100px;
+				height: 100px;
+				background: green;
+				float: left;
+				border: 1px solid #000;
+				box-sizing: border-box;
+			}
+			/* <400，显示1个 */
+			@media all and (max-width:400px){
+				div{
+					width: 100%;
+				}
+			}
+
+			/* 400-600，显示2个 */
+			@media all and (min-width:400px){
+				div{
+					width: 50%;
+				}
+			}
+
+			/* 600-800，显示3个 */
+			@media all and (min-width:600px){
+				div{
+					width:33.3%;
+				}
+			}
+
+			/* 800-1000，显示4个 */
+			@media all and (min-width:800px){
+				div{
+					width:25%;
+				}
+			}
+
+			/* 1000以上，显示5个 */
+			@media all and (min-width:1000px){
+				div{
+					width: 20%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+	</body>
+</html>

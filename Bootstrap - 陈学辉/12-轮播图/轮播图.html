@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title></title>
+	<style>
+		body {
+			padding-bottom: 1000px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="carousel slide carousel-fade" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="images/pic_01.jpg" class="img-fluid">
+						</div>
+						<div class="carousel-item">
+							<img src="images/pic_02.jpg" class="img-fluid">
+						</div>
+						<div class="carousel-item">
+							<img src="images/pic_03.jpg" class="img-fluid">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 带控制功能的轮播图 -->
+		<div class="row mt-5">
+			<div class="col">
+				<div class="carousel slide" data-ride="carousel" id="control">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="images/pic_01.jpg" class="img-fluid">
+						</div>
+						<div class="carousel-item">
+							<img src="images/pic_02.jpg" class="img-fluid">
+						</div>
+						<div class="carousel-item">
+							<img src="images/pic_03.jpg" class="img-fluid">
+						</div>
+					</div>
+
+					<!-- 添加左右箭头 -->
+					<a href="#control" class="carousel-control-prev" data-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+					<a href="#control" class="carousel-control-next" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- 包含指示器功能的轮播图 -->
+		<div class="row mt-5">
+			<div class="col">
+				<div class="carousel slide" data-ride="carousel" id="indicators">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="images/pic_01.jpg" class="img-fluid">
+						</div>
+						<div class="carousel-item">
+							<img src="images/pic_02.jpg" class="img-fluid">
+						</div>
+						<div class="carousel-item">
+							<img src="images/pic_03.jpg" class="img-fluid">
+						</div>
+					</div>
+
+					<!-- 添加左右箭头 -->
+					<a href="#indicators" class="carousel-control-prev" data-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+					<a href="#indicators" class="carousel-control-next" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</a>
+
+					<!-- 添加指示器 -->
+					<ol class="carousel-indicators">
+						<li data-target="#indicators" data-slide-to="0" class="active"></li>
+						<li data-target="#indicators" data-slide-to="1"></li>
+						<li data-target="#indicators" data-slide-to="2"></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+
+		<!-- 包含字幕的轮播图 -->
+		<div class="row mt-5">
+			<div class="col">
+				<div class="carousel slide" data-ride="carousel" id="captions">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="images/pic_01.jpg" class="img-fluid">
+							<div class="carousel-caption text-danger">
+								<h5>这是第1张图</h5>
+								<p>这是第1张图的说明这是第1张图的说明这是第1张图的说明这是第1张图的说明这是第1张图的说明这是第1张图的说明这是第1张图的说明这是第1张图的说明</p>
+							</div>
+
+						</div>
+						<div class="carousel-item">
+							<img src="images/pic_02.jpg" class="img-fluid">
+							<div class="carousel-caption text-danger">
+								<h5>这是第2张图</h5>
+								<p>这是第2张图的说明这是第1张图的说明这是第2张图的说明这是第1张图的说明这是第1张图的说明这是第1张图的说明这是第1张图的说明这是第1张图的说明</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="images/pic_03.jpg" class="img-fluid">
+							<div class="carousel-caption text-danger">
+								<h5>这是第3张图</h5>
+								<p>这是第3张图的说明这是第3张图的说明这是第1张图的说明这是第1张图的说明这是第1张图的说明这是第1张图的说明这是第1张图的说明这是第1张图的说明</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- 添加左右箭头 -->
+					<a href="#captions" class="carousel-control-prev" data-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+					<a href="#captions" class="carousel-control-next" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</a>
+
+					<!-- 添加指示器 -->
+					<ol class="carousel-indicators">
+						<li data-target="#captions" data-slide-to="0" class="active"></li>
+						<li data-target="#captions" data-slide-to="1"></li>
+						<li data-target="#captions" data-slide-to="2"></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+
+		<!-- 设置轮播图的选项 -->
+		<div class="row mt-5">
+			<div class="col">
+				<div class="carousel slide" id="options" data-ride="carousel" data-interval='2000' data-keyboard='true'
+					data-pause='false' data-wrap='true'>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="images/pic_01.jpg" class="img-fluid">
+						</div>
+						<div class="carousel-item">
+							<img src="images/pic_02.jpg" class="img-fluid">
+						</div>
+						<div class="carousel-item">
+							<img src="images/pic_03.jpg" class="img-fluid">
+						</div>
+					</div>
+
+					<!-- 添加左右箭头 -->
+					<a href="#options" class="carousel-control-prev" data-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+					<a href="#options" class="carousel-control-next" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</a>
+
+					<!-- 添加指示器 -->
+					<ol class="carousel-indicators">
+						<li data-target="#options" data-slide-to="0" class="active"></li>
+						<li data-target="#options" data-slide-to="1"></li>
+						<li data-target="#options" data-slide-to="2"></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+
+		<!-- 方法与事件 -->
+		<div class="row mt-5">
+			<div class="col">
+				<div class="carousel slide" id="methods">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="images/pic_01.jpg" class="img-fluid">
+						</div>
+						<div class="carousel-item">
+							<img src="images/pic_02.jpg" class="img-fluid">
+						</div>
+						<div class="carousel-item">
+							<img src="images/pic_03.jpg" class="img-fluid">
+						</div>
+					</div>
+
+					<!-- 添加左右箭头 -->
+					<a href="javascript:;" class="carousel-control-prev prevBtn">
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+					<a href="javascript:;" class="carousel-control-next nextBtn">
+						<span class="carousel-control-next-icon"></span>
+					</a>
+
+					<!-- 添加指示器 -->
+					<ol class="carousel-indicators indicatorsBtn">
+						<li class="active"></li>
+						<li></li>
+						<li></li>
+					</ol>
+				</div>
+
+				<button class="btn btn-primary play">开始</button>
+				<button class="btn btn-primary pause">暂停</button>
+			</div>
+		</div>
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+
+	<script>
+		//初始化以及开始播放
+		$('.play').click(function () {
+			$('#methods').carousel({
+				interval: 2000
+			});
+
+			$('#methods').carousel('cycle');
+		});
+
+		//暂停播放
+		$('.pause').click(function () {
+			$('#methods').carousel('pause');
+		});
+
+		//上一张功能
+		$('.prevBtn').click(function () {
+			$('#methods').carousel('prev');
+		});
+
+		//下一张功能
+		$('.nextBtn').click(function () {
+			$('#methods').carousel('next');
+		});
+
+		//指示器点击的功能
+		$('.indicatorsBtn li').each(function (index, element) {
+			$(element).click(function () {
+				$('#methods').carousel(index)
+			});
+		});
+
+		//两个事件
+		$('#methods').on('slide.bs.carousel', function (ev) {	//开始切换的事件
+			console.log(
+				ev.direction,	//当前走的方向
+				ev.relatedTarget,	//当前走的哪一个图片（DOM）
+				ev.from,	//当前走的图片的索引
+				ev.to,		//要走到的图片的索引
+			);	
+			console.log('开始走');
+		});
+		$('#methods').on('slid.bs.carousel', function () {	//结束切换的事件
+			// do something…
+			console.log('走完了');
+		});
+	</script>
+</body>
+
+</html>

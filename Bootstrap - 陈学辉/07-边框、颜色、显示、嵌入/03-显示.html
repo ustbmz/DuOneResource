@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title></title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<!-- 把元素显示成各种类型，3.x的版本只有三种，block,inline,inline-block -->
+				<div class="d-inline bg-primary text-white" style="width: 150px;">d-inline</div>
+				<span class="d-block bg-dark text-white">d-block</span>
+				<span class="d-inline-block bg-success text-white" style="width: 200px;">d-inline-block</span>
+				<div class="d-flex bg-warning">d-flex</div>
+				<div class="d-table bg-info">d-table</div>
+			</div>
+		</div>
+		<div class="row mt-5">
+			<!-- 
+				在各种尺寸下显示一个元素。只在某一个尺寸下显示，在其它的尺寸下都要隐藏
+					1、隐藏是分为两个部分
+						1、比它大的尺寸隐藏
+						2、比它小的尺寸隐藏
+			 -->
+			<div class="col bg-primary text-white d-xl-block d-none">只在超大屏幕下显示</div>
+			<div class="col bg-dark text-white d-none d-lg-block d-xl-none">只在大屏幕下显示</div>
+			<div class="col bg-success text-white d-none d-md-block d-lg-none">只在中等屏幕下显示</div>
+			<div class="col bg-warning text-white d-none d-sm-block d-md-none">只在小屏幕下显示</div>
+			<div class="col bg-info text-white d-sm-none">只在超小屏幕下显示</div>
+			<!-- 3.x的版本显示的类名为.visiable-*-block -->
+		</div>
+		<div class="row mt-5">
+			<!-- 
+				在各种尺寸下隐藏
+			 -->
+			 <div class="col bg-primary text-white d-xl-none">超大屏幕以外的显示</div>
+			 <div class="col bg-dark text-white d-lg-none d-xl-block">大屏以外的显示</div>
+			 <div class="col bg-success text-white d-md-none d-lg-block ">中等屏以外的显示</div>
+			 <div class="col bg-warning text-white d-sm-none d-md-block">小屏以外的显示</div>
+			 <div class="col bg-info text-white d-none d-sm-block">超小屏以外的显示</div>
+			 <!-- 3.x的版本隐藏的类名为.hidden-* -->
+		</div>
+		<!-- <div class="row mt-5">
+			<div class="col-md-3 bg-info" style="height: 100px;">col</div>
+		</div> -->
+
+		<!-- 在打印的时候显示，d-print-block -->
+		<div class="row mt-5">
+			<div class="col d-none d-print-block">author:陈学辉；wechart:kaivon</div>
+			 <!-- 3.x的版本打印的类名为.visiable-print-block -->
+		</div>
+	</div>
+</body>
+
+</html>

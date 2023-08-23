@@ -1,0 +1,99 @@
+html {
+    font-size: 62.5% !important;    /* 取默认字体的百分比 */
+}
+@media (min-width: 992px){
+    html {
+        font-size: 62.5%;
+    }
+}
+@media (min-width: 768px){
+    html {
+        font-size: 59%;
+    }
+}
+@media (min-width: 576px){
+    html {
+        font-size: 56%
+    }
+}
+body{
+    overflow-x: hidden;
+}
+a:hover{
+    text-decoration: none;
+}
+
+/* 左侧内容 */
+.leftCon{
+    left: 0;
+}
+.leftCon header{
+    height: 80px;
+}
+.leftCon header ul a{
+    font-size: 1.6rem;
+}
+.leftCon .icon-menu{
+    font-size: 3rem;
+    cursor: pointer;
+    color: #858585;
+}
+
+.login{
+    height: calc(100vh - 80px);
+}
+.login .icon-kafei{
+    font-size: 24px;
+    color: #67a4c7;
+}
+.login a{
+    font-size: 1.6rem;
+}
+.register{
+    border-radius: 13px;
+}
+@media (max-width:991.98px){
+    .leftCon{
+        position: relative!important;
+    }
+    .login{
+        height: auto;
+    }
+}
+
+.menu{
+    left: 0;
+    top: 0;
+    width:100%;
+    height: 100vh;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    z-index: 2000;
+    transition: 0.3s;
+}
+.menu.hide{
+    opacity: 0;
+    transform: scale(2);
+    z-index: -1;
+}
+.menu.show{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.menu .list ul a{
+    font-size: 1.8rem;
+}
+.menu .font,.menu .font .btn{
+    font-size: 1.6rem;
+}
+.menu footer{
+    font-size: 1.4rem;
+}
+.menu footer,.menu footer a{
+    color: rgba(0,0,0,0.38);
+}
+#closeBtn{
+    cursor: pointer;
+}

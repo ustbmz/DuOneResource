@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+		integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/bootstrap-datetimepicker.css">
+	<title></title>
+
+</head>
+
+<body>
+	<!-- 
+		官网：https://www.malot.fr/bootstrap-datetimepicker/ 
+		中文翻译：https://www.bootcss.com/p/bootstrap-datetimepicker/
+	 -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="form-group form-inline">
+					<label for="datetime">日期：</label>
+					<input type="text" class="form-control datetime" id="datetime">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="js/bootstrap-datetimepicker.js"></script>
+
+	<script>
+		; (function ($) {
+			$.fn.datetimepicker.dates['zh-CN'] = {
+				days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
+				daysShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+				daysMin: ["日", "一", "二", "三", "四", "五", "六", "日"],
+				months: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+				monthsShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+				today: "今天",
+				suffix: [],
+				meridiem: ["上午", "下午"]
+			};
+		}(jQuery));
+
+
+		$('.datetime').datetimepicker({
+			//格式化日期
+			format: 'yyyy-mm-dd',
+			format: 'yyyy-mm-dd hh:ii',
+			format: 'yyyy-mm-ddThh:ii',
+			format: 'yyyy-mm-dd hh:ii:ss',
+			format: 'yyyy-mm-dd hh:ii:ssZ',
+			format: 'yyyy-mm-dd hh:ii:ss P',
+			format: 'yyyy-mm-dd H:ii:ss p',
+			format: 'yyyy-mm-dd',
+
+			weekStart: 1,	//一周从哪一天开始，0-6（周日-周六）
+			/* startDate:new Date(),	//能够选择到的开始日期
+			endDate:new Date(2020,1,1),	//能够选择到的结束日期 */
+			daysOfWeekDisabled: [1, 3, 5],	//一周里周几不能选择到
+			daysOfWeekDisabled: [],	//一周里周几不能选择到
+			autoclose: true,	//当选择到一个日期后，是否自动关闭日期选择器
+
+			startView: 0,	//0或者'hour'：从小时视图开始，选分
+			startView: 1,	//1或者'day'：从天视图开始，选小时
+			startView: 2,	//2或者'month'：从月视图开始，选天（这是默认的）
+			startView: 3,	//3或者'year'：从年视图开始，选月
+			startView: 4,	//4或者'decade'：从十年视图开始，选年
+			startView: 2,	//还原
+
+			//日期时间选择器最低能够选择到的日期类型
+			minView: 0,		//0或者'hour'：能选择到分（这是默认的）		
+			minView: 1,		//1或者'day'：能选择到小时		
+			minView: 2,		//2或者'month'：能选择到天		
+			minView: 3,		//3或者'year'：能选择到月		
+			minView: 4,		//4或者'decade'：能选择到年
+			minView: 0,		//还原
+
+			//最大能够选择到的日期类型。是通过点击头部的日期来选择。演示234就够了，最大的值权限为2了
+			maxView: 0,		//0或者'hour'：能选择到分	
+			maxView: 1,		//1或者'day'：能选择到小时		
+			maxView: 2,		//2或者'month'：能选择到天		
+			maxView: 3,		//3或者'year'：能选择到月		
+			maxView: 4,		//4或者'decade'：能选择到年（这是默认的）
+
+			todayBtn: true,	//是否显示回到今天的按钮
+			keyboardNavigation: true,	//是否可以通过键盘选择日期
+			language: 'zh-CN',	//语言选择
+
+			minuteStep: 10,	//最小分钟间隔数，默认为5
+			pickerPosition: 'bottom-right',		//日期组件显示的位置
+			showMeridian: true,	//在日期界面上是否显示上下午
+		});
+
+		//方法
+		/* $('.datetime').datetimepicker('remove');	//移除日期时间选择器组件 
+		$('.datetime').datetimepicker('show');	//显示日期时间选择器组件 
+		setTimeout(function(){
+			$('.datetime').datetimepicker('hide');	//隐藏日期时间选择器组件 
+		},5000); */
+
+		$('.datetime').datetimepicker('setStartDate', '2019-10-01');//设置日期选择器的起始日期
+		$('.datetime').datetimepicker('setEndDate', '2020-10-01');//设置日期选择器的结束日期
+		$('.datetime').datetimepicker('setDaysOfWeekDisabled', [0, 6]);//设置不可选的星期
+
+
+		//事件
+		$('.datetime').datetimepicker()
+			//日期选择器显示事件
+			.on('show', function () {
+				console.log('日期选择器组件显示了');
+			})
+			//日期选择器隐藏事件
+			.on('hide', function () {
+				console.log('日期选择器组件隐藏了');
+			})
+			//日期变动事件
+			.on('changeDate', function () {
+				console.log('日期变动了');
+			})
+			//年份变动事件
+			.on('changeYear', function () {
+				console.log('年份变动了')
+			})
+			//月份变动事件
+			.on('changeMonth', function () {
+				console.log('月份变动了')
+			})
+			//超出选择日期范围事件
+			.on('outOfRange', function () {
+				console.log('你选择的日期超出范围了')
+			})
+	</script>
+</body>
+
+</html>

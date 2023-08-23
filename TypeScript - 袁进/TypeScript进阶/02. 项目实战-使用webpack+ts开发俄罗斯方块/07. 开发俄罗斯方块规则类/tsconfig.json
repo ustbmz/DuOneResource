@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "esnext",
+        "lib": ["es2016", "dom"],
+        "sourceMap": true,
+        "strict": true,
+        "removeComments": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "isolatedModules": true
+    },
+    "include": ["./src"]
+}

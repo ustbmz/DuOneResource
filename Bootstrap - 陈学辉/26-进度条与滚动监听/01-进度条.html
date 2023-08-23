@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title></title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row mt-5">
+			<div class="col">
+				<!-- 基础class，变成了flex，并且给了高度1rem，背景，圆角 -->
+				<div class="progress">	
+					<!-- 
+						.progress-bar	当前的进度
+							1、弹性盒模型。还添加了过渡效果。需要给它指定一个宽度。通过行间样式或者预定义class都行
+					 -->
+					<div class="progress-bar" style="width: 25%"></div>	
+				</div>
+				<div class="progress mt-2">
+					<div class="progress-bar w-50"></div>
+				</div>
+
+				<!-- 通过父级添加高度后，子级也会继承使用 -->
+				<div class="progress mt-2" style="height: 50px;">
+					<div class="progress-bar" style="width: 75%"></div>
+				</div>
+
+				<!-- 通过背景预定义class去修改颜色 -->
+				<div class="progress mt-2">
+					<div class="progress-bar bg-success" style="width: 90%"></div>
+				</div>
+				<div class="progress mt-2">
+					<div class="progress-bar bg-danger" style="width: 90%"></div>
+				</div>
+
+				<!-- 多个进度条 -->
+				<div class="progress mt-2" style="height: 50px;">
+					<div class="progress-bar" style="width: 15%"></div>
+					<div class="progress-bar bg-warning" style="width: 30%"></div>
+					<div class="progress-bar bg-info" style="width: 20%"></div>
+				</div>
+
+				<!-- 条纹进度条 -->
+				<div class="progress mt-5">
+					<div class="progress-bar progress-bar-striped" style="width: 10%"></div>
+				</div>
+				<div class="progress mt-2">
+					<div class="progress-bar progress-bar-striped bg-success" style="width: 25%"></div>
+				</div>
+				<div class="progress mt-2">
+					<div class="progress-bar progress-bar-striped bg-info" style="width: 50%"></div>
+				</div>
+				<div class="progress mt-2">
+					<div class="progress-bar progress-bar-striped bg-warning" style="width: 75%"></div>
+				</div>
+				<div class="progress mt-2">
+					<div class="progress-bar progress-bar-striped bg-danger" style="width: 100%"></div>
+				</div>
+
+				<!-- 动画条纹进度条 -->
+				<div class="progress mt-5">
+					<div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+				</div>
+				<div class="progress mt-2">
+					<div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width: 55%"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

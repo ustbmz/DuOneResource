@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title></title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row mt-5">
+			<div class="col">
+				<p>
+					<a href="#kengdie" class="btn btn-primary" data-toggle="collapse">坑爹</a>
+					<button class="btn btn-primary" data-toggle="collapse" data-target="#kengdie">坑爹</button>
+				</p>
+				<div class="collapse show" id="kengdie">
+					<div class="card card-body">
+						坑爹一般用于讽刺、嘲笑或吐槽不满。意指与本人意愿有很大出入，有欺骗的意思，又包含了几丝“不给力”的意思成分。
+						该网络用语“坑爹”一词最早出现于网络游戏魔兽世界。
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 多个目标 -->
+		<div class="row mt-5">
+			<div class="col-12">
+				<p>
+					<a href="#diaosi" class="btn btn-primary" data-toggle="collapse">屌丝</a>
+					<button class="btn btn-primary" data-toggle="collapse" data-target="#tuhao">土豪</button>
+					<button class="btn btn-primary" data-toggle="collapse" data-target="#nvshen">女神</button>
+					<button class="btn btn-primary" data-toggle="collapse" data-target=".all">控制全部</button>
+				</p>
+			</div>
+			<div class="col-4 collapse all" id="diaosi">
+				<div class="card card-body">
+					屌丝 [1]
+					来源于中国大陆地区的中国网络文化。表达意思是讽刺；另一意思是指喻不方便明言或不合适直言的隐语，多用于熟人之间互侃或者互贬。同时指的是比喻自嘲。多用自嘲来活跃气氛，屌丝一词传用至今已无特定人群的界限，多用于朋友，熟人之间的戏侃。
+				</div>
+			</div>
+			<div class="col-4 collapse all" id="tuhao">
+				<div class="card card-body">
+					土豪，网络用语。原指乡下财大气粗、没什么品味的有钱人，现多指有钱、不理性消费、喜欢炫耀的人。出自《宋书·殷琰传》：“叔宝者，杜坦之子，既土豪乡望，内外诸军事并专之。”
+				</div>
+			</div>
+			<div class="col-4 collapse all" id="nvshen">
+				<div class="card card-body">
+					女神是一个汉语词语，拼音是nǚ
+					shén，意思指对女性的神明或至尊的称谓，特指神话传说中的女性至高者。后来引申为容貌漂亮、具有智慧、优雅、贞洁以及高素质的女性。在现代社会，女神常用来定义男性心目中喜爱，但难以成为真正恋爱对象的女生。
+				</div>
+			</div>
+		</div>
+
+		<!-- 手风琴 -->
+		<div class="row mt-5">
+			<div class="accordion" id="accordion">
+				<!-- 第一项 -->
+				<div class="card">
+					<div class="card-header">
+						<button class="btn btn-link" data-toggle="collapse" data-target="#item1">屌丝</button>
+					</div>
+					<div class="collapse show" id="item1" data-parent="#accordion">
+						<div class="card-body">
+							屌丝 [1]
+							来源于中国大陆地区的中国网络文化。表达意思是讽刺；另一意思是指喻不方便明言或不合适直言的隐语，多用于熟人之间互侃或者互贬。同时指的是比喻自嘲。多用自嘲来活跃气氛，屌丝一词传用至今已无特定人群的界限，多用于朋友，熟人之间的戏侃。
+						</div>
+					</div>
+				</div>
+				<!-- 第二项 -->
+				<div class="card">
+					<div class="card-header">
+						<button class="btn btn-link" data-toggle="collapse" data-target="#item2">土豪</button>
+					</div>
+					<div class="collapse" id="item2" data-parent="#accordion">
+						<div class="card-body">
+							屌丝 [1]
+							来源于中国大陆地区的中国网络文化。表达意思是讽刺；另一意思是指喻不方便明言或不合适直言的隐语，多用于熟人之间互侃或者互贬。同时指的是比喻自嘲。多用自嘲来活跃气氛，屌丝一词传用至今已无特定人群的界限，多用于朋友，熟人之间的戏侃。
+						</div>
+					</div>
+				</div>
+				<!-- 第三项 -->
+				<div class="card">
+					<div class="card-header">
+						<button class="btn btn-link" data-toggle="collapse" data-target="#item3">女神</button>
+					</div>
+					<div class="collapse" id="item3" data-parent="#accordion">
+						<div class="card-body">
+							屌丝 [1]
+							来源于中国大陆地区的中国网络文化。表达意思是讽刺；另一意思是指喻不方便明言或不合适直言的隐语，多用于熟人之间互侃或者互贬。同时指的是比喻自嘲。多用自嘲来活跃气氛，屌丝一词传用至今已无特定人群的界限，多用于朋友，熟人之间的戏侃。
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- js的方法与事件 -->
+		<div class="row mt-5">
+			<div class="col">
+				<p>
+					<a href="javascript:;" class="btn btn-primary myBtn">坑爹</a>
+				</p>
+				<div class="collapse show" id="myCollapse">
+					<div class="card card-body">
+						坑爹一般用于讽刺、嘲笑或吐槽不满。意指与本人意愿有很大出入，有欺骗的意思，又包含了几丝“不给力”的意思成分。
+						该网络用语“坑爹”一词最早出现于网络游戏魔兽世界。
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+
+	<script>
+		$('.myBtn').click(function () {
+			//$('#myCollapse').collapse('hide');
+			//$('#myCollapse').collapse('show');
+			$('#myCollapse').collapse('toggle');
+		});
+
+		//事件
+		$('#myCollapse').on('show.bs.collapse', function () {
+			console.log('显示事件发生了');	//当调用show的方法的时候会触发此事件
+		});
+
+		$('#myCollapse').on('hide.bs.collapse', function () {
+			console.log('隐藏事件发生了');	//当调用hide的方法的时候会触发此事件
+		});
+		
+
+		$('#myCollapse').on('shown.bs.collapse', function () {
+			console.log('折叠块完全显示了！');
+		});
+		
+		$('#myCollapse').on('hidden.bs.collapse', function () {
+			console.log('折叠块完全隐藏了！');
+		});
+	</script>
+</body>
+
+</html>
