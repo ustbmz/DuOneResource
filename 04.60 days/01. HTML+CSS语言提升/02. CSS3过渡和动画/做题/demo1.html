@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        color: #666;
+        text-align: center;
+      }
+      .dog {
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+        cursor: pointer;
+        opacity: 0.5;
+      }
+    </style>
+    <style>
+      /* 在这里完成作业 */
+      .dog {
+        border-radius: 50%;
+        transition: 0.5s;
+      }
+      .dog:hover {
+        box-shadow: 0 0 3px rgb(0, 0, 0);
+        opacity: 1;
+        transform: scale(1.5) rotate(1turn);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="/练习题/效果/doge.jpeg" class="dog" />
+    <p>移动鼠标到图片上</p>
+  </body>
+</html>

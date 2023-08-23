@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-size: 100%;
+        font-weight: normal;
+      }
+      ul {
+        list-style: none;
+      }
+      .desc {
+        color: #666;
+        font-size: 14px;
+        text-align: center;
+        margin: 1em 0;
+      }
+      .menu-container {
+        width: 200px;
+        margin: 50px auto;
+        background: #434a50;
+        color: #fff;
+        line-height: 1.5;
+      }
+      .menu h2 {
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      .sub-menu {
+        background: #565c63;
+      }
+      .sub-menu li {
+        font-size: 14px;
+        padding: 8px 0 8px 30px;
+      }
+    </style>
+    <style>
+      /* 在这里完成作业 */
+      .menu-container {
+        border-radius: 5px;
+      }
+      .sub-menu {
+        height: 0;
+        overflow: hidden;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="desc">本效果需要用到JS</p>
+    <p class="desc">为降低复杂度，子菜单高度固定为150px</p>
+    <p class="desc">
+      因为如果高度为auto，无法产生过渡效果，必须通过一些特别的技巧才能解决
+    </p>
+    <div class="menu-container">
+      <div class="menu">
+        <h2>菜单1</h2>
+        <ul class="sub-menu">
+          <li>菜单1-1</li>
+          <li>菜单2-2</li>
+          <li>菜单3-3</li>
+          <li>菜单4-4</li>
+        </ul>
+      </div>
+      <div class="menu">
+        <h2>菜单2</h2>
+        <ul class="sub-menu">
+          <li>菜单2-1</li>
+          <li>菜单2-2</li>
+          <li>菜单2-3</li>
+          <li>菜单2-4</li>
+        </ul>
+      </div>
+      <div class="menu">
+        <h2>菜单3</h2>
+        <ul class="sub-menu">
+          <li>菜单3-1</li>
+          <li>菜单3-2</li>
+          <li>菜单3-3</li>
+          <li>菜单3-4</li>
+        </ul>
+      </div>
+      <div class="menu">
+        <h2>菜单4</h2>
+        <ul class="sub-menu">
+          <li>菜单4-1</li>
+          <li>菜单4-2</li>
+          <li>菜单4-3</li>
+          <li>菜单4-4</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      var menus = document.getElementsByClassName('menu');
+      for (var i = 0; i < menus.length; i++) {
+        var menu = menus[i];
+        var h2 = menu.getElementsByTagName('h2')[0];
+        h2.onclick = handleClick;
+      }
+      //处理h2的点击事件
+      function handleClick() {
+        var ul = this.nextElementSibling;
+        // 除了当前这个ul之外，其他的子菜单全部收起来
+        var subMenus = document.getElementsByClassName('sub-menu');
+        for (var i = 0; i < subMenus.length; i++) {
+          var subM = subMenus[i];
+          if (subM !== ul) {
+            subM.style.height = 0;
+          }
+        }
+        if (ul.clientHeight) {
+          // 有高度
+          ul.style.height = '0';
+        } else {
+          ul.style.height = '150px';
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.item {
+  width: 230px;
+  height: 140px;
+  outline: 1px solid;
+  margin: 30px auto;
+  position: relative;
+}
+.aside {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  padding: 0 10px;
+}
+.aside .number {
+  float: left;
+}
+.aside .number::before {
+  content: '';
+  /* outline: 1px solid; */
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url('../assets/icons.png') no-repeat -255px -63px;
+  vertical-align: -5px;
+}
+.aside .date {
+  float: right;
+}
+.modal {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.modal .play {
+  width: 44px;
+  height: 50px;
+  display: block;
+  background: url('../assets/icons.png') no-repeat -190px -60px;
+  /* outline: 1px solid #fff; */
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -22px;
+  margin-top: -25px;
+}
+
+.item:hover .modal {
+  display: block;
+}

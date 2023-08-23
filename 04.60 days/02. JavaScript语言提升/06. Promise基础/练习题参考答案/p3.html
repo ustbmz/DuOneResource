@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select id="selProvince"></select>
+
+    <script>
+      // 你无须知道该函数是如何实现的！！！
+      // 调用该函数，会远程加载省份数据
+      // 函数返回一个Promise，成功后得到省份数组，失败时会给予失败原因
+      function getProvinces() {
+        return fetch('https://study.duyiedu.com/api/citylist')
+          .then((resp) => resp.json())
+          .then((resp) => resp.data)
+          .then((resp) =>
+            resp.map((it) => ({ value: it.value, label: it.label }))
+          );
+      }
+      // 利用getProvinces函数，将省份数据加载到select元素中
+      getProvinces().then(
+        (ps) => {
+          const html = ps
+            .map((p) => `<option value="${p.value}">${p.label}</option>`)
+            .join('');
+          const selProvince = document.getElementById('selProvince');
+          selProvince.innerHTML = html;
+        },
+        (reason) => {
+          console.log(reason);
+        }
+      );
+    </script>
+  </body>
+</html>

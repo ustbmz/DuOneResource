@@ -1,0 +1,100 @@
+<mxfile>
+    <diagram id="fSqGF5DPaqLaa6KoUcw9" name="第 1 页">
+        <mxGraphModel dx="722" dy="628" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="700" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="40" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.chrome;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="71" width="54.56" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="" style="image;html=1;image=img/lib/clip_art/computers/Server_Tower_128x128.png;flipH=1;fontSize=16;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="464" y="67" width="59" height="59" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="145.28" y="144" width="24" height="391" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="481" y="144" width="24" height="389" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="" style="endArrow=classic;html=1;fontFamily=Roboto Mono;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="188" y="168" as="sourcePoint"/>
+                        <mxPoint x="462" y="168" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="53" value="首次：/js/app-9ea93.js" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="225" y="140" width="161" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="" style="endArrow=classic;html=1;fontFamily=Roboto Mono;" edge="1" parent="1" source="48">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="457" y="210" as="sourcePoint"/>
+                        <mxPoint x="184.56" y="210" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="56" value="&lt;span style=&quot;background-color: rgb(255 , 255 , 255)&quot;&gt;app-9ea93.js&lt;/span&gt;" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=#d79b00;fillColor=#ffe6cc;shape=mxgraph.azure.script_file;pointerEvents=1;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="77" y="222" width="36.1" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="缓存" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="79.10000000000001" y="197" width="34" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="app-9ea93.js" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=#d79b00;fillColor=#ffe6cc;shape=mxgraph.azure.script_file;pointerEvents=1;labelBackgroundColor=#FFFFFF;shadow=0;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="307" y="191" width="36.1" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="" style="endArrow=none;html=1;endFill=0;fontFamily=Roboto Mono;" edge="1" parent="1" target="48">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="457" y="210" as="sourcePoint"/>
+                        <mxPoint x="184.55999999999995" y="210" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="61" value="app-81192.js" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=#82b366;fillColor=#d5e8d4;shape=mxgraph.azure.script_file;pointerEvents=1;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="532" y="352" width="36.1" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="更新" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="532" y="320" width="34" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="" style="curved=1;endArrow=classic;html=1;fontFamily=Roboto Mono;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="177" y="269" as="sourcePoint"/>
+                        <mxPoint x="177" y="319" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="232" y="289"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="65" value="/js/app-9ea93.js" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="206" y="282" width="125" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="" style="endArrow=classic;html=1;fontFamily=Roboto Mono;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="186.44" y="397" as="sourcePoint"/>
+                        <mxPoint x="460.44" y="397" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="70" value="首次：/js/app-81192.js" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="223.44" y="369" width="161" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="" style="endArrow=classic;html=1;fontFamily=Roboto Mono;" edge="1" source="72" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="455.44" y="439" as="sourcePoint"/>
+                        <mxPoint x="182.99999999999994" y="439" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="72" value="app-81192.js" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=#82b366;fillColor=#d5e8d4;shape=mxgraph.azure.script_file;pointerEvents=1;labelBackgroundColor=#FFFFFF;shadow=0;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="305.44" y="420" width="36.1" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="" style="endArrow=none;html=1;endFill=0;fontFamily=Roboto Mono;" edge="1" target="72" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="455.44" y="439" as="sourcePoint"/>
+                        <mxPoint x="182.99999999999994" y="439" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="74" value="&lt;span style=&quot;background-color: rgb(255 , 255 , 255)&quot;&gt;app-81192.js&lt;/span&gt;" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=#82b366;fillColor=#d5e8d4;shape=mxgraph.azure.script_file;pointerEvents=1;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="77" y="453" width="36.1" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="缓存" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="79.10000000000001" y="428" width="34" height="18" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

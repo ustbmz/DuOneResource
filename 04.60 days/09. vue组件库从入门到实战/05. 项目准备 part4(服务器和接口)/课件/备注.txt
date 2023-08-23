@@ -1,0 +1,2 @@
+备注：windows 安装 mongodb 后，自带 mongodb 配置文件。
+配置文件位于“mongo安装目录/server/6.0/bin”目录下，是一个名为 mongod.cfg 的文件

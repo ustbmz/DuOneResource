@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 13px;
+}
+a {
+  color: #3c3c3c;
+  text-decoration: none;
+}
+em {
+  color: #ff2100;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 17px;
+}
+input[type='checkbox'] {
+  cursor: pointer;
+}
+#cart {
+  /* outline: 1px dashed blue; */
+  width: 1200px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+#cart div {
+  /* outline: 1px dashed pink; */
+  float: left;
+}
+div.info {
+  width: 400px;
+  text-align: center;
+  padding: 10px;
+}
+div.check,
+div.price,
+div.num,
+div.sum,
+div.del {
+  width: 159px;
+  text-align: center;
+  padding: 10px;
+}
+/* 头部 */
+.header {
+  margin-bottom: 20px;
+  background-color: #f3f3f3;
+}
+
+/* 商品列表 */
+.itemChecked {
+  background-color: #fff9de;
+}
+.list .item {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.list .item .check .checkItem {
+  margin-left: -30px;
+}
+.list .item .info img {
+  float: left;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-right: 10px;
+}
+.list .item .num {
+  font-size: 0;
+}
+.list .item .num .decr,
+.list .item .num .incr {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #cacaca;
+  background-color: #fff;
+  font-size: 13px;
+  line-height: 22px;
+}
+.list .item .num .txt {
+  width: 45px;
+  height: 25px;
+  border: 1px solid #cacaca;
+  text-align: center;
+}
+
+/* 总计与结算 */
+.footer {
+  margin-top: 10px;
+  width: 1200px;
+  height: 60px;
+  padding: 20px 0;
+  background-color: #f3f3f3;
+}
+.footer div.check {
+  padding: 0;
+}
+.footer div.operation {
+  width: 400px;
+}
+.footer div.operation a {
+  margin: 0 10px;
+}
+#cart .footer > div.right {
+  width: 380px;
+  float: right;
+}
+.footer > div.right div {
+  width: 110px;
+}
+.footer > div.right div.sums {
+  width: 160px;
+}
+.footer > div.right div.done {
+  height: 60px;
+  margin-top: -20px;
+  font-weight: bolder;
+  line-height: 60px;
+  text-align: center;
+}
+.footer > div.right div.done a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  font-size: 21px;
+  color: #fff;
+  background-color: #ff2100;
+}
+.footer em {
+  font-size: 21px;
+  font-weight: bolder;
+}

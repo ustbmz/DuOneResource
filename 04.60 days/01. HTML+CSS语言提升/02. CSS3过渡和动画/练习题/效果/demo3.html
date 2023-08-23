@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        list-style: none;
+      }
+      .menu {
+        width: 200px;
+        height: 50px;
+        background: #409eff;
+        color: #fff;
+        line-height: 50px;
+        margin: 0 auto;
+        margin-top: 50px;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+      }
+      .sub-menu {
+        background: #ddebfd;
+        font-size: 14px;
+        line-height: 35px;
+        color: #333;
+        padding: 10px 0;
+        position: absolute;
+        width: 100%;
+      }
+    </style>
+    <style>
+      /* 在这里完成作业 */
+      .menu {
+        border-radius: 5px;
+      }
+      .sub-menu {
+        border-radius: 5px;
+        transform: scaleY(0);
+        transition: 0.3s;
+        transform-origin: center top;
+      }
+      .menu:hover .sub-menu {
+        transform: scaleY(1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <h2>下拉菜单</h2>
+      <ul class="sub-menu">
+        <li>子菜单1</li>
+        <li>子菜单2</li>
+        <li>子菜单3</li>
+        <li>子菜单4</li>
+      </ul>
+    </div>
+  </body>
+</html>

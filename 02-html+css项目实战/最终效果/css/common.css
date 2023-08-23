@@ -1,0 +1,44 @@
+/* 通用的css代码 */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: #ff6700;
+}
+html {
+  color: #333;
+  min-width: 1226px;
+  font: 14px/1.5 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei',
+    'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+/* 浮动处理 */
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* 通用容器 */
+.container {
+  width: 1226px;
+  margin-left: auto;
+  margin-right: auto;
+}

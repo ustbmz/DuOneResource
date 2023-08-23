@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>聊天机器人-聊天频道</title>
+    <link rel="shortcut icon" href="./asset/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <h1 class="main-title">
+          <img src="./asset/robot.png" alt="" />
+          AI 聊天机器人
+        </h1>
+        <div class="chat-container"></div>
+        <form class="msg-container">
+          <input
+            type="text"
+            id="txtMsg"
+            placeholder="在这里输入要发送的消息，按回车键即可发送"
+          />
+          <button>发送</button>
+        </form>
+      </div>
+      <div class="aside">
+        <img src="./asset/avatar.png" class="aside-avatar" alt="" />
+        <p id="nickname" class="aside-name"></p>
+        <p id="loginId" class="aside-account"></p>
+      </div>
+      <div class="close">
+        <i class="iconfont icon-close"></i>
+      </div>
+    </div>
+
+    <script src="./js/common.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 点击该按钮输出 1 -->
+    <button>show my index</button>
+    <!-- 点击该按钮输出 2，依次类推 -->
+    <button>show my index</button>
+    <button>show my index</button>
+    <button>show my index</button>
+    <button>show my index</button>
+    <button>show my index</button>
+    <button>show my index</button>
+    <button>show my index</button>
+    <button>show my index</button>
+    <button>show my index</button>
+
+    <script>
+      // 遍历所有按钮，注册点击事件，当点击时输出一个数字，该数字表示点的是第几个按钮
+      const btns = document.querySelectorAll('button');
+      for (let i = 0; i < btns.length; i++) {
+        btns[i].onclick = function () {
+          console.log(i);
+        };
+      }
+      console.log('循环结束');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      账号：
+      <input type="text" id="txtLoginId" />
+    </p>
+    <p>
+      密码：
+      <input type="password" id="txtLoginPwd" />
+    </p>
+    <p>
+      <button>登录</button>
+    </p>
+
+    <script>
+      const btn = document.querySelector('button');
+      const txtLoginId = document.querySelector('#txtLoginId');
+      const txtLoginPwd = document.querySelector('#txtLoginPwd');
+
+      btn.onclick = async function () {
+        const loginId = txtLoginId.value,
+          loginPwd = txtLoginPwd.value;
+        const obj = {
+          loginId,
+          loginPwd,
+        };
+        const resp = await fetch('http://localhost:7001/api/user/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            a: 123,
+          },
+          body: JSON.stringify(obj),
+        });
+        const body = await resp.json();
+        if (body.code) {
+          alert(body.msg);
+        } else {
+          alert('登录成功');
+        }
+      };
+    </script>
+  </body>
+</html>

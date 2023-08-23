@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font: 300 14px / 1.4em 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: rgb(245, 245, 245);
+  color: rgb(17, 17, 17);
+  min-width: 230px;
+  max-width: 550px;
+  margin: 0px auto;
+  letter-spacing: 1px;
+}
+.container {
+  width: 500px;
+  margin: 0 auto;
+  padding: 2em;
+  margin-bottom: 2em;
+}
+
+.title {
+  font-size: 80px;
+  font-weight: 200;
+  text-align: center;
+  color: #b83f45;
+  text-rendering: optimizelegibility;
+  margin: 1em;
+}
+.section {
+  background: #fff;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px 0px,
+    rgb(0 0 0 / 10%) 0px 25px 50px 0px;
+}
+.txt {
+  padding: 16px 16px 16px 60px;
+  border: none;
+  outline: none;
+  margin: 0px;
+  width: 100%;
+  font-size: 24px;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: 1.4em;
+  color: inherit;
+  letter-spacing: inherit;
+  border-bottom: 1px solid rgb(230, 230, 230);
+}
+.txt::placeholder {
+  font-style: italic;
+}
+
+.todo-list {
+  list-style: none;
+}
+.todo-list li {
+  overflow: hidden;
+  padding: 1em;
+}
+.todo-list li span {
+  float: left;
+}
+.todo-list li button {
+  float: right;
+  /* visibility: hidden; */
+  color: #b83f45;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+.todo-list li:hover button {
+  visibility: visible;
+}

@@ -1,0 +1,70 @@
+<mxfile>
+    <diagram id="WINrH8xl9_BDoHL1TBoS" name="第 1 页">
+        <mxGraphModel dx="722" dy="630" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="700" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="38" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="164" y="60" width="443" height="146" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.chrome" parent="1" vertex="1">
+                    <mxGeometry x="204" y="116" width="39.68" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="endArrow=classic;html=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="261" y="127" as="sourcePoint"/>
+                        <mxPoint x="509" y="127" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="http://localhost:8080/*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontFamily=Roboto Mono;fillColor=#d5e8d4;strokeColor=#82b366;rotation=0;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="98" width="176" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="" style="image;html=1;image=img/lib/clip_art/computers/Server_Tower_128x128.png;flipH=1;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="532" y="110" width="51" height="51" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="endArrow=classic;html=1;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="261" y="149" as="sourcePoint"/>
+                        <mxPoint x="509" y="149" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" value="http://localhost:8080/api/*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontFamily=Roboto Mono;fillColor=#ffe6cc;strokeColor=#d79b00;rotation=0;" vertex="1" parent="1">
+                    <mxGeometry x="282" y="157" width="204" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="开发环境" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="325.5" y="49" width="120" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="162.5" y="283" width="443" height="146" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.chrome" vertex="1" parent="1">
+                    <mxGeometry x="202.5" y="339" width="39.68" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="" style="endArrow=classic;html=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="259.5" y="350" as="sourcePoint"/>
+                        <mxPoint x="507.5" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="43" value="http://study.duyiedu.com/movie/*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontFamily=Roboto Mono;fillColor=#d5e8d4;strokeColor=#82b366;rotation=0;" vertex="1" parent="1">
+                    <mxGeometry x="266.5" y="321" width="240" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="" style="image;html=1;image=img/lib/clip_art/computers/Server_Tower_128x128.png;flipH=1;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="530.5" y="333" width="51" height="51" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="endArrow=classic;html=1;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="259.5" y="372" as="sourcePoint"/>
+                        <mxPoint x="507.5" y="372" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="46" value="http://study.duyiedu.com/api/*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontFamily=Roboto Mono;fillColor=#ffe6cc;strokeColor=#d79b00;rotation=0;" vertex="1" parent="1">
+                    <mxGeometry x="269.5" y="380" width="226" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="生产环境" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="324" y="272" width="120" height="28" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

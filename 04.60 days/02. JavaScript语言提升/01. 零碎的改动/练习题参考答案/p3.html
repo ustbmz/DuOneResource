@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+      .container {
+        width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        text-align: center;
+        justify-items: center;
+        gap: 30px;
+      }
+      .movie img {
+        width: 150px;
+        height: 200px;
+        display: block;
+      }
+      .movie .cover {
+        display: block;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+
+    <script>
+      const movies = [
+        {
+          _id: '60950c5b11faef69c541a2b9',
+          rate: 7.6,
+          title: '智能大反攻',
+          url: 'https://movie.douban.com/subject/30229667/',
+          cover:
+            'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2637896820.jpg',
+          __v: 0,
+        },
+        {
+          _id: '60950c5b11faef69c541a2ba',
+          rate: 5.6,
+          title: '冷血悍将',
+          url: 'https://movie.douban.com/subject/3010409/',
+          cover:
+            'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2638872429.jpg',
+          __v: 0,
+        },
+        {
+          _id: '60950c5b11faef69c541a2bb',
+          rate: 6.1,
+          title: '大师',
+          url: 'https://movie.douban.com/subject/33441582/',
+          cover:
+            'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2636832800.jpg',
+          __v: 0,
+        },
+        {
+          _id: '60950c5b11faef69c541a2bc',
+          rate: 5.9,
+          title: '正义协会：二战',
+          url: 'https://movie.douban.com/subject/35274795/',
+          cover:
+            'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2634040881.jpg',
+          __v: 0,
+        },
+        {
+          _id: '60950c5b11faef69c541a2bd',
+          rate: 7.1,
+          title: '弓蕉园的秘密',
+          url: 'https://movie.douban.com/subject/35427435/',
+          cover:
+            'https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2639379745.jpg',
+          __v: 0,
+        },
+        {
+          _id: '60950c5b11faef69c541a2be',
+          rate: 5.9,
+          title: '徐福',
+          url: 'https://movie.douban.com/subject/26949852/',
+          cover:
+            'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2625736779.jpg',
+          __v: 0,
+        },
+        {
+          _id: '60950c5b11faef69c541a2bf',
+          rate: 7.7,
+          title: '命运理发师',
+          url: 'https://movie.douban.com/subject/35441896/',
+          cover:
+            'https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2641806535.jpg',
+          __v: 0,
+        },
+        {
+          _id: '60950c5b11faef69c541a2c0',
+          rate: 6.3,
+          title: '浴血无名川',
+          url: 'https://movie.douban.com/subject/35231379/',
+          cover:
+            'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2636337478.jpg',
+          __v: 0,
+        },
+        {
+          _id: '60950c5b11faef69c541a2c1',
+          rate: 6.1,
+          title: '克劳德夫人',
+          url: 'https://movie.douban.com/subject/33447572/',
+          cover:
+            'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2637657801.jpg',
+          __v: 0,
+        },
+        {
+          _id: '60950c5b11faef69c541a2c2',
+          rate: 6.1,
+          title: '兴安岭猎人传说',
+          url: 'https://movie.douban.com/subject/35027719/',
+          cover:
+            'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2635669599.jpg',
+          __v: 0,
+        },
+        {
+          _id: '60950c5b11faef69c541a2c3',
+          rate: 5.6,
+          title: '不日成婚',
+          url: 'https://movie.douban.com/subject/35307509/',
+          cover:
+            'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2639843077.jpg',
+          __v: 0,
+        },
+        {
+          _id: '60950c5b11faef69c541a2c4',
+          rate: 7.9,
+          title: '小人物',
+          url: 'https://movie.douban.com/subject/34865507/',
+          cover:
+            'https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2633966702.jpg',
+          __v: 0,
+        },
+        {
+          _id: '60950c5b11faef69c541a2c5',
+          rate: 6.4,
+          title: '哥斯拉大战金刚',
+          url: 'https://movie.douban.com/subject/26613692/',
+          cover:
+            'https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2634253484.jpg',
+          __v: 0,
+        },
+        {
+          _id: '60950c5b11faef69c541a2c6',
+          rate: 8.3,
+          title: '扎克·施奈德版正义联盟',
+          url: 'https://movie.douban.com/subject/35076714/',
+          cover:
+            'https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2634360594.jpg',
+          __v: 0,
+        },
+        {
+          _id: '60950c5b11faef69c541a2c7',
+          rate: 5.3,
+          title: '杀手柔情',
+          url: 'https://movie.douban.com/subject/35384360/',
+          cover:
+            'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2635233028.jpg',
+          __v: 0,
+        },
+        {
+          _id: '60950c5b11faef69c541a2c8',
+          rate: 6,
+          title: '有求必应日',
+          url: 'https://movie.douban.com/subject/30242905/',
+          cover:
+            'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2632772050.jpg',
+          __v: 0,
+        },
+      ];
+      // 将movies数组中的电影转换为html填充到container容器中
+
+      /* 
+      <div class="movie">
+        <a href="" target="_blank" class="cover">
+          <img
+            src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1315141725,1406451968&fm=224&gp=0.jpg"
+            alt=""
+          />
+        </a>
+        <a href="" target="_blank">哈利波特</a>
+      </div>
+      */
+      let html = '';
+      for (let i = 0; i < movies.length; i++) {
+        const m = movies[i];
+        html += `
+        <div class="movie">
+        <a href="${m.url}" target="_blank" class="cover">
+          <img
+            src="${m.cover}"
+            alt=""
+          />
+        </a>
+        <a href="${m.url}" target="_blank">${m.title}</a>
+      </div>
+        `;
+      }
+      document.querySelector('.container').innerHTML = html;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container"></div>
+    <p class="label"></p>
+    <script>
+      // 根据指定的图片路径，创建一个img元素
+      // 该函数需要返回一个Promise，当图片加载完成后，任务完成，若图片加载失败，任务失败
+      // 任务完成后，需要提供的数据是图片DOM元素；任务失败时，需要提供失败的原因
+      // 提示：img元素有两个事件，load事件会在图像加载完成时触发，error事件会在图像加载失败时触发
+      function createImage(imgUrl) {
+        return new Promise((resolve, reject) => {
+          const img = document.createElement('img');
+          img.src = imgUrl;
+          img.onload = () => {
+            // 图像加载完成
+            resolve(img);
+          };
+          img.onerror = (e) => {
+            // 图像加载失败
+            reject(e);
+          };
+        });
+      }
+
+      // 使用createImage函数创建一个图像，图像路径自行定义
+      // 当图像成功加载后，将图像宽高显示在p元素中，当图像加载失败后，输出加载失败的原因
+      const url1 =
+        'https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=155346741,3953923104&fm=26&gp=0.jpg';
+      createImage(url1).then(
+        (img) => {
+          const p = document.querySelector('.label');
+          p.innerHTML = `${img.width} * ${img.height}`;
+        },
+        (reason) => {
+          console.log(reason);
+        }
+      );
+
+      // 使用createImage函数创建一个图像，图像路径自行定义
+      // 当图像成功加载后，将图像元素加入到container容器中，当图像加载失败后，输出加载失败的原因
+      createImage(url1).then(
+        (img) => {
+          const div = document.querySelector('.container');
+          div.appendChild(img);
+        },
+        (reason) => {
+          console.log(reason);
+        }
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>事件委托示例</title>
+    <style>
+      .container {
+        width: 300px;
+        height: 300px;
+        background: lightblue;
+        text-align: center;
+        margin: 0 auto;
+        line-height: 3;
+        margin-bottom: 30px;
+      }
+      .inner {
+        width: 70%;
+        height: 70%;
+        background: #f40;
+        margin: 0 auto;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        font-size: inherit;
+        margin-top: 30px;
+      }
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      container
+      <div class="inner">
+        inner
+        <button>button</button>
+      </div>
+    </div>
+
+    <script>
+      var container = document.querySelector('.container');
+      var inner = document.querySelector('.inner');
+      var btn = document.querySelector('button');
+
+      container.addEventListener('mouseover', function (e) {
+        console.log('container mouseover!');
+      });
+
+      inner.addEventListener('mouseover', function (e) {
+        console.log('inner mouseover!');
+      });
+
+      btn.addEventListener('mouseover', function (e) {
+        console.log('button mouseover!');
+      });
+    </script>
+  </body>
+</html>

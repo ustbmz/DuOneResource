@@ -1,0 +1,84 @@
+body {
+  background: url(../asset/bg1.png) no-repeat center;
+}
+
+.user-form {
+  border-radius: 15px;
+  padding: 30px 80px;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 3px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.user-form a {
+  text-decoration: underline;
+}
+
+.title {
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+}
+.title img {
+  height: 50px;
+  margin-right: 20px;
+}
+
+.form-group {
+  height: 80px;
+  padding-bottom: 30px;
+  position: relative;
+}
+.form-group .txt {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 3px;
+  outline: none;
+  border-radius: 25px;
+  padding-right: 20px;
+  padding-left: 55px;
+}
+.form-group .txt::placeholder {
+  color: #ccc;
+}
+.form-group .iconfont {
+  position: absolute;
+  left: 20px;
+  font-size: 24px;
+  color: #ccc;
+  top: 13px;
+}
+.form-group .err {
+  position: absolute;
+  left: 20px;
+  bottom: 8px;
+  color: #ff8e03;
+}
+.form-group .submit {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  letter-spacing: 10px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.7);
+  background: #ffda43;
+  transition: 0.2s;
+}
+.form-group .submit:hover {
+  background: #ffe57b;
+}
+.form-group .submit:active {
+  background: #d4b534;
+}
+.form-group .msg {
+  text-align: center;
+}

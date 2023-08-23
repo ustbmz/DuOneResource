@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Lorem.</button>
+    <button>Explicabo!</button>
+    <button>Saepe.</button>
+    <button>Sit?</button>
+    <button>Reprehenderit.</button>
+    <button>Facere!</button>
+    <button>Debitis.</button>
+    <button>Sit?</button>
+    <button>Rem?</button>
+    <button>Possimus.</button>
+
+    <script>
+      // 得到所有按钮文本形成的数组  [ {index:0, text:'Lorem.'}, {index:1, text:'Explicabo!'}, ...]
+      const btns = document.querySelectorAll('button');
+      const newArr = Array.from(btns).map(function (item, i) {
+        return { index: i, text: item.innerText };
+      });
+      console.log(newArr);
+    </script>
+  </body>
+</html>

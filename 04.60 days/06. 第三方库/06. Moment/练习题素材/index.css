@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  justify-content: center;
+  line-height: 2;
+}
+.container {
+  margin-top: 2em;
+}
+.form-group {
+  display: flex;
+  margin: 1em 0;
+}
+.form-group label {
+  margin-right: 1em;
+}

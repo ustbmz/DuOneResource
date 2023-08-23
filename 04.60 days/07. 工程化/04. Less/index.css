@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.a {
+  border-radius: 5px;
+}
+.b {
+  border-radius: 5px;
+}
+.c {
+  border-radius: 10px;
+}
+/* 这是普通的css注释，它会生成到编译结果中 */

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+        color: #666;
+      }
+      .btn {
+        outline: none;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 50px;
+      }
+    </style>
+    <style>
+      /* 在这里完成作业 */
+      .btn {
+        background: linear-gradient(to bottom, #acd4ff, #4293fc);
+        color: #fff;
+        border-radius: 5px;
+      }
+      .btn:active {
+        background: #4293fc;
+        /* box-shadow: 0 0 0 3px #fff; */
+        box-shadow: 0 0 0 3px #fff, 0 0 0 5px #4293fc;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">Click Me</button>
+    <p>渐变颜色： #acd4ff -> #4293fc</p>
+    <p>点击按钮看看效果</p>
+  </body>
+</html>

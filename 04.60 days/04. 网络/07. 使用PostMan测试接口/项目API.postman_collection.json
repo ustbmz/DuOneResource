@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "aa3606c6-f553-4527-934a-1b3fdc1ef675",
+		"name": "项目API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "用户接口",
+			"item": [
+				{
+					"name": "注册",
+					"protocolProfileBehavior": {
+						"followAuthorizationHeader": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"loginId\": \"guagua\",\n    \"nickname\": \"呱呱\",\n    \"loginPwd\": \"123123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/api/user/reg",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"reg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "登录",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"loginId\": \"guagua\",\n    \"loginPwd\": \"123123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/api/user/login",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "验证账号",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/api/user/exists?loginId=guaguagua",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"exists"
+							],
+							"query": [
+								{
+									"key": "loginId",
+									"value": "guaguagua"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "当前登录的用户信息",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNmE0NmI4NzEwNTA4MDk1ZmFhMTQ2YyIsImlhdCI6MTY1MTEzMjc1NiwiZXhwIjoxNjUxNzM3NTU2fQ.QjXMdoO_MqKn-qaAjaDyYCztTZ0wCV3YYkpdNOpGGrY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base}}/api/user/profile",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "其他接口",
+			"item": [
+				{
+					"name": "热门电影列表",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/api/movies?size=4&page=3",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"movies"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "4"
+								},
+								{
+									"key": "page",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "省市区三级列表",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/api/citylist",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"citylist"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "聊天接口",
+			"item": [
+				{
+					"name": "发送聊天消息",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNmE0NmI4NzEwNTA4MDk1ZmFhMTQ2YyIsImlhdCI6MTY1MTEzMjc1NiwiZXhwIjoxNjUxNzM3NTU2fQ.QjXMdoO_MqKn-qaAjaDyYCztTZ0wCV3YYkpdNOpGGrY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\": \"你知道邓哥是谁吗？\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/api/chat",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"chat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取聊天记录",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNmE0NmI4NzEwNTA4MDk1ZmFhMTQ2YyIsImlhdCI6MTY1MTEzMjc1NiwiZXhwIjoxNjUxNzM3NTU2fQ.QjXMdoO_MqKn-qaAjaDyYCztTZ0wCV3YYkpdNOpGGrY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base}}/api/chat/history",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"chat",
+								"history"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

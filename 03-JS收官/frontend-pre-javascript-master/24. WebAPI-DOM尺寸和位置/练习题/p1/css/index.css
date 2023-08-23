@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.note {
+  box-shadow: 0 0 5px #00000080;
+  width: 300px;
+  color: #333;
+  background: #fdf3a7;
+  position: fixed;
+  left: 100px;
+  top: 100px;
+}
+.move-bar {
+  background: #fbe961;
+  height: 10px;
+  cursor: move;
+}
+.content p {
+  margin: 1em 0;
+  padding: 0.5em;
+}
+.content {
+  outline: none;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/Mock.js/1.0.0/mock-min.js"></script>
+    <script>
+      Mock.mock('/hello', 'get', {
+        'name|1-5': 'abc',
+        'age|10-50': 0,
+        'arr|5-10': [
+          {
+            'id|+1': 1,
+            name: '@cname',
+            tel: /1\d{10}/,
+            addr: '@city(true)',
+            avatar: '@image(180x150, #008c8c, #fff, textimage)',
+          },
+        ],
+      });
+
+      axios.get('/hello').then((resp) => {
+        console.log(resp.data);
+      });
+    </script>
+  </body>
+</html>

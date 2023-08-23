@@ -1,0 +1,29 @@
+.round(@r:5px) {
+  border-radius: @r;
+}
+
+.content-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  .content-center();
+}
+
+.a {
+  .round();
+}
+
+.b {
+  .round();
+}
+
+.c {
+  .round(10px);
+}
+
+// 这样的注释只存在于less源代码中
+
+/* 这是普通的css注释，它会生成到编译结果中 */

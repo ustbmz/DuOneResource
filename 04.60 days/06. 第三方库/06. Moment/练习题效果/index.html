@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-group">
+        <label>中国</label>
+        <div zone="8"></div>
+      </div>
+      <div class="form-group">
+        <label>英国</label>
+        <div zone="0"></div>
+      </div>
+      <div class="form-group">
+        <label>纽约</label>
+        <div zone="-5"></div>
+      </div>
+      <div class="form-group row">
+        <label>悉尼</label>
+        <div zone="10"></div>
+      </div>
+      <div>
+        <label>生日</label>
+        <input type="date" id="birthInput" />
+      </div>
+      <div class="form-group">
+        <div id="birthInfo"></div>
+      </div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/moment.js/2.27.0/locale/zh-cn.min.js"></script>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

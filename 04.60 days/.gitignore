@@ -1,0 +1,12 @@
+#OS
+.DS_Store
+
+#drawio
+技能树.drawio.png
+
+
+#npm
+node_modules
+
+#editor
+.vscode

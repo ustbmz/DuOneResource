@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  line-height: 3;
+  color: #333;
+  width: 500px;
+  margin: 30px auto;
+}
+.nav a {
+  display: block;
+}
+.nav span {
+  display: inline-block;
+  background: #eee;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  color: #fff;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <button>按钮5</button>
+    <button>按钮6</button>
+    <button>按钮7</button>
+    <button>按钮8</button>
+    <button>按钮9</button>
+    <button>按钮10</button>
+
+    <script>
+      // 使用 for-of 循环遍历所有按钮，为其注册点击事件，每次点击输出其内容即可
+      const btns = document.querySelectorAll('button');
+      for (const btn of btns) {
+        btn.onclick = function () {
+          console.log(btn.innerText);
+        };
+      }
+    </script>
+  </body>
+</html>

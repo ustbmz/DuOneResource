@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .form {
+        width: 200px;
+        margin: 0 auto;
+      }
+      .item {
+        margin: 1em 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form">
+      <div class="item">
+        <label>姓名</label>
+        <input id="txtName" type="text" />
+      </div>
+      <div class="item">
+        <label>年龄</label>
+        <input id="txtAge" type="number" />
+      </div>
+      <div class="item">
+        <label>性别</label>
+        <label>
+          <input checked id="sexMale" name="sex" type="radio" />
+          男
+        </label>
+        <label>
+          <input id="sexFemale" name="sex" type="radio" />
+          女
+        </label>
+      </div>
+    </div>
+    <script>
+      // 填写表单时，保存数据到本地
+      var inputs = document.querySelectorAll('input');
+      for (var i = 0; i < inputs.length; i++) {
+        inputs[i].addEventListener('input', save);
+      }
+      var txtName = document.querySelector('#txtName');
+      var txtAge = document.querySelector('#txtAge');
+      var sexMale = document.querySelector('#sexMale');
+      var sexFemale = document.querySelector('#sexFemale');
+      // 将表单信息放到localStorage中
+      function save() {
+        var obj = {
+          name: txtName.value,
+          age: txtAge.value ? +txtAge.value : 0,
+          sex: sexMale.checked ? '男' : '女',
+        };
+        var json = JSON.stringify(obj);
+        localStorage.setItem('form', json);
+      }
+
+      // 打开页面时，从本地加载数据到表单
+
+      function load() {
+        var json = localStorage.getItem('form');
+        if (!json) {
+          return;
+        }
+        var obj = JSON.parse(json);
+        txtName.value = obj.name;
+        txtAge.value = obj.age;
+        if (obj.sex === '男') {
+          sexMale.checked = true;
+        } else {
+          sexFemale.checked = true;
+        }
+      }
+
+      load();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="begin">开始</button>
+    <button id="interaction">添加交互任务</button>
+    <script>
+      // 死循环指定的时间
+      function delay(duration) {
+        var start = Date.now();
+        while (Date.now() - start < duration) {}
+      }
+
+      function addDelay() {
+        console.log('添加延时队列');
+        setTimeout(() => {
+          console.log('延时队列执行');
+        }, 100);
+        delay(2000);
+      }
+
+      function addInteraction() {
+        console.log('添加交互队列');
+        interaction.onclick = function () {
+          console.log('交互队列执行');
+        };
+        delay(2000);
+      }
+
+      begin.onclick = function () {
+        addDelay();
+        addInteraction();
+        console.log('===========');
+      };
+    </script>
+  </body>
+</html>

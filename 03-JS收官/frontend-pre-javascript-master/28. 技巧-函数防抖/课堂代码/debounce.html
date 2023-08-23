@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function debounce(fn, delay) {
+      //   var timerId = null;
+
+      //   return function () {
+      //     var args = Array.prototype.slice.call(arguments);
+      //     clearTimeout(timerId);
+      //     timerId = setTimeout(function () {
+      //       fn.apply(this, args);
+      //     }, delay);
+      //   };
+      // }
+
+      function debounce(fn, delay) {
+        var timerId; // 最后一个计时器的id
+        return function () {
+          var args = Array.prototype.slice.call(arguments);
+          clearTimeout(timerId); // 清除最后一个计时器
+          timerId = setTimeout(function () {
+            fn.apply(this, args);
+          }, delay);
+        };
+      }
+
+      function sum(a, b) {
+        console.log(a + b);
+      }
+
+      var newSum = debounce(sum, 3000);
+
+      var handler = debounce(function () {
+        console.log('move');
+      }, 200);
+
+      window.addEventListener('mousemove', handler);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      video {
+        width: 80%;
+      }
+      .controls {
+        margin: 1em 0;
+        display: none;
+      }
+      .active {
+        background: #ffbd80;
+      }
+    </style>
+  </head>
+  <body>
+    <video src="./open.mp4"></video>
+    <div class="controls">
+      <button id="btnPlay">播放/暂停</button>
+    </div>
+    <div class="controls" id="progress">
+      进度：
+      <input type="range" min="0" max="100" value="0" />
+      <span>current</span>
+      /
+      <span>total</span>
+    </div>
+    <div class="controls" id="rate">
+      播放速率：
+      <button data-rate="0.5">0.5倍</button>
+      <button data-rate="0.75">0.75倍</button>
+      <button data-rate="1">1倍</button>
+      <button data-rate="1.25">1.25倍</button>
+      <button data-rate="1.5">1.5倍</button>
+    </div>
+    <div class="controls" id="volume">
+      音量：
+      <input type="range" min="0" max="100" value="50" />
+      <span>50%</span>
+    </div>
+    <div class="controls">
+      <button id="save">保存设置</button>
+      <button id="load">加载设置</button>
+    </div>
+    <script src="./demo1.js"></script>
+  </body>
+</html>

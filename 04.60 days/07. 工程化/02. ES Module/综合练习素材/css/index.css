@@ -1,0 +1,142 @@
+body,
+html,
+img,
+ul,
+li,
+input,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-container {
+  background-image: url('../img/bg1.jpg');
+  background-size: 100% 100%;
+  display: flex;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding-top: 100px;
+}
+
+.title {
+  text-align: center;
+  font-weight: 400;
+  font-weight: bold;
+  color: #5e0b0b;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.form-wrapper {
+  background: #2b2b36;
+  position: relative;
+  width: 570px;
+  text-align: center;
+  border-radius: 15px;
+  padding: 40px 0 60px;
+  overflow: hidden;
+}
+
+/* register鐗规畩鏍峰紡澶勭悊 */
+
+.form-wrapper.register {
+  padding: 40px 0 100px;
+}
+
+.form-item {
+  height: 58px;
+  padding: 0 40px;
+}
+
+.form-item > input {
+  width: 100%;
+  height: 100%;
+  color: #9199aa;
+  font-size: 18px;
+  outline: none;
+  background-image: url(../img/user.png);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position-y: center;
+  text-indent: 60px;
+  border: none;
+  border-bottom: 1px solid#484856;
+}
+
+.form-item.nick-name > input {
+  background-image: url(../img/nickname.png);
+}
+
+.form-item > input[type='password'] {
+  background-image: url(../img/password.png);
+}
+
+.password-container {
+  margin-bottom: 46px;
+}
+
+.signin {
+  height: 76px;
+  position: absolute;
+  line-height: 76px;
+  font-size: 30px;
+  width: 100%;
+  color: #fff;
+  outline: none;
+  border: none;
+  background: #3ea751;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.signin:hover {
+  background: #44b85a;
+  transition: all 0.2s linear;
+}
+
+.switch-register {
+  color: #dfdfdf;
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.switch-register:hover {
+  color: #ff2775;
+}
+
+.copy-rights {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 16px;
+}

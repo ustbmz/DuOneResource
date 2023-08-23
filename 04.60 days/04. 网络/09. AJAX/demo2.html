@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul></ul>
+    <script>
+      // fetch 返回的是一个Promise，当收到服务器的响应头之后，Promise完成
+      // 完成之后，会给予一个响应对象
+      async function getHeroes() {
+        const resp = await fetch('http://localhost:7001/api/herolist');
+        return await resp.json();
+      }
+
+      getHeroes().then((resp) => {
+        console.log(resp);
+      });
+    </script>
+  </body>
+</html>

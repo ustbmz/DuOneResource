@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>购物车jQuery版</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="cart">
+      <div class="header">
+        <div class="check">
+          <input type="checkbox" class="checkAll" />
+          全选
+        </div>
+        <div class="info">商品信息</div>
+        <div class="price">单价</div>
+        <div class="num">数量</div>
+        <div class="sum">金额</div>
+        <div class="del">操作</div>
+      </div>
+
+      <div class="list"></div>
+
+      <div class="footer">
+        <div class="check">
+          <input type="checkbox" class="checkAll" />
+          全选
+        </div>
+        <div class="operation">
+          <a href="" class="delChecked">删除选中商品</a>
+          <a href="" class="clearAll">清空购物车</a>
+        </div>
+        <div class="right">
+          <div class="nums">
+            已选
+            <em>0</em>
+            件商品
+          </div>
+          <div class="sums">
+            合计：
+            <em>￥0.00</em>
+          </div>
+          <div class="done">
+            <a href="">结算</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/Mock.js/1.0.0/mock-min.js"></script>
+    <script src="./mock.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

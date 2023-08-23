@@ -1,0 +1,44 @@
+{
+  "id": "2514356",
+  "name": "常用图标",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "9253405",
+      "name": "订单",
+      "font_class": "layer",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "18442205",
+      "name": "设 置",
+      "font_class": "settingsBlock",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "20181875",
+      "name": "用户",
+      "font_class": "yonghu",
+      "unicode": "e84a",
+      "unicode_decimal": 59466
+    },
+    {
+      "icon_id": "13478625",
+      "name": "Cat Footprint",
+      "font_class": "CatFootprint",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "1955301",
+      "name": "尖头",
+      "font_class": "arrow-up",
+      "unicode": "e69a",
+      "unicode_decimal": 59034
+    }
+  ]
+}

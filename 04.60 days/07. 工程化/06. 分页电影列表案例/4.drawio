@@ -1,0 +1,73 @@
+<mxfile>
+    <diagram id="G5EUqyLvnRxqAqPChuoF" name="第 1 页">
+        <mxGraphModel dx="722" dy="630" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="700" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="28" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#d5e8d4;sketch=1;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="521" y="160" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#dae8fc;sketch=1;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="521" y="224" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#ffe6cc;sketch=1;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="521" y="346" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="打包结果1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="547" y="128" width="65" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="打包结果2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="548.5" y="322" width="65" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="" style="image;html=1;image=img/lib/clip_art/computers/Server_Tower_128x128.png;flipH=1;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="429" y="59" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.chrome" vertex="1" parent="1">
+                    <mxGeometry x="105" y="64" width="54.56" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="119.78" y="141" width="25" height="380" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="445" y="141" width="25" height="380" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="158" y="162" as="sourcePoint"/>
+                        <mxPoint x="430" y="162" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="43" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="424" y="201" as="sourcePoint"/>
+                        <mxPoint x="159" y="201" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="44" value="获取打包结果1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="235" y="174" width="89" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="运行打包结果1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="152" y="242" width="89" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="159.56" y="322" as="sourcePoint"/>
+                        <mxPoint x="431.56" y="322" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="47" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="424.56" y="368" as="sourcePoint"/>
+                        <mxPoint x="159.56" y="368" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="48" value="获取打包结果2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="241" y="337" width="89" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="运行打包结果2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="152" y="404" width="89" height="18" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

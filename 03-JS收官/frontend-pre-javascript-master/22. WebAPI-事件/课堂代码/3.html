@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" />
+
+      <select name="" id="">
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+        <option value="">6</option>
+        <option value="">7</option>
+        <option value="">8</option>
+        <option value="">9</option>
+        <option value="">10</option>
+      </select>
+      <button type="button">点击</button>
+    </form>
+    <script>
+      // function handleClick() {
+      //   console.log('click1!!!');
+      // }
+      // var f = document.querySelector('form');
+      // f.onsubmit = function () {
+      //   console.log('表单被提交了');
+      // };
+
+      // var txt = document.querySelector('input');
+
+      // txt.onchange = function () {
+      //   console.log(txt.value);
+      // };
+
+      // var sel = document.querySelector('select');
+
+      // sel.onchange = function () {
+      //   console.log('1`23');
+      // };
+
+      // window.onmousemove = function () {
+      //   console.log('右键菜单');
+      // };
+
+      var btn = document.querySelector('button');
+
+      function click2Handler() {
+        console.log('click2');
+        console.log(this);
+      }
+
+      btn.addEventListener('click', function (e) {
+        console.log(e);
+      });
+      btn.addEventListener('click', click2Handler);
+      btn.addEventListener('click', function () {
+        console.log('click3');
+        console.log(this);
+      });
+
+      btn = null;
+
+      // btn.removeEventListener('click', click2Handler)
+    </script>
+  </body>
+</html>

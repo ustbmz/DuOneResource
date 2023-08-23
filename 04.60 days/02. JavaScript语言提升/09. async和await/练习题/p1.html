@@ -1,0 +1,13 @@
+<ul id="heroList"></ul>
+
+<script>
+  /**
+   * 远程获取王者荣耀所有的英雄数据
+   */
+  async function getHeroes() {
+    return fetch('https://study.duyiedu.com/api/herolist')
+      .then((resp) => resp.json())
+      .then((resp) => resp.data);
+  }
+  // 利用getHeroes方法，获取所有的英雄数据，将英雄名称显示到页面的列表中
+</script>

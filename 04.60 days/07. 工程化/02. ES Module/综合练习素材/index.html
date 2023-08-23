@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登录界面</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body>
+    <div class="form-container">
+      <h1 class="title">用户登录</h1>
+      <form id="formContainer" class="form-wrapper">
+        <div class="form-item">
+          <input
+            id="userName"
+            class="text"
+            type="text"
+            placeholder="请输入登录账号"
+            autocomplete="new-password"
+          />
+        </div>
+        <div class="form-item password-container">
+          <input
+            id="userPassword"
+            type="password"
+            placeholder="请输入登录密码"
+            autocomplete="new-password"
+          />
+        </div>
+        <input id="btnSubmit" type="submit" class="signin" value="登录" />
+      </form>
+    </div>
+  </body>
+</html>

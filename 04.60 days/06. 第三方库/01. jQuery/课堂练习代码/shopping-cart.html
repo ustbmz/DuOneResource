@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>购物车jQuery版</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="cart">
+      <div class="header">
+        <div class="check">
+          <input type="checkbox" class="checkAll" />
+          全选
+        </div>
+        <div class="info">商品信息</div>
+        <div class="price">单价</div>
+        <div class="num">数量</div>
+        <div class="sum">金额</div>
+        <div class="del">操作</div>
+      </div>
+
+      <div class="list">
+        <div class="item">
+          <div class="check">
+            <input type="checkbox" class="checkItem" />
+          </div>
+          <div class="info">
+            <img
+              src="https://img.alicdn.com/bao/uploaded/i2/3817310001/O1CN01qiU0Yt1BsV2LpfHvc_!!3817310001.jpg_80x80.jpg"
+              alt=""
+            />
+            <a href="">
+              酷冷至尊 冰神B360ARGB电脑散热器白色 台式主机水冷散热器
+            </a>
+          </div>
+          <div class="price"><em>￥599.00</em></div>
+          <div class="num">
+            <a href="" class="decr">-</a>
+            <input type="text" value="1" class="txt" />
+            <a href="" class="incr">+</a>
+          </div>
+          <div class="sum"><em>￥599.00</em></div>
+          <div class="del">
+            <a href="">删除</a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="check">
+            <input type="checkbox" class="checkItem" name="" />
+          </div>
+          <div class="info">
+            <img
+              src="https://img.alicdn.com/bao/uploaded/i4/2189100631/O1CN01YWJ4Y21GX2aPMz6ta_!!0-item_pic.jpg_80x80.jpg"
+              alt=""
+            />
+            <a href="">
+              【天猫直送】ETS六代笔记本电脑抽风式散热器侧吸式风扇水冷拯救
+            </a>
+          </div>
+          <div class="price"><em>￥199.00</em></div>
+          <div class="num">
+            <a href="" class="decr">-</a>
+            <input type="text" value="1" class="txt" />
+            <a href="" class="incr">+</a>
+          </div>
+          <div class="sum"><em>￥199.00</em></div>
+          <div class="del">
+            <a href="">删除</a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="check">
+            <input type="checkbox" class="checkItem" name="" />
+          </div>
+          <div class="info">
+            <img
+              src="https://img.alicdn.com/bao/uploaded/i1/2087512200/O1CN01zZHbqa1S7e0AsdJL4_!!2087512200.jpg_80x80.jpg"
+              alt=""
+            />
+            <a href="">
+              索皇笔记本抽风式散热器电脑侧吸风扇机15.6寸14寸适用于联想华硕
+            </a>
+          </div>
+          <div class="price"><em>￥37.90</em></div>
+          <div class="num">
+            <a href="" class="decr">-</a>
+            <input type="text" value="1" class="txt" />
+            <a href="" class="incr">+</a>
+          </div>
+          <div class="sum"><em>￥37.90</em></div>
+          <div class="del">
+            <a href="">删除</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="check">
+          <input type="checkbox" class="checkAll" />
+          全选
+        </div>
+        <div class="operation">
+          <a href="" class="delChecked">删除选中商品</a>
+          <a href="" class="clearAll">清空购物车</a>
+        </div>
+        <div class="right">
+          <div class="nums">
+            已选
+            <em>0</em>
+            件商品
+          </div>
+          <div class="sums">
+            合计：
+            <em>￥0.00</em>
+          </div>
+          <div class="done">
+            <a href="">结算</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <button>按钮</button>
+      <button>按钮</button>
+      <button>按钮</button>
+      <button>按钮</button>
+      <button>按钮</button>
+      <button>按钮</button>
+      <button>按钮</button>
+      <button>按钮</button>
+      <button>按钮</button>
+      <button>按钮</button>
+    </div>
+
+    <script>
+      // var container = document.querySelector('.container');
+      // container.onclick = function (e) {
+      //   if (e.target.tagName === 'BUTTON') {
+      //     var children = Array.prototype.slice.call(container.children);
+      //     var i = children.indexOf(e.target);
+
+      //     console.log(i);
+      //   }
+      // };
+
+      var btns = document.querySelectorAll('button');
+
+      for (var i = 0; i < btns.length; i++) {
+        (function (i) {
+          btns[i].onclick = function () {
+            console.log(i);
+          };
+        })(i);
+      }
+    </script>
+  </body>
+</html>

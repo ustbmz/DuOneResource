@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      .words {
+        font-size: 3em;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .words span {
+        margin: 0 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="words">
+      <span class="animate__animated animate__rotateIn">A</span>
+      <span class="animate__animated animate__zoomIn">N</span>
+      <span class="animate__animated animate__slideInDown">I</span>
+      <span class="animate__animated animate__flipInY">M</span>
+      <span class="animate__animated animate__bounceIn">A</span>
+      <span class="animate__animated animate__flipInX">T</span>
+      <span
+        class="animate__animated animate__lightSpeedInRight animate__delay-1s"
+      >
+        E
+      </span>
+    </div>
+
+    <script>
+      const A = document.querySelector('.animate__rotateIn');
+      const E = document.querySelector('.animate__lightSpeedInRight');
+      E.addEventListener('animationend', function () {
+        A.classList.remove('animate__rotateIn');
+        A.classList.add('animate__hinge');
+      });
+    </script>
+  </body>
+</html>

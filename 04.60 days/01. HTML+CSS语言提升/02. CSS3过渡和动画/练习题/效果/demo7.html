@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .bell {
+        width: 59px;
+        height: 107px;
+        background: url(./bell.png);
+        margin: 0 auto;
+      }
+    </style>
+    <style>
+      /* 在这里完成作业 */
+      .bell {
+        animation: swing 1s infinite ease-in-out alternate;
+        transform-origin: center top;
+      }
+      @keyframes swing {
+        0% {
+          transform: rotate(45deg);
+        }
+        100% {
+          transform: rotate(-45deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bell"></div>
+  </body>
+</html>

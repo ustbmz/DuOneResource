@@ -1,0 +1,16 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "c": "lessc index.less index.css",
+    "p1": "lessc p1.less p1.css",
+    "p2": "lessc ./hero/index.less ./hero/index.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "less": "^4.1.1"
+  }
+}

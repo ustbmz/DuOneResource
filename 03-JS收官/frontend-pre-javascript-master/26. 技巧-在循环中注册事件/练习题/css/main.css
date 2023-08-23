@@ -1,0 +1,83 @@
+.main {
+  background: #f5f5f5;
+  padding: 22px 0;
+}
+
+/* banner3 */
+.banner3 {
+  display: block;
+  background: red;
+}
+.banner3 img {
+  width: 100%;
+  display: block;
+}
+
+/* 橱窗 */
+.sc {
+  margin-top: 10px;
+}
+.sc-top {
+  height: 58px;
+  line-height: 58px;
+}
+.sc-title {
+  font-size: 22px;
+  font-weight: normal;
+}
+.sc-more .iconfont {
+  background: #aaa;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  line-height: 20px;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  /* vertical-align: -2px; */
+}
+.sc-more:hover .iconfont {
+  background: #ff6700;
+}
+
+.sc-item-first {
+  width: 234px;
+  height: 614px;
+  margin-right: 14px;
+}
+.sc-item-first img {
+  width: 100%;
+  height: 100%;
+}
+.sc-item-list {
+  width: 978px;
+}
+.sc-item {
+  background: #fff;
+  margin-right: 14px;
+  margin-bottom: 14px;
+  width: 234px;
+  height: 300px;
+  text-align: center;
+}
+.sc-item img {
+  width: 160px;
+  height: 160px;
+  margin-top: 20px;
+}
+.sc-name {
+  margin-top: 20px;
+  color: #333;
+}
+.sc-desc {
+  font-size: 12px;
+  color: #b0b0b0;
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+.sc-price {
+  color: #ff6700;
+}
+.sc-item:nth-child(4n) {
+  margin-right: 0;
+}

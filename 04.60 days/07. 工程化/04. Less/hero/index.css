@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  background: #ecedf2;
+}
+.container {
+  width: 1140px;
+  margin: 1em auto;
+}
+.search {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  line-height: 50px;
+}
+.title {
+  background: #f40;
+  color: #fff;
+  width: 80px;
+  text-align: center;
+  border-radius: 10px 0 0 10px;
+}
+.types {
+  flex: 1 0 auto;
+  color: #666;
+  background: #fff;
+  font-size: 14px;
+}
+.type-list {
+  display: flex;
+  padding-left: 20px;
+}
+.radio {
+  margin-right: 30px;
+  padding-left: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.radio::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+.radio::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  background: #f40;
+  border-radius: 50%;
+  transition: 0.25s;
+}
+.radio.checked::after {
+  transform: translateY(-50%) scale(1);
+}
+.keyword {
+  background: #fff;
+  padding-right: 30px;
+}
+.input {
+  margin-top: 50px;
+  border: 1px solid #ccc;
+  height: 40px;
+  padding-right: 40px;
+  border-radius: 5px;
+  width: 300px;
+  position: relative;
+}
+.input input {
+  height: 100%;
+  display: block;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding-left: 1em;
+  font-size: 12px;
+}
+.input::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  right: 0;
+  background: url('./search_icon.png') no-repeat center;
+  border-left: 1px solid #ccc;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  justify-items: center;
+  text-align: center;
+  font-size: 14px;
+  row-gap: 20px;
+  color: #333;
+}
+.list img {
+  width: 77px;
+  height: 77px;
+  display: block;
+  margin-bottom: 5px;
+  border: 2px solid #f40;
+  border-radius: 10px 0 10px 0;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div id="app" a="1" b="2">asdfasfd</div>
+    <script>
+      var div = document.getElementById('app');
+      var a = div.getAttribute('a');
+      var b = div.getAttribute('b');
+      console.log(a, b);
+    </script> -->
+
+    <div id="app" data-a="1" data-b="2"></div>
+    <script>
+      var div = document.getElementById('app');
+      // var a = div.getAttribute('data-a');
+      // var b = div.getAttribute('data-b');
+      // console.log(div.dataset);
+      var a = div.dataset.a;
+      var b = div.dataset.b;
+      console.log(a, b);
+    </script>
+  </body>
+</html>

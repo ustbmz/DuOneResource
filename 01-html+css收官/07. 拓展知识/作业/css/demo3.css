@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.item-list {
+  width: 720px;
+  margin: 30px auto;
+  outline: 1px solid;
+  overflow: hidden;
+}
+
+.item-list img {
+  width: 150px;
+  float: left;
+  margin: 20px;
+}

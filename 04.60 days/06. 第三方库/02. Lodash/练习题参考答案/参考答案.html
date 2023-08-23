@@ -1,0 +1,37 @@
+<script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+<script>
+  /**
+   * 练习1：产生一个长度为10的数组，数组的值从1~10
+   * 期望结果：[1,2,3,4,5,6,7,8,9,10]
+   * 提示：times函数
+   */
+  console.log(
+    '练习1',
+    _.times(10, (n) => n + 1)
+  );
+
+  /**
+   * 练习2：去掉对象无关的属性
+   * 对象 obj 中有一些我们不需要的属性，仅保留属性 name 和 age，去掉其他属性
+   * 期望结果：{name:'于谦', age:52}
+   * 提示：pick函数
+   */
+  const obj = {
+    name: '于谦',
+    father: '郭老爷子',
+    age: 52,
+    sex: '男',
+    hobbies: ['抽烟', '喝酒', '烫头'],
+  };
+  console.log('练习2', _.pick(obj, ['name', 'father']));
+
+  /**
+   * 练习3：arr1 保存了用户选中的号码， arr2 保存了开奖号码，比较 arr1 和 arr2，看用户选对了几个数字
+   * 注意，用户错误的选择了一些重复的数字，要先去掉 arr1 的重复数字
+   * 期望结果：[19, 17]
+   * 提示：uniq函数、intersection函数
+   */
+  const arr1 = [11, 33, 5, 19, 45, 17, 33, 45];
+  const arr2 = [1, 17, 19, 26, 55];
+  console.log('练习3', _.intersection(_.uniq(arr1), arr2));
+</script>

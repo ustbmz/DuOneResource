@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script>
+      // axios.get('https://study.duyiedu.com/api/herolist').then((resp) => {
+      //   console.log(resp); // resp.data 为响应体的数据，axios会自动解析JSON格式
+      // });
+
+      // (async function () {
+      //   const resp = await axios.get('https://study.duyiedu.com/api/herolist');
+      //   console.log(resp.data);
+      // })();
+
+      // axios
+      //   .get('https://study.duyiedu.com/api/user/exists', {
+      //     params: {
+      //       // 这里可以配置 query，axios会自动将其进行Url编码
+      //       loginId: 'a&k=3',
+      //       a: 1,
+      //       b: 2,
+      //     },
+      //   })
+      //   .then((resp) => {
+      //     console.log(resp.data); // resp.data 为响应体的数据，axios会自动解析JSON格式
+      //   });
+
+      axios
+        .post('https://study.duyiedu.com/api/user/reg', {
+          loginId: 'abc',
+          loginPwd: '123123',
+          nickname: '棒棒鸡',
+        })
+        .then((resp) => {
+          console.log(resp.data); // resp.data 为响应体的数据，axios会自动解析JSON格式
+        });
+    </script>
+  </body>
+</html>
