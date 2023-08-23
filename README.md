@@ -1,5 +1,7 @@
 # 技术应用阶段
 
+课程源码及课件地址:  https://github.com/ustbmz/DuOneResource
+
 ## 基础领航
 
 ### HTML+CSS收官 - 袁进
