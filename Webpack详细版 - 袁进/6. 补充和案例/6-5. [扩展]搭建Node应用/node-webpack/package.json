@@ -1,0 +1,32 @@
+{
+  "name": "node-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --watch src --exec 'npm run dev:build && npm run dev:exec'",
+    "dev:build": "cross-env NODE_ENV=development webpack",
+    "dev:exec": "node dist/index",
+    "build": "cross-env NODE_ENV=production webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yjisme/node-webpack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yjisme/node-webpack/issues"
+  },
+  "homepage": "https://github.com/yjisme/node-webpack#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.4",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.15"
+  }
+}
