@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .move {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="move">
+        <!-- 该div自动向右下移动，遇到边界反弹 -->
+    </div>
+    <script>
+        var div = document.querySelector(".move");
+        var config = {
+            _x: 0,
+            _y: 0,
+            xDis: 2,
+            yDis: 2,
+            duration: 16,
+            width: 100,
+            height: 100
+        }
+
+        Object.defineProperty(config, "x", {
+            get: function() {
+                return this._x;
+            },
+            set: function(val) {
+                if (val < 0) {
+                    val = 0;
+                } else if (val > document.documentElement.clientWidth - this.width) {
+                    val = document.documentElement.clientWidth - this.width;
+                }
+                this._x = val;
+                div.style.left = val + "px";
+            }
+        })
+
+        Object.defineProperty(config, "y", {
+            get: function() {
+                return this._y;
+            },
+            set: function(val) {
+                if (val < 0) {
+                    val = 0;
+                } else if (val > document.documentElement.clientHeight - this.height) {
+                    val = document.documentElement.clientHeight - this.height;
+                }
+                this._y = val;
+                div.style.top = val + "px";
+            }
+        })
+
+        // setInterval(function() {
+        //     config.x += config.xDis;
+        //     config.y += config.yDis;
+        //     //边界判定
+        //     if (config.y === document.documentElement.clientHeight - config.height ||
+        //         config.y === 0) {
+        //         config.yDis = -config.yDis;
+        //     }
+        //     if (config.x === document.documentElement.clientWidth - config.width ||
+        //         config.x === 0) {
+        //         config.xDis = -config.xDis;
+        //     }
+        // }, config.duration);
+    </script>
+</body>
+
+</html>

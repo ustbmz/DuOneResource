@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 打印1-100的所有素数
+        for (var i = 1; i <= 100; i++) {
+            // 判断i是不是素数
+            var isFind = false; //没有找到
+            for (var j = 2; j < i - 1; j++) {
+                if (i % j === 0) {
+                    isFind = true;
+                    break;
+                }
+            }
+            if (i > 1 && !isFind) {
+                console.log(i);
+            }
+        }
+    </script>
+</body>
+
+</html>

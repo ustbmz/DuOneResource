@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function User(name, age) {
+            this.name = name;
+            //年龄的取值范围是 0 - 100
+            //如果年龄的值小于了0，则赋值为0，如果年龄的值大于了100，则赋值为100
+            var _age;
+            Object.defineProperty(this, "age", {
+                get: function() {
+                    return _age;
+                },
+                set: function(val) {
+                    if (val < 0) {
+                        val = 0;
+                    } else if (val > 100) {
+                        val = 100;
+                    }
+                    _age = val;
+                }
+            })
+
+            this.age = age;
+        }
+
+        var u = new User("abc", -1);
+        u.age = u.age + 10000;
+        console.log(u.age);
+    </script>
+</body>
+
+</html>

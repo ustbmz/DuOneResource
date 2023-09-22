@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打星星评分</title>
+    <style>
+        .container{
+            float: left;
+        }
+        .score{
+            float: left;
+            position: relative;
+            width: 100px;
+            margin-top: 5px;
+            margin-left: 10px;
+        }
+        span{
+            display: none;
+            position: absolute;
+            font-family: "Microsoft YaHei";
+            font-size: 14px;
+            left: 0;
+            top: 0;
+        }
+        .scoreDisplay{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 一个容器里面放5张图片，先所有的都是空星图片 -->
+    <!-- 该案例的要点就在于鼠标移动上去时改变图片的src -->
+    <div class="container">
+        <img src="./images/empty.png" alt="0">
+        <img src="./images/empty.png" alt="1">
+        <img src="./images/empty.png" alt="2">
+        <img src="./images/empty.png" alt="3">
+        <img src="./images/empty.png" alt="4">
+    </div>
+    <div class="score">
+        <span>很差</span>
+        <span>较差</span>
+        <span>一般</span>
+        <span>较好</span>
+        <span>很好</span>
+    </div>
+    <script>
+        // 获取DOM元素
+        let imgs = document.getElementsByTagName("img");
+        let span = document.getElementsByTagName("span");
+        let k = -1; // 声明变量k并给一个初始值-1，不然后面第一个星星始终是被点亮的
+        // 鼠标移入时事件处理程序
+        let enter = function(){
+            // 鼠标进入时，将右边的评论给清除掉，然后将星星修改为空星
+            for(let i=0;i<span.length;i++)
+            {
+                span[i].setAttribute("class","");
+                imgs[i].setAttribute("src","./images/empty.png");
+            }
+            let starIndex = this.alt; // 获取鼠标进入时当前星星的下标
+            // 将到下标为止的星星的src替换为./images/shining.png
+            for(let i=0;i<=starIndex;i++)
+            {
+                imgs[i].setAttribute("src","./images/shining.png");
+            }
+            span[starIndex].setAttribute("class","scoreDisplay");
+        }
+        // 鼠标移出时事件处理程序
+        let out = function(){
+            // 首先同样是将所有的星星熄灭，评论清空掉，然后根据k值来显示点亮对应的星星以及显示评论
+            for(let i=0;i<span.length;i++)
+            {
+                span[i].setAttribute("class","");
+                imgs[i].setAttribute("src","./images/empty.png");
+            }
+            for(let i=0;i<=k;i++)
+            {
+                imgs[i].setAttribute("src","./images/shining.png");
+            }
+            if(k === -1)
+            {
+                for(let i=0;i<span.length;i++)
+                {
+                    span[i].setAttribute("class","");
+                }
+            }
+            else{
+                span[k].setAttribute("class","scoreDisplay");
+            }
+        }
+        // 鼠标点击事件处理程序 使用k来记录当前星星的下标值
+        let starClick = function(){
+            k = this.alt;
+        }
+        // 通过循环给所有img添加事件
+        for(let i=0;i<imgs.length;i++)
+        {
+            imgs[i].addEventListener("mouseenter",enter,false);
+            imgs[i].addEventListener("mouseleave",out,false);
+            imgs[i].addEventListener("click",starClick,false);
+        }
+    </script>
+</body>
+</html>

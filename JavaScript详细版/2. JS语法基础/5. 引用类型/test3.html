@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var user1 = {
+            name: "u1",
+            address: {
+                country: "中国",
+                city: "哈尔滨"
+            }
+        };
+
+        var user2 = {
+            name: "u2",
+            address: user1.address
+        };
+        user2.name = "user2";
+        user2.address.city = "成都";
+        console.log(user1.name, user2.name); // u1, user2
+        console.log(user1.address.city, user2.address.city); // 成都 成都
+    </script>
+</body>
+
+</html>

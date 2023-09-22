@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap {
+            width: 120px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 25px;
+        }
+
+        .title {
+            background-color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap" id="wrap">
+        <dl>
+            <dt class="title" _id="0">菜单一</dt>
+            <dd>
+                <p>商品一</p>
+                <p>商品二</p>
+                <p>商品三</p>
+                <p>商品四</p>
+            </dd>
+        </dl>
+        <dl>
+            <dt class="title" _id="1">菜单二</dt>
+            <dd>
+                <p>商品一</p>
+                <p>商品二</p>
+                <p>商品三</p>
+                <p>商品四</p>
+            </dd>
+        </dl>
+        <dl>
+            <dt class="title" _id="2">菜单三</dt>
+            <dd>
+                <p>商品一</p>
+                <p>商品二</p>
+                <p>商品三</p>
+                <p>商品四</p>
+            </dd>
+        </dl>
+    </div>
+    <script src="./index.js"></script>
+
+    <script>
+        var menu = [{
+                name: "菜单一",
+                children: ["商品一", "商品二", "商品三", "商品四"]
+            },
+            {
+                name: "菜单二",
+                children: ["商品一", "商品二", "商品三", "商品四"]
+            }, {
+                name: "菜单三",
+                children: ["商品一", "商品二", "商品三", "商品四"]
+            }
+        ];
+    </script>
+</body>
+
+</html>

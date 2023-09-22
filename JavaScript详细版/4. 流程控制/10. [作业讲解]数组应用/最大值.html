@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var nums = [23, 6, 1, 1, 666, 324];
+        // 求最大值
+        var max = nums[0];
+        for (var i = 1; i < nums.length; i++) {
+            if (nums[i] > max) {
+                max = nums[i];
+            }
+        }
+
+        console.log(max);
+    </script>
+</body>
+
+</html>

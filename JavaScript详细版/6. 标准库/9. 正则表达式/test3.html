@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var s = "hello world\tjavascript\nyes";
+        //将空白字符替换为逗号
+        console.log(s);
+        s = s.replace(/\s*\b[a-z]\s*/g, function(match){
+            return match.toUpperCase().trim();
+        });
+        console.log(s);
+
+        //按照逗号、空格、横杠、制表符进行分割
+        // var result = s.split(/[, \-\s]/);
+        // console.log(s, result);
+        // var result = s.match(/\d+/)
+        // console.log(s, result);
+
+        // var result = s.search(/\d+/g)
+        // console.log(s, result);
+        // result = s.search(/\d+/g)
+        // console.log(s, result);
+
+
+    </script>
+</body>
+
+</html>

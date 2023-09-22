@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1. 定义一个变量，存放对象，包含姓名、年龄、性别、女朋友（姓名、年龄、性别）
+        var cheng = {
+            name: "成哥",
+            age: 18,
+            gender: "男",
+            girlFriend: {
+                name: "小花",
+                age: 50,
+                gender: "女"
+            }
+        };
+        //2. 定义一个变量，存放对象，包含姓名、年龄、性别、女朋友，女朋友和第一个变量的女朋友是一样的
+        var deng = {
+            name: "邓哥",
+            age: 53,
+            gender: "男"
+        };
+        deng.girlFriend = cheng.girlFriend;
+        //3. 输出：成哥女朋友的姓名，邓哥女朋友的姓名
+        console.log(cheng.girlFriend.name, deng.girlFriend.name);
+
+        //4. 女朋友与邓哥分手了
+        // delete deng.girlFriend;
+        deng.girlFriend = undefined;
+        console.log(deng);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [234,2, 6, 23, 211, 23];
+        for (var index in arr) {
+            // 判断arr[index]是不是素数
+            var isFind = false;
+            for (var i = 2; i < arr[index] - 1; i++) {
+                if (arr[index] % i === 0) {
+                    isFind = true;
+                    break;
+                }
+            }
+            if (!isFind && arr[index] >= 2) {
+                console.log(arr[index]);
+            }
+        }
+    </script>
+</body>
+
+</html>

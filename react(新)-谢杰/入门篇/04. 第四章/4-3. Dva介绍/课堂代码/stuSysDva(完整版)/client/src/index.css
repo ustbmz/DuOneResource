@@ -1,0 +1,25 @@
+a {
+    text-decoration: none;
+}
+
+h1{
+    font-weight: 200;
+    margin-top: 0;
+}
+
+a.active {
+    color: #ccc;
+    text-decoration: none;
+}
+
+
+tr,
+th {
+    text-align: center;
+}
+
+span::before {
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+}

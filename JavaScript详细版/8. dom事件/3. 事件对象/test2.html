@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            background: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p><span>Lorem ipsum dolor sit.</span><button><span>删除</span></button></p>
+        <p><span>Nostrum placeat sint odit.</span><button><span>删除</span></button></p>
+        <p><span>Perferendis, deleniti! Quo, unde.</span><button><span>删除</span></button></p>
+        <p><span>Nesciunt facilis atque eos.</span><button><span>删除</span></button></p>
+        <p><span>Aliquam doloremque at dolorum.</span><button><span>删除</span></button></p>
+        <p><span>Recusandae inventore quasi tempora?</span><button><span>删除</span></button></p>
+        <p><span>Vel optio numquam adipisci?</span><button><span>删除</span></button></p>
+        <p><span>Aperiam, error molestiae? Aut!</span><button><span>删除</span></button></p>
+        <p><span>Eaque ipsam vel est.</span><button><span>删除</span></button></p>
+        <p><span>Architecto assumenda atque esse.</span><button><span>删除</span></button></p>
+    </div>
+
+    <script>
+        var div = document.querySelector("div")
+
+        div.onclick = function(e) {
+            console.log(e.type);
+            
+            // console.log(e.target);
+
+            // console.log(this === e.currentTarget);
+            // if (e.target.tagName === "BUTTON") {
+            //     e.target.parentElement.remove();
+            // }
+        }
+    </script>
+</body>
+
+</html>

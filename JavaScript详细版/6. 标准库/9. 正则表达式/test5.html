@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var reg = /(\d[a-z])([a-z]+)/g;
+        // var s = "2afsdf-5fdgdfg-9asddf";
+        // while (result = reg.exec(s)) {
+        //     console.log(result);
+        // }
+
+        // var s = "2015-5-1, 2019-6-19, 2000-04-28";
+        // //得到每一个日期，并得到每个日期的年月日
+        // var reg = /(?:\d{4})-(?:\d{1,2})-(\d{1,2})/g;
+        // while (result = reg.exec(s)) {
+        //     console.log(result);
+        // }
+
+        var s = "2015-5-1,- 2019-6-19,- 2000-04-28";
+        var reg = /(\d{4})-(\d{1,2})-(\d{1,2})/g;
+        s = s.replace(reg, "$1/$2/$3")
+        console.log(s);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getInfoFromPID(pid) {
+            return {
+                birthYear: parseInt(pid.substr(6, 4)),
+                birthMonth: parseInt(pid.substr(10, 2)),
+                birthDay: parseInt(pid.substr(12, 2)),
+                gender: pid[pid.length - 2] % 2 === 0 ? "女" : "男"
+            }
+        }
+
+        console.log(getInfoFromPID("524713199703020014"));
+    </script>
+</body>
+
+</html>

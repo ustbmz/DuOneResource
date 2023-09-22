@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function A() {}
+
+        function B() {}
+
+        function create() {
+            if (Math.random() < 0.5) {
+                return new A();
+            } else {
+                return new B();
+            }
+        }
+
+        var obj = create();
+        //如何得到创建obj的构造函数名称
+        console.log(obj.__proto__.constructor.name);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        .container li {
+            margin: 20px 0;
+        }
+
+        .container button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>
+            <button id="btnClear">清空</button>
+        </p>
+        <ul class="list">
+            <li>项目1<button>删除</button></li>
+            <li>项目2<button>删除</button></li>
+            <li>项目3<button>删除</button></li>
+            <li>项目4<button>删除</button></li>
+            <li>项目5<button>删除</button></li>
+            <li>项目6<button>删除</button></li>
+            <li>项目7<button>删除</button></li>
+            <li>项目8<button>删除</button></li>
+            <li>项目9<button>删除</button></li>
+            <li>项目10<button>删除</button></li>
+        </ul>
+    </div>
+    <script>
+        var btnClear = document.getElementById("btnClear");
+        var ul = document.querySelector(".list");
+        btnClear.onclick = function() {
+            ul.innerHTML = "";
+        }
+
+        //得到ul下的所有按钮
+        var btns = ul.querySelectorAll("button");
+        Array.from(btns).forEach(function(b) {
+            b.onclick = function() {
+                b.parentNode.remove();
+            }
+        })
+
+        // for (var i = 0; i < btns.length; i++) {
+        //     var b = btns[i]; //得到当前按钮
+        //     // (function(b) {
+        //     //     b.onclick = function() {
+        //     //         b.parentNode.remove();
+        //     //     }
+        //     // }(b));
+
+        //     b.onclick = function() {
+        //         this.parentNode.remove();
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

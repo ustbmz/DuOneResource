@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var money = 200000,
+            month = 12,
+            rate = 4;
+        money > 100000 && (rate = rate * 1.2);
+        var lixi = money * rate / 100 / 12 * month;
+        console.log("利息：" + lixi);
+    </script>
+</body>
+
+</html>

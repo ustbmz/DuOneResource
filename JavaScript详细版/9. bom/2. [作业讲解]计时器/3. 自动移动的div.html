@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .move {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="move">
+        <!-- 该div自动向右下移动，遇到边界反弹 -->
+    </div>
+    <script>
+        var div = document.querySelector(".move"),
+            x = 0, //初始坐标x
+            y = 0, //初始坐标y
+            xDis = 2, //每次移动x的距离
+            yDis = 2, //每次移动y的距离
+            duration = 16, //移动的间隔时间
+            width = 100,
+            height = 100;
+
+        setInterval(function() {
+            x += xDis;
+            y += yDis;
+            //边界判定
+            if (y >= document.documentElement.clientHeight - height) {
+                y = document.documentElement.clientHeight - height;
+                yDis = -yDis;
+            }
+            if (y <= 0) {
+                y = 0;
+                yDis = -yDis;
+            }
+
+            if (x <= 0) {
+                x = 0;
+                xDis = -xDis;
+            }
+            if (x >= document.documentElement.clientWidth - width) {
+                x = document.documentElement.clientWidth - width;
+                xDis = -xDis;
+            }
+
+            div.style.left = x + "px";
+            div.style.top = y + "px";
+        }, duration);
+    </script>
+</body>
+
+</html>

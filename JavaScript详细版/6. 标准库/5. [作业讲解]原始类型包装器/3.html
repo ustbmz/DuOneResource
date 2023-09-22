@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="../../common/BetterFunction.js"></script>
+    <script>
+        function getRandomString(len) {
+            var template = "";
+            for (var i = 65; i < 65 + 26; i++) {
+                template += String.fromCharCode(i);
+            }
+            for (var i = 97; i < 97 + 26; i++) {
+                template += String.fromCharCode(i);
+            }
+            for (var i = 48; i < 48 + 10; i++) {
+                template += String.fromCharCode(i);
+            }
+
+            var result = "";
+            for (var i = 0; i < len; i++) {
+                //从模板中随机取出一位字符
+                var index = MyFunctions.getRandom(0, template.length - 1);
+                result += template[index];
+            }
+            return result;
+        }
+
+        console.log(getRandomString(20));
+    </script>
+</body>
+
+</html>

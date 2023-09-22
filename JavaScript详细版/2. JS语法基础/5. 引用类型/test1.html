@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = "123";
+        var b = a;
+        b = "456";
+        console.log(a, b); // 123 456
+        //obj1 指向 xx 对象
+        //obj1 持有 xx 对象的引用
+        var obj1 = {
+            name: "123",
+            age: 10
+        }; // 出现对象字面量的位置，会新开辟一块内存空间，用于存放对象的内容
+
+        // obj2 和 obj1 指向同一个对象
+        // obj2 和 obj1 持有相同的引用
+        var obj2 = obj1; 
+        obj2.name = "456";
+        console.log(obj1.name, obj2.name); // 456 456
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span {
+            min-width: 50px;
+            display: inline-block;
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        库存的最小值为0
+    </p>
+    <div>
+        库存：
+        <button data-plus="-1000">-1000</button>
+        <button data-plus="-100">-100</button>
+        <button data-plus="-10">-10</button>
+        <button data-plus="-1">-</button>
+        <span id="spanNumber">10</span>
+        <button data-plus="1">+</button>
+        <button data-plus="10">+10</button>
+        <button data-plus="100">+100</button>
+        <button data-plus="1000">+1000</button>
+    </div>
+
+    <script>
+        var btns = document.querySelectorAll("button");
+        var span = document.getElementById("spanNumber");
+        for (var i = 0; i < btns.length; i++) {
+            var b = btns[i];
+            b.onclick = function() {
+                var num = parseInt(span.innerText);
+                //加某个数
+                var plus = parseInt(this.dataset.plus);
+                var result = num + plus;
+                if (result < 0) {
+                    result = 0;
+                }
+                span.innerHTML = result;
+            }
+        }
+    </script>
+</body>
+
+</html>

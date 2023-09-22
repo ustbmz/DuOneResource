@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="imgChange(1)">第1张图片</button>
+    <button onclick="imgChange(2)">第2张图片</button>
+    <button onclick="imgChange(3)">第3张图片</button>
+    <button onclick="imgChange(4)">第4张图片</button>
+    <div style="margin-top:20px;">
+        <img src="img/1.jpg" alt="" id="imgShow" width="250" height="250">
+    </div>
+    <script>
+        let imgShow = document.getElementById("imgShow");
+        let imgChange = function(i){
+            imgShow.src = "img/"+i+".jpg";
+        }
+    </script>
+</body>
+</html>

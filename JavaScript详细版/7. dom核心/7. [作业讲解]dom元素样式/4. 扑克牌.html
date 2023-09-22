@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        利用pokers文件夹中的图片，用纯JS生成图片依次排列到页面上。不允许使用样式表
+    </p>
+    <div id="divcontainer">
+
+    </div>
+
+    <script>
+        var div = document.getElementById("divcontainer");
+        var imgs = [];
+        for (var i = 1; i <= 13; i++) {
+            for (var j = 1; j <= 4; j++) {
+                imgs.push(createImg(`pokers/${i}_${j}.jpg`));
+            }
+        }
+        imgs.push(createImg(`pokers/14_1.jpg`));
+        imgs.push(createImg(`pokers/15_1.jpg`));
+        imgs.sort(function() {
+            return Math.random() - 0.5;
+        });
+
+        imgs.forEach(function(img){
+            div.appendChild(img);
+        });
+
+        function createImg(src) {
+            var img = document.createElement("img");
+            img.src = src;
+            img.style.margin = "30px";
+            return img;
+        }
+    </script>
+</body>
+
+</html>

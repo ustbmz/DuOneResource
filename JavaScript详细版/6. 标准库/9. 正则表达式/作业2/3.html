@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var senWords = ["色情", "暴力", "卢本伟", "贸易战"];
+        //将字符串中敏感词汇替换为指定的字符串
+        function removeSensitiveWords(s, rep) {
+            var reg = new RegExp(`(${senWords.join("|")})+`, "g");
+            return s.replace(reg, rep);
+        }
+
+        console.log(removeSensitiveWords("sdffs色情暴力sfsfs卢本伟牛逼dsdf贸易战sf", "****"))
+    </script>
+</body>
+
+</html>

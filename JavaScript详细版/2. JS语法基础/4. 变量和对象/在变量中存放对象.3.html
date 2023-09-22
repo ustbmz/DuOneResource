@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var user1 = {
+            account: "abc",
+            pwd: "123456",
+            gender: "男",
+            isVip: false,
+            age: 18,
+            address: {
+                country: "中国",
+                city: "成都"
+            }
+        };
+
+        var user2 = {};
+        user2.addr = user1.address;
+
+        console.log(user2, user1);
+
+        // var user2 = {
+        //     account: user1.account
+        // };
+
+        // console.log(user1.account, user2.account);
+        // console.log(user2.pwd);
+    </script>
+</body>
+
+</html>

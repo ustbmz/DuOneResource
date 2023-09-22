@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="../../plugin/helpers.js"></script>
+    <script>
+        // 函数管道：将多个单参函数组合起来，形成一个新的函数，这些函数中，前一个函数的输出，是后一个函数的输入
+
+        //将字符串中每一个单词首字母大写
+        function everyFirstLetterUp(str) {
+            return str.replace(/\b(\w)(\w*)\b/g, function($, $1, $2) {
+                return $1.toUpperCase() + $2;
+            });
+        }
+
+        //将字符串中除首字母外的其他字母小写
+        function otherLetterLower(str) {
+            return str.replace(/\b(\w)(\w*)\b/g, function($, $1, $2) {
+                return $1 + $2.toLowerCase();
+            });
+        }
+
+        //去掉字符串中所有的空白字符
+        function removeEmpty(str) {
+            return str.replace(/\s+/g, "");
+        }
+
+        //将字符串中第一个单词字符小写
+        function firstLetterLower(str) {
+            return str.replace(/\w/, function($) {
+                return $.toLowerCase();
+            });
+        }
+
+        //截取字符串
+        function curString(number, str) {
+            return str.substr(0, number);
+        }
+
+        //将一个字符串变为小驼峰命名法
+
+        var smallCamel = myPlugin.pipe(everyFirstLetterUp, firstLetterLower,
+            otherLetterLower, removeEmpty, myPlugin.curry(curString, 10));
+
+        console.log(smallCamel("    MY     fIrST    naME"));
+        console.log(smallCamel("  asdfasf  sdfasf   ggggggg  hGDGF"));
+    </script>
+</body>
+
+</html>

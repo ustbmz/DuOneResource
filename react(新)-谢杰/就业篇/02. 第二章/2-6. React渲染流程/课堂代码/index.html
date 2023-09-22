@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .ball {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #f00;
+        position: absolute;
+        left: 0;
+        top: 50px;
+        animation: move 10s infinite alternate;
+      }
+      @keyframes move {
+        0% {
+          left: 0px;
+        }
+        100% {
+          left: 500px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ball"></div>
+    <script>
+      //   function callback(IdleDeadline) {
+      //     console.log(
+      //       "当前帧绘制完毕后所剩余的时间：",
+      //       IdleDeadline.timeRemaining()
+      //     );
+      //     window.requestIdleCallback(callback);
+      //   }
+      //   window.requestIdleCallback(callback);
+
+      // 通过 requestIdleCallback 去模拟 Scheduler 的工作流程
+
+      function delay(duration) {
+        const start = Date.now();
+        while (Date.now() - start < duration) {}
+      }
+
+      const taskList = []; // 存放任务的队列
+
+      // 推入任务
+      for (let i = 1; i <= 10; i++) {
+        taskList.push(() => {
+          delay(10);
+          console.log(`执行任务${i}`);
+        });
+      }
+
+      // 接下来我们想要执行任务，每一帧渲染完毕后有剩余时间
+      // 如果时间充足，我们就执行任务
+      // 如果时间不充足，那么就在下一帧渲染后再接着执行
+
+      function callback(IdleDeadline) {
+        // 执行任务
+        console.log(
+          "当前帧绘制完毕后所剩余的时间：",
+          IdleDeadline.timeRemaining()
+        );
+        while (IdleDeadline.timeRemaining() > 0 && taskList.length) {
+          // 还有剩余时间，并且任务列表还有任务
+          const task = taskList.shift();
+          task();
+        }
+        // 退出上面的 while 后，有一种情况是当前帧的时间不够了，但是任务列表中还有剩余任务
+        if (taskList.length) {
+          // 那么我们就在下一帧空闲时间再继续执行任务
+          window.requestIdleCallback(callback);
+        }
+      }
+
+      window.requestIdleCallback(callback);
+    </script>
+  </body>
+</html>

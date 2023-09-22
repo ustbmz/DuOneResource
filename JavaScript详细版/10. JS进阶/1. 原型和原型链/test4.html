@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function User(name, age) {
+        //     this.name = name;
+        //     this.age = age;
+        // }
+
+        // User.prototype.sayHello = function(){
+        //     console.log(this.name, this.age);
+        // }
+
+        // var u1 = new User("abc", 11);
+        // var u2 = new User("bcd", 12);
+
+        function A() {}
+        A.prototype.toString = function() {
+            return "123";
+        }
+        var obj = new A();
+
+        // var A = new Function();
+
+
+        // String.prototype.camel = function() {
+        //     return this.replace(/\b(\w)(\w*)\b/g, function($, $1, $2) {
+        //         return $1.toUpperCase() + $2;
+        //     }).replace(/\s/g, "");
+        // }
+    </script>
+</body>
+
+</html>

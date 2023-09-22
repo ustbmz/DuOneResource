@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sayHello(a, b) {
+            console.log(this.name, this.age);
+            console.log(a, b);
+        }
+
+        var user1 = {
+            name: "asfd",
+            age: 123
+        };
+
+        var user2 = {
+            name: "546345",
+            age: 11
+        };
+        var newFunc = sayHello.bind(user1, 1, 2);
+        newFunc();
+        newFunc();
+        newFunc();
+        newFunc();
+        newFunc();
+        newFunc();
+        newFunc();
+
+        // sayHello.apply(user1, [1, 2]);
+        // sayHello.call(user2, 1, 2);
+
+    </script>
+</body>
+
+</html>

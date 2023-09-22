@@ -1,0 +1,17 @@
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.row{
+    margin-bottom: 30px;
+}
+
+.intro{
+    font-weight: 300;
+}
+
+.edit{
+    color: #4091f7;
+    cursor: pointer;
+}

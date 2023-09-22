@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>放大镜</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 去除图片的3px */
+        img {
+            vertical-align: top;
+        }
+
+        /* 容器样式 */
+        .container {
+            width: 350px;
+            height: 350px;
+            margin: 100px;
+            border: 1px solid #ccc;
+            position: relative;
+            border: 1px solid;
+        }
+
+        /* 鼠标盒子样式 */
+        .mouse {
+            position: relative;
+        }
+
+        /* 大鼠标盒子样式 */
+        .mouseBigSize {
+            width: 450px;
+            height: 450px;
+            position: absolute;
+            top: 0;
+            left: 370px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            display: none;
+        }
+
+        /* 大鼠标盒子里面图片样式 */
+        .mouseBigSize img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* 遮罩层样式 */
+        .mask {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 0, 0.4);
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: move;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 小鼠标 -->
+        <div class="mouse">
+            <img src="./images/mouse.jpg" alt="">
+            <!-- 遮罩层 -->
+            <div class="mask"></div>
+        </div>
+        <!-- 大鼠标 -->
+        <div class="mouseBigSize">
+            <img src="./images/mouseBigSize.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        // 获取DOM元素
+        let container = document.getElementsByClassName("container")[0]; // 获得最大的盒子
+        let mouse = document.getElementsByClassName("mouse")[0]; // 获取小鼠标盒子
+        let mouseBigSize = document.getElementsByClassName("mouseBigSize")[0]; // 获取大鼠标盒子
+        let bigImg = mouseBigSize.children[0]; // 获取大盒子里面的图片
+        let mask = document.getElementsByClassName("mask")[0]; // 获取遮罩层
+        // 给小盒子添加mouseover事件
+        mouse.onmouseover = function () {
+            mask.style.display = "block";
+            mouseBigSize.style.display = "block";
+        }
+        // 给小盒子添加mouseout事件
+        mouse.onmouseout = function () {
+            mask.style.display = "none";
+            mouseBigSize.style.display = "none";
+        }
+        // 初始化x轴和y轴
+        let x = 0, y = 0;
+        // 给小盒子添加mousemove事件
+        mouse.onmousemove = function (event) {
+            // x = event.clientX - this.offsetParent.offsetLeft - mask.offsetWidth / 2;
+            // y = event.clientY - this.offsetParent.offsetTop - mask.offsetHeight / 2;
+            x = event.clientX - this.offsetLeft - 100 - mask.offsetWidth / 2;
+            y = event.clientY - this.offsetTop - 100 - mask.offsetHeight / 2;
+            console.log(this.offsetParent);
+            // 进行边界判断
+            if (x < 0) {
+                x = 0;
+            }
+            if (x > mouse.offsetWidth - mask.offsetWidth) {
+                x = mouse.offsetWidth - mask.offsetWidth;
+            }
+            if (y < 0) {
+                y = 0;
+            }
+            if (y > mouse.offsetHeight - mask.offsetHeight) {
+                y = mouse.offsetHeight - mask.offsetHeight;
+            }
+            // 重新给遮罩层的left和top赋值
+            mask.style.left = x + "px";
+            mask.style.top = y + "px";
+            /*  
+                计算：弟弟一顿吃2个馒头，哥哥一顿吃4个馒头，问：弟弟今天吃了3个馒头，哥哥应该吃几个馒头？
+                计算出他们的倍数   4 / 2    2倍
+                3 * 2  == 6个  
+            */
+
+            /*  
+                大图盒子 / 小图盒子 = 倍数
+                我们 再小图移动的距离 *  倍数  ==  大图的位置
+            */
+            bigImg.style.left = -x * mouseBigSize.offsetWidth / mouse.offsetWidth + "px";
+            bigImg.style.top = -y * mouseBigSize.offsetHeight / mouse.offsetHeight + "px";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var obj = {
+        //     a: 1,
+        //     b: 32,
+        //     c: "asd"
+        // };
+
+        // for (var prop in obj) {
+        //     console.log(prop);
+        // }
+
+        // 利用该特点，可以实现数组的遍历
+        var arr = ["abc", "bcd", "234", , , , 54, 2, 1];
+        console.log(arr);
+        // for (var i = 0; i < arr.length; i++) {
+        //     console.log(arr[i]);
+        // }
+
+        for (var index in arr) {
+            console.log(index, typeof index, arr[index]);
+        }
+    </script>
+</body>
+
+</html>

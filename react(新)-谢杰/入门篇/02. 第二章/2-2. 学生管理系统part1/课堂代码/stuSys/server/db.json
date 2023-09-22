@@ -1,0 +1,49 @@
+{
+    "students": [
+        {
+            "name": "xiejie",
+            "age": "18",
+            "phone": "333-444-555",
+            "email": "xiejie@gmail.com",
+            "education": "adsfasfd",
+            "graduationschool": "asdfasfd",
+            "profession": "asdfasdf",
+            "profile": "asdfasfdasdf",
+            "id": 1
+        },
+        {
+            "name": "yajing",
+            "age": "34",
+            "phone": "123-345-678",
+            "email": "yajing@hotmail.com",
+            "education": "fasdfasfd",
+            "graduationschool": "fasfasdf",
+            "profession": "sdfasdfafd",
+            "profile": "asdfasdf",
+            "id": 3
+        },
+        {
+            "name": "xizhi",
+            "age": 47,
+            "phone": "13112341234",
+            "email": "1234567@qq.com",
+            "education": "硕士",
+            "graduationschool": "北京大学",
+            "profession": "前端开发工程师",
+            "profile": "大家好!",
+            "id": 2
+        }
+    ],
+    "classes" : [
+        {
+            "id" : 1,
+            "name" : "前端01班",
+            "description" : "这是一个积极向上的班级"
+        },
+        {
+            "id" : 2,
+            "name" : "前端02班",
+            "description" : "这也是一个非常积极向上的班级"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 面试题
+        // 数组的本质：对象 （引用类型）
+        // var arr1 = [3, 5, 7, 8, 2]; // arr1中存放的是地址
+        // var arr2 = arr1; // arr2中存放的是地址
+        // arr2[0] = 5;
+        // console.log(arr1 === arr2);
+        // console.log(arr1[0], arr2[0]);
+
+        // 如何复制（克隆，产生一个全新的对象）
+        var arr1 = [3, 5, 7, 8, 2];
+        var arr2 = arr1.slice(); 
+        arr2[0] = 5;
+        console.log(arr1 === arr2);
+        console.log(arr1[0], arr2[0]);
+
+    </script>
+</body>
+
+</html>

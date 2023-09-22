@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="../../plugin/helpers.js"></script>
+    <script>
+        function User(firstName, lastName, age) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.fullName = this.firstName + " " + this.lastName;
+        }
+
+        User.prototype.sayHello = function() {
+            console.log(`大家好，我叫${this.fullName}，今年${this.age}岁了`);
+        }
+
+        function VIPUser(firstName, lastName, age, money) {
+            User.call(this, firstName, lastName, age);
+            this.money = money;
+        }
+        myPlugin.inherit(VIPUser, User);
+
+        VIPUser.prototype.upgrade = function() {
+            console.log(`使用了${100}元软妹币，升级了！`);
+            this.money -= 100;
+        }
+
+        var vUser = new VIPUser("姬", "成", 1, 100);
+
+    </script>
+</body>
+
+</html>

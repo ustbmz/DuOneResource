@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [1, 2, 3, 4, 5, 6, -1, -2, -3, -4, -5, -6];
+        // 去掉数组中的负数， 然后对每一项平方， 然后再对每一项翻倍， 然后求和
+        // 不许使用循环
+
+        var result = arr.filter(function(item) {
+            return item >= 0;
+        }).map(function(item) {
+            return item ** 2;
+        }).map(function(item) {
+            return item * 2;
+        }).reduce(function(s, item) {
+            return s + item;
+        }, 0);
+
+        console.log(result);
+    </script>
+</body>
+
+</html>

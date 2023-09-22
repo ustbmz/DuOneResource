@@ -1,0 +1,15 @@
+.container {
+    width: 500px;
+    height: 200px;
+    border: 1px solid;
+    margin: 0 auto;
+}
+
+.btnContainer {
+    text-align: center;
+}
+
+.childComContainer {
+    display: flex;
+    justify-content: space-between;
+}

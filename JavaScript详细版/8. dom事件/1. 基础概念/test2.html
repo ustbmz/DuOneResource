@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+        }
+
+        button{
+            position: absolute;
+            right: -200px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button>
+            点击我
+        </button>
+    </div>
+
+    <p>
+
+    </p>
+    <script>
+        document.documentElement.onclick = function(){
+            console.log("html")
+        }
+        document.onclick = function(){
+            console.log("document");
+        }
+        
+        document.querySelector("div").onclick = function(){
+            console.log("div")
+        }
+        document.body.onclick = function(){
+            console.log("body")
+        }
+        document.querySelector("button").onclick = function(){
+            console.log("button")
+        }
+        
+
+        document.querySelector("p").onclick = function(){
+            console.log("p");
+        }
+    </script>
+</body>
+</html>

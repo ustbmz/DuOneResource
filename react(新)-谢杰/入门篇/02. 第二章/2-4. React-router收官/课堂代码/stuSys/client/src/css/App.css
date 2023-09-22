@@ -1,0 +1,38 @@
+.content {
+    margin-top: 100px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navigation {
+    line-height: 50px;
+    margin: 0 10px;
+    font-weight: 400;
+}
+
+.navigation:hover {
+    color: #ccc;
+    text-decoration: none;
+}
+
+a.active {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.table {
+    margin-top: 30px;
+}
+
+tr,
+th {
+    text-align: center;
+}
+
+.glyphicon::before{
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+}

@@ -1,0 +1,49 @@
+.jobContainer {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    padding-right: 20px;
+}
+
+.leftSide {
+    width: 40%;
+}
+
+.rightSide {
+    width: 700px;
+    height: 70vh;
+    border-radius:5px;
+    box-shadow:0 0 1px #ccc;
+    border-radius: 5px;
+    position:fixed;
+    left: 41%;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.card {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.salary {
+    color: red;
+    font-size: 22px;
+}
+
+.badge {
+    color: #fff;
+    background-color: #74aef4;
+    padding: 3px 5px;
+    margin-right: 8px;
+}
+
+.paginationContainer{
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    justify-content:center;
+}
+

@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7450616",
+      "name": "奖杯",
+      "font_class": "jiangbei",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    }
+  ]
+}

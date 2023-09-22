@@ -1,0 +1,15 @@
+.bookContainer{
+    width: 90%;
+    margin: 0 auto;
+    /* outline: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+.numberContainer{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 10px;
+    font-weight: 200;
+}

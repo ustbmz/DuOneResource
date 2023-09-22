@@ -1,0 +1,22 @@
+.row {
+    margin-bottom: 20px;
+}
+
+.title {
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.describtionTitle {
+    margin: 10px 0;
+}
+
+.content {
+    font-weight: 200;
+    margin: 10px 0;
+}
+
+.salary {
+    color: red;
+    font-size: 22px;
+}

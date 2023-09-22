@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var user = {
+            account: "abc",
+            pwd: "123456",
+            gender: "男",
+            isVip: false,
+            age: 18
+        };
+        // console.log(user.pwd);
+        // //将密码改为654321
+        // user.pwd = "654321";
+        // console.log(user.pwd);
+
+        user.tradePwd = "abcdfasdf"; // 相当于添加了属性tradePwd
+
+        console.log(user);
+
+        var user2;
+
+        user2.account = "abcded"; // 报错，原始类型undefined中不可以有属性
+
+        console.log(user2);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var reg = /\d+?/g;
+        var s = "1234abc123aaa";
+        console.log(s, reg.lastIndex, reg.test(s), reg.lastIndex);
+        console.log(s, reg.lastIndex, reg.test(s), reg.lastIndex);
+        console.log(s, reg.lastIndex, reg.test(s), reg.lastIndex);
+        console.log(s, reg.lastIndex, reg.test(s), reg.lastIndex);
+        console.log(s, reg.lastIndex, reg.test(s), reg.lastIndex);
+        console.log(s, reg.lastIndex, reg.test(s), reg.lastIndex);
+
+        //判断匹配多少处
+        // var n = 0;
+        // while (reg.test(s)) {
+        //     n++;
+        // }
+
+        // console.log(`匹配了${n}次`);
+    </script>
+</body>
+
+</html>

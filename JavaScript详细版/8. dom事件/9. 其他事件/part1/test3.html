@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="" id="sel">
+        <option value="1">Lorem.</option>
+        <option value="2">Porro?</option>
+        <option value="3">A?</option>
+        <option value="4">Ad.</option>
+        <option value="5">Voluptates?</option>
+        <option value="6">Blanditiis!</option>
+        <option value="7">Dicta.</option>
+        <option value="8">Illum!</option>
+        <option value="9">Sint.</option>
+        <option value="10">Sunt.</option>
+    </select>
+
+    <input type="text" id="txt1">
+
+    <textarea id="txt2"></textarea>
+
+    <script>
+        sel.onchange = function() {
+            console.log(sel.value, sel.options[sel.selectedIndex].innerHTML);
+        }
+
+        txt1.oninput = txt2.oninput = function(e) {
+            if (!this.value.trim()) {
+                console.log("请输入内容");
+                return;
+            }
+            console.log(this.value, e.bubbles);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #buttons button {
+            margin-right: 20px;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="buttons">
+
+    </div>
+    <img src="" alt="">
+    <script>
+        var imgs = [
+            "img/1.jpg",
+            "img/2.jpg",
+            "img/3.jpg",
+            "img/4.jpg"
+        ];
+        var img = document.getElementsByTagName("img")[0];
+        img.src = imgs[0];
+
+
+        var divButtons = document.getElementById("buttons");
+        imgs.forEach(function(src, i) {
+            var btn = document.createElement("button");
+            btn.innerText = `第${i+1}张图片`;
+            divButtons.appendChild(btn);
+            btn.dataset.src = src;
+        });
+
+        divButtons.onclick = function(e) {
+            if (e.target.dataset.src) {
+                img.src = e.target.dataset.src;
+            }
+        }
+    </script>
+</body>
+
+</html>

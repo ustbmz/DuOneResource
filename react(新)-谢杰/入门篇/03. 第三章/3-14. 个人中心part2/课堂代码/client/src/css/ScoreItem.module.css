@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    /* outline: 1px solid red; */
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    color: rgb(102, 102, 102);
+}
+
+.left {
+    /* width: 30%; */
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* outline: 1px solid blue; */
+}
+
+.rank{
+    width: 22px;
+    height: 100%;
+    text-align: center;
+    line-height:30px;
+    font-size: 16px;
+    /* outline: 1px solid red; */
+}
+
+.avatar{
+    margin:0 15px;
+}
+
+.right {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

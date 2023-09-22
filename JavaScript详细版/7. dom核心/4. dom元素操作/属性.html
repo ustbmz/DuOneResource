@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            width: 150px;
+            height: 150px;
+            border: 2px solid;
+            object-fit: contain;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" value="asdfasfd">
+    <input id="cbgender" type="checkbox" checked="checked"> <label for="cbgender">男</label>
+    <select class="ssss">
+        <option value="chengdu">成都</option>
+        <option value="beijing">北京</option>
+        <option value="haerbin">哈尔滨</option>
+    </select>
+    <button id="btnGetTxt">获取文本框内容</button>
+    <button id="btnSetTxt">设置文本框内容</button>
+    <img src="1.jpg" alt="">
+    <p>
+        <textarea>
+            啊手动阀手动阀三发射发生
+        </textarea>
+    </p>
+    <div data-abc="123" data-bcd="234">
+
+    </div>
+    <script>
+        var input = document.querySelector("input[type=text]");
+        document.getElementById("btnGetTxt").onclick = function() {
+            //获取文本框的值
+            console.log(input.value, typeof input.value);
+        }
+
+        document.getElementById("btnSetTxt").onclick = function() {
+            input.value = "请输入文本";
+        }
+
+        //点击图片切换
+        var i = 1; //第几张图片
+        var img = document.querySelector("img");
+        img.onclick = function() {
+            i++;
+            if (i === 3) {
+                i = 1;
+            }
+            img.src = i + ".jpg";
+        }
+    </script>
+</body>
+
+</html>

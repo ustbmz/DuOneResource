@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var obj = {
+            x: 13,
+            y: 34534,
+            valueOf() {
+                return 123;
+            }
+        }
+
+        console.log(obj + 1);
+        // 如果调用了valueOf已经得到了原始类型，则不再调用toString
+        // console.log(obj.valueOf().toString() + 1);
+    </script>
+</body>
+
+</html>

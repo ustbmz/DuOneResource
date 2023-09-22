@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var arr = [32, 6, 67, 3, 23, 4];
+        // 从数组下标3的位置开始寻找，目标是67
+        // console.log(arr.includes(67, 3));
+
+        var arr = [{
+                x: 1,
+                y: 2
+            },
+            {
+                x: 3,
+                y: 4
+            }
+        ];
+        console.log(arr.includes({
+            x: 1,
+            y: 2
+        }));
+    </script>
+</body>
+
+</html>

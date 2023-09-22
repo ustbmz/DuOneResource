@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 200px;
+            height: 200px;
+            border: 2px solid;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        点击div，设置div的背景色为随机颜色
+    </p>
+    <div class="container">
+
+    </div>
+    <script src="../../common/BetterFunction.js"></script>
+    <script>
+        var div = document.querySelector(".container");
+        div.onclick = function() {
+            // 0 - 255
+            this.style.background = `rgb(${MyFunctions.getRandom(0, 255)},${MyFunctions.getRandom(0, 255)},${MyFunctions.getRandom(0, 255)})`;
+        }
+    </script>
+</body>
+
+</html>

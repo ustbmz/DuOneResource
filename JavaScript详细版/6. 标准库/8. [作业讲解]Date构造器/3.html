@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //打印当前月每一天的星期
+        function print() {
+            var now = new Date();
+            var m = now.getMonth() + 1;
+            //得到这一年，这一月的天数
+            var y = now.getFullYear();
+            var days = new Date(y, m, 0).getDate();
+            for (var i = 1; i <= days; i++) {
+                console.log(`${y}年${m}月${i}日：星期${getDayOfWeek(y, m, i)}`);
+            }
+        }
+
+        function getDayOfWeek(year, month, day) {
+            var d = new Date(year, month - 1, day);
+            var day = d.getDay(); //得到星期
+            switch (day) {
+                case 0:
+                    return "日";
+                case 1:
+                    return "一";
+                case 2:
+                    return "二";
+                case 3:
+                    return "三";
+                case 4:
+                    return "四";
+                case 5:
+                    return "五";
+                case 6:
+                    return "六";
+            }
+        }
+
+        print();
+    </script>
+</body>
+
+</html>

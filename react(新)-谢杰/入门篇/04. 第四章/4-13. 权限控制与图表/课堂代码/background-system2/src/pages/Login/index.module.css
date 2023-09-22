@@ -1,0 +1,38 @@
+.container {
+    width: 400px;
+
+    /* border: 1px solid #ccc; */
+    padding: 30px;
+    margin: 100px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 5px gainsboro;
+    position: relative;
+    z-index: 99;
+    background-color: #fcfcfc;
+}
+
+.container h1 {
+    text-align: center;
+    margin: 30px auto;
+    font-weight: 200;
+    font-size: 26px;
+}
+
+.captchaImg {
+    width: 130px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.captchaImg svg {
+    width: 100%;
+    height: 100%;
+}
+
+.remember {
+    text-align: center;
+}
+
+.loginBtn {
+    width: 100%;
+}

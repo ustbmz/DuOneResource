@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+    </div>
+    <p style="margin-top: 300px;">
+        <button id="btn1">开始移动</button>
+        <button id="btn2">停止移动</button>
+    </p>
+
+    <script>
+        var div = document.querySelector("div");
+        var left = 0;
+        var timer;
+        btn1.onclick = function() {
+            if (timer) {
+                return;
+            }
+            timer = setInterval(function() {
+                left++;
+                div.style.left = left + "px";
+            }, 16)
+        }
+
+        btn2.onclick = function(){
+            clearInterval(timer);
+            timer = null;
+        }
+    </script>
+</body>
+
+</html>

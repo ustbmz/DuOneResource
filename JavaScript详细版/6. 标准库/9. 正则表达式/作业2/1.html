@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var reg = /\d{3}/g;
+        var s = "433afdsaf34542fsdssfsd234";
+        var n = 0;
+        var str = "";
+        while (result = reg.exec(s)) {
+            n++;
+            str += result[0] + "\n";
+        }
+        str = `匹配${n}次\n` + str;
+        console.log(str);
+    </script>
+</body>
+
+</html>

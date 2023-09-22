@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // window.console.log("abc");
+        // window.alert("abc");
+        // window.document.write("abc");
+
+        // var a;
+        // console.log(window); //因为，window之前没有属性a，a成为了window对象的属性
+
+        // var console = undefined;
+        // alert(window.console); //由于，console有赋值，因此，覆盖了window的属性console
+
+        // var console;
+        // console.log(console); //由于，console没有赋值，因此，没有覆盖window的属性console
+
+        // why?
+        var name = null; // name属性比较特殊，赋值的任何内容，都会被转换为字符串
+        console.log(name);
+        console.log(typeof name);
+        console.log(window);
+
+        // var alert = undefined;
+        // console.log(typeof alert);
+    </script>
+</body>
+
+</html>

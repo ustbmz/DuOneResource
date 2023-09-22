@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var year = 2001;
+        //是否是闰年
+        var isLeap = year % 4 === 0 && year % 100 !== 0 || year % 400 === 0;
+
+        isLeap && console.log(29 + "天");
+        isLeap || console.log(28 + "天");
+    </script>
+</body>
+
+</html>

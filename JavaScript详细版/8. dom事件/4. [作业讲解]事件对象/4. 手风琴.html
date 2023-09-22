@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        ul {
+            margin: 0;
+            list-style: none;
+            padding: 0;
+        }
+
+        .wrap {
+            width: 200px;
+            border: 1px solid #ccc;
+            text-align: center;
+            line-height: 2;
+        }
+
+        .title {
+            background: rgb(236, 135, 52);
+            display: block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap" id="wrap">
+        <ul class="menu">
+
+        </ul>
+    </div>
+
+    <script>
+        var menu = [{
+                name: "菜单一",
+                children: ["商品一", "商品二", "商品三", "商品四"]
+            },
+            {
+                name: "菜单二",
+                children: ["商品一", "商品二", "商品三", "商品四"]
+            }, {
+                name: "菜单三",
+                children: ["商品一", "商品二", "商品三", "商品四"]
+            }, {
+                name: "菜单四",
+                children: ["商品一", "商品二", "商品三", "商品四"]
+            }
+        ];
+        var ul = document.querySelector("ul.menu");
+        menu.forEach(function(item) {
+            var li = document.createElement("li");
+            li.innerHTML = `<span class="title">${item.name}</span>`;
+
+            var childUl = document.createElement("ul");
+            item.children.forEach(function(child) {
+                childUl.innerHTML += `<li>${child}</li>`;
+            })
+            li.appendChild(childUl);
+            ul.appendChild(li);
+        })
+
+        ul.onclick = function(e) {
+            if (e.target.className === "title") {
+                var nextUl = e.target.nextElementSibling;
+                var style = getComputedStyle(nextUl);
+                if (style.display === "none") {
+                    nextUl.style.display = "block";
+                } else {
+                    nextUl.style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

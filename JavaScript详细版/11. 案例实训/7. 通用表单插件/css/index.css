@@ -1,0 +1,91 @@
+.form {
+    width: 500px;
+    margin: 30px auto;
+}
+
+.form .item{
+    margin: 5px 0;
+}
+
+.form .item::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.form .left {
+    float: left;
+    width: 25%;
+    text-align: right;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.form .left::after {
+    content: "：";
+}
+
+.form .right {
+    float: right;
+    width: 75%;
+    box-sizing: border-box;
+}
+
+.form .right input[type=text], .form .right input[type=password]{
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form .right input:focus {
+    /* outline: 1px solid #008c8c; */
+    outline: none;
+    box-shadow: 0px 0px 0px 1px #008c8c;
+}
+
+.form .error {
+    color: #f40;
+    margin-left: 25%;
+    font-size: 14px;
+    visibility: hidden;
+    height: 30px;
+    line-height: 30px;
+}
+
+.form .has-error .error {
+    visibility: visible;
+}
+
+.form .form-item.has-error .right input {
+    border-color: #f40;
+    box-shadow: none;
+}
+
+.form .has-error .left {
+    color: #f40;
+}
+
+.form .button{
+    margin-left: 25%;
+}
+
+
+.form .button button{
+    width: 100%;
+    box-sizing: border-box;
+    background: #008c8c;
+    border: none;
+    color: #fff;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form .button button:hover{
+    background: #1dadad;
+}

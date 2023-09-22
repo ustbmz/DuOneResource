@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .small{
+            width: 350px;
+            height: 350px;
+            border: 1px solid #ccc;
+            float: left;
+            background-clip: padding-box;
+            position: relative;
+        }
+        .big{
+            width: 540px;
+            height: 540px;
+            border:1px solid #ccc;
+            float: left;
+            margin-left: 10px;
+            background-clip: padding-box;
+            display: none;
+        }
+
+        .small .move{
+            position: absolute;
+            background: rgba(200,200,50,0.5);
+            border: 1px solid #999;
+            box-sizing: border-box;
+            cursor: move;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="small">
+        <div class="move"></div>
+    </div>
+    <div class="big"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>

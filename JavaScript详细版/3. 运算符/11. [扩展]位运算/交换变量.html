@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 5, b = 3;
+
+        // 方式1
+        // var temp = a;
+        // a = b;
+        // b = temp;
+        // console.log(a, b);
+
+        // 方式2
+        // a = a + b;
+        // b = a - b; 
+        // a = a - b;
+        // console.log(a, b);
+
+        // 方式3
+        // 101
+        // 011
+        a = a ^ b; // 110
+        b = a ^ b; // 110 ^ 011  = 101 = 5
+        a = a ^ b; // 110 ^ 101  = 11 = 3
+        console.log(a, b);
+    </script>
+</body>
+
+</html>

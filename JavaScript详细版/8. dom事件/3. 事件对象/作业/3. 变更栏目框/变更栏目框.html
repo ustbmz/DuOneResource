@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变更栏目框</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 390px;
+            height: 655px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .top{
+            width: 100%;
+            height: 10%;
+            border-bottom: 2px solid #ccc;
+        }
+        .content{
+            width: 100%;
+            height: 90%;
+        }
+        .top ul{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        li{
+            width: 25%;
+            height: 100%;
+            list-style: none;
+            text-align: center;
+            /* 将box-sizing设置为border-box，可以随意修改padding而不用修改盒子大小 */
+            box-sizing: border-box;
+            padding-top: 35px;
+            font-size: 18px;
+            color: #2c7bbb;
+            cursor: pointer;
+        }
+        li:hover{
+            color: #d32228;
+        }
+        .current{
+            border-bottom: 4px solid #d32228;
+            color: #d32228;
+        }
+        img{
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <ul>
+                <li class="current">电玩</li>
+                <li>网游</li>
+                <li>手游</li>
+                <li>数码</li>
+            </ul>
+        </div>
+        <div class="content">
+            <img src="./images/1.png" alt="" width="390">
+        </div>
+    </div>
+    <script>
+        // 获取DOM元素
+        let li = document.getElementsByTagName("li");
+        let img = document.getElementsByTagName("img")[0];
+        for(let i=0;i<li.length;i++)
+        {
+            li[i].onclick = function(){
+                // 首先清除所有li的类
+                for(let j=0;j<li.length;j++)
+                {
+                   li[j].className = "";
+                }
+                // 给当前所点击的li添加类
+                li[i].className = "current";
+                // 拼接图片的路径
+                let picSrc = "./images/" + (i+1) + ".png";
+                img.setAttribute("src",picSrc);
+            }
+        }
+    </script>
+</body>
+</html>

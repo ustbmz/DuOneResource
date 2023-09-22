@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 年-月-日 时:分:秒
+        function getDateString(date) {
+            var year = date.getFullYear().toString().padStart(4, "0");
+            var month = (date.getMonth() + 1).toString().padStart(2, "0");
+            var day = date.getDate().toString().padStart(2, "0");
+
+            var hour = date.getHours().toString().padStart(2, "0");
+            var minute = date.getMinutes().toString().padStart(2, "0");
+            var second = date.getSeconds().toString().padStart(2, "0");
+
+            return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+        }
+
+        console.log(getDateString(new Date()));
+    </script>
+</body>
+
+</html>

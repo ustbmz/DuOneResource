@@ -1,0 +1,37 @@
+body, p{
+    margin: 0;
+}
+
+.paper{
+    width: 170px;
+    height: 170px;
+    background: rgb(243, 168, 168);
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 20px;
+    position: fixed;
+    left: 100px;
+    top: 100px;
+    cursor: move;
+}
+
+.paper span{
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+input{
+    position: fixed;
+    width: 300px;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #aaa;
+    font-size: 20px;
+    border-radius: 5px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 30px;
+}

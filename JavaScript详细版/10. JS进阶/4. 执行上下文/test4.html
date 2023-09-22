@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var g1 = 123;
+        var a = 2;
+        function A(a, b) {
+            console.log(a, b, g1);
+            var b = 123;
+            
+
+            function b() {}
+
+            var a = function() {}
+
+            console.log(a, b);
+        }
+        var g2 = 456;
+
+        var g3 = function() {}
+
+        A(1, 2);
+    </script>
+</body>
+
+</html>

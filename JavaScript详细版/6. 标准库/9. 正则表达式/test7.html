@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var s = "sdfsdf3434343sdfsa545454dfsdfsfsd6754";
+        // var reg = /[a-zA-Z](?=\d+)/g;
+        // while (result = reg.exec(s)) {
+        //     console.log(result);
+        // }
+
+        // var s = "334353456";
+        // // var result = "43,534,512,312";
+        // var reg = /\B(?=(\d{3})+$)/g;
+        // s = s.replace(reg, ",");
+        // console.log(s);
+
+        // var s = "afg43223444wr423424243";
+        // var reg = /[a-zA-Z](?!\d+)/g;
+        // while (result = reg.exec(s)) {
+        //     console.log(result);
+        // }
+
+        // 判断密码强度
+        // 要求密码中必须出现小写字母、大写字母、数字、特殊字符(!@#_,.)，6-12位
+        // var s = "asdfsdAf234."
+        // var reg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#_,.]).{6,12}$/;
+        // console.log(reg.test(s));
+
+        // 判断密码强度
+        // 密码长度必须是6-12位
+        // 出现小写字母、大写字母、数字、特殊字符(!@#_,.)  -> 强
+        // 出现小写字母、大写字母、数字  -> 中
+        // 出现小写字母、大写字母  -> 轻
+        // 其他  -> 不满足要求
+
+        function judgePwd(pwd) {
+            if (/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#_,.]).{6,12}$/.test(pwd)) {
+                return "强";
+            } else if (/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,12}$/.test(pwd)) {
+                return "中";
+            } else if (/^(?=.*[a-z])(?=.*[A-Z]).{6,12}$/.test(pwd)) {
+                return "轻";
+            } else {
+                return "不满足要求";
+            }
+        }
+
+        console.log(judgePwd("asdADFF4.343"));
+    </script>
+</body>
+
+</html>

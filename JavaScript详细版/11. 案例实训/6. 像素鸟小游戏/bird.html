@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>像素鸟</title>
+    <style>
+        .game {
+            width: 800px;
+            height: 600px;
+            border: 2px solid;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .game .sky {
+            height: 100%;
+            width: 200%;
+            background: url("img/sky.png");
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .game .land {
+            height: 112px;
+            width: 200%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: url("img/land.png");
+        }
+
+        .game .bird {
+            width: 33px;
+            height: 26px;
+            position: absolute;
+            left: 150px;
+            top: 150px;
+            background: url("img/bird.png");
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .pipe {
+            position: absolute;
+            width: 52px;
+        }
+
+        .up {
+            background: url("img/pipeDown.png") no-repeat;
+            background-position: left bottom;
+        }
+
+        .down {
+            background: url("img/pipeUp.png") no-repeat;
+        }
+
+        .game .over {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: rgba(0, 0, 0, .5);
+            z-index: 9;
+            line-height: 600px;
+            color: #fff;
+            font-size: 5em;
+            text-align: center;
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="game">
+        <div class="sky"></div>
+        <div class="land"></div>
+        <div class="bird"></div>
+        <div class="over">
+            游戏结束
+        </div>
+    </div>
+
+    <p>
+        回车键开始/暂停，空格键跳跃
+    </p>
+
+    <script src="bird.js"></script>
+</body>
+
+</html>

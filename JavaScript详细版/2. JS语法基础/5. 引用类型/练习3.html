@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var a = 3, b =5;
+        // //将两个变量交换
+        // var temp = a;
+        // a = b;
+        // b = temp;
+    </script>
+
+    <script>
+        var item = {
+            name: "foo",
+            parent: {
+                name: "bar"
+            },
+            child: {
+                name: "goo"
+            }
+        };
+        // 将item的parent和child互换，不可创建新对象
+
+        // item.parent  item.child
+        var temp = item.parent;
+        item.parent = item.child;
+        item.child = temp;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //说出以下程序是否有问题，问题在哪？
+        //中国象棋中有4个马，每个马是一个对象，为了方便对象的创建，写出如下代码
+        var horse1 = {
+            name: "马",
+            position: { //马在棋盘上的位置
+                x: 1,
+                y: 9
+            },
+            color: "red" //马的颜色
+        };
+
+        var horse2 = horse1;
+        horse2.position.x = 7;
+
+        var horse3 = horse1;
+        horse3.name = "馬";
+        horse3.position.y = 0;
+        horse3.color = "black";
+
+        var horse4 = horse3;
+        horse4.position.x = 7;
+
+        console.log(horse1.color, horse2.color, horse3.color, horse4.color);
+    </script>
+</body>
+
+</html>

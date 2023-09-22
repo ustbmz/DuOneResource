@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var nums = [23, 2, -34, 3563, 111, 44, 5, 8, 1];
+
+        for (var i = 1; i < nums.length; i++) {
+            // 第i次排序
+            for (var j = 0; j < nums.length - i; j++) {
+                // 比较 j 和 j+1 两个位置的数字
+                if (nums[j] > nums[j + 1]) {
+                    //交换
+                    var temp = nums[j];
+                    nums[j] = nums[j + 1];
+                    nums[j + 1] = temp;
+                }
+            }
+        }
+
+        console.log(nums);
+
+        /*
+            第1次：排了5次，比较的位置从0~4
+            2，23，44，5，8，1
+            2，23，44，5，8，1
+            2，23，5，44，8，1
+            2，23，5，8，44，1
+            2，23，5，8，1，44
+        */
+
+        /*
+            第2次：排了4次，比较的位置从0~3
+            2，23，5，8，1，44
+            2，5，23，8，1，44
+            2，5，8，23，1，44
+            2，5，23，1，23，44
+        */
+
+        /*
+            第3次：排了3次，比较的位置从0~2
+            2，5，23，1，23，44
+            2，5，23，1，23，44
+            2，5，1，23，23，44
+        */
+
+        /*
+            第4次：排了2次，比较的位置从0~1
+            2，5，1，23，23，44
+            2，1，5，23，23，44
+        */
+
+        /*
+            第5次：排了1次，比较的位置从0~0
+            1，2，5，23，23，44
+        */
+    </script>
+</body>
+
+</html>

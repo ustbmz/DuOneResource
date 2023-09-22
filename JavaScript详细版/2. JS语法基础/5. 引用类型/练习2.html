@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //以下程序的输出结果是什么
+        var obj1 = {
+            a: "a1",
+            subObj: {
+                prop: "p1"
+            }
+        };
+
+        var obj2 = {
+            a: "a2",
+            subObj: {
+                prop: "p2"
+            }
+        };
+
+        obj2.subObj = obj1.subObj;
+        obj2.subObj.prop = "p3";
+        console.log(obj1.subObj.prop, obj2.subObj.prop); //p3 p3
+    </script>
+</body>
+
+</html>

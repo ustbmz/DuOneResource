@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>tes2.html</h1>
+    <script>
+        console.time("全局");
+        for (var i = 0; i < 100000; i++) {
+
+        }
+        console.time("测试");
+        var sum = 0;
+        for (var i = 0; i < 10000; i++) {
+            sum += i;
+        }
+        console.timeEnd("测试");
+        console.timeEnd("全局");
+    </script>
+</body>
+
+</html>

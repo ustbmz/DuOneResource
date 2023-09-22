@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="../../plugin/helpers.js"></script>
+    <script>
+        //保证一个时间段内执行一次
+        window.onresize = function(){
+            handle();
+        }
+        function test() {
+            console.log("a");
+        }
+
+        var handle = myPlugin.throttle(test, 1000, false);
+        handle();
+        handle();
+        handle();
+        handle();
+        handle();
+        handle();
+        handle();
+        handle();
+        handle();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="../../common/MyFunction.js"></script>
+    <script>
+        function begin() {
+            var num = +prompt("请输入一个大于2的偶数");
+            if (isNaN(num) || num <= 2 || isOdd(num)) {
+                console.log("输入有误");
+                return;
+            }
+            //输入正确
+            for (var i = 2; i <= num - 2; i++) {
+                var j = num - i;
+                //判断两个数字是否都是素数
+                if (isPrime(i) && isPrime(j)) {
+                    console.log(`${num} = ${i} + ${j}`);
+                }
+            }
+        }
+
+        begin();
+    </script>
+</body>
+
+</html>

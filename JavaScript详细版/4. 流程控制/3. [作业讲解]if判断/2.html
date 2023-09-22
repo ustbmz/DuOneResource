@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var score = +prompt("请输入一个成绩（0~100）");
+        if (isNaN(score) || score < 0 || score > 100) {
+            console.log("输入有误");
+        } else {
+            if (score >= 90) {
+                console.log("A")
+            } else if (score >= 70) {
+                console.log("B")
+            } else if (score >= 60) {
+                console.log("C")
+            } else if (score >= 40) {
+                console.log("D")
+            } else {
+                console.log("E");
+            }
+        }
+    </script>
+</body>
+
+</html>

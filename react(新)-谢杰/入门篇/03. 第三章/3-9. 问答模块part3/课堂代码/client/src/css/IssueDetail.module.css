@@ -1,0 +1,83 @@
+/* 问答页面样式 */
+
+.detailContainer {
+    width: 90%;
+    /* height: 3000px; */
+    margin: 0 auto;
+    /* outline: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+.leftSide {
+    width: 70%;
+    height: 100%;
+
+}
+
+.leftSide pre {
+    background: rgb(40, 40, 40);
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.leftSide .toastui-editor-main pre{
+    color: #000;
+}
+
+.leftSide table {
+    border: 1px solid;
+}
+
+.leftSide tr,
+.leftSide th,
+.leftSide td {
+    border: 1px solid;
+    text-align: center;
+}
+
+
+.question {
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 0 1px #ccc;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.question h1 {
+    font-weight: 200;
+    font-size: 24px;
+}
+
+.questioner {
+    margin: 20px 0;
+    /* outline: 1px solid red; */
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+}
+
+.user {
+    margin: 0 15px;
+}
+
+.content {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.content img{
+    max-width: 100%;
+}
+
+.rightSide {
+    width: 28%;
+    height: 100%;
+    /* outline: 1px solid #ccc; */
+    position: sticky;
+    top: 90px;
+}

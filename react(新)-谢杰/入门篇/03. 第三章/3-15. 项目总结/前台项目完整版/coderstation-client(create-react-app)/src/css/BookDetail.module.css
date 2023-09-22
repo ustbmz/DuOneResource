@@ -1,0 +1,60 @@
+.bookInfoContainer {
+    width: 100%;
+    /* outline: 1px solid; */
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftSide {
+    width: 35%;
+
+}
+
+.img {
+    text-align: center;
+    height: 350px;
+    box-shadow: 0 0 1px #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.link {
+    height: 50px;
+    /* outline: 1px solid blue; */
+    text-align: center;
+    line-height: 50px;
+}
+
+.rightSide {
+    width: 63%;
+    height: 100%;
+    /* outline: 1px solid red; */
+    padding: 0 20px;
+}
+
+.title {
+    font-weight: 200;
+    margin: 20px 0;
+}
+
+.rightSide p {
+    font-weight: 200;
+    margin-bottom: 0;
+}
+
+.comment {
+    padding: 50px;
+}
+
+.requirePoints {
+    font-size: 18px;
+    color: #f00;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.downloadLink {
+    color: #4091f7;
+    cursor: pointer;
+}

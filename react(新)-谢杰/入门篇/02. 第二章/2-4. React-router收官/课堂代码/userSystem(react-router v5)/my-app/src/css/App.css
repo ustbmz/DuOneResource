@@ -1,0 +1,34 @@
+.navgation {
+    line-height: 50px;
+    margin: 0 10px;
+    font-weight: 300;
+}
+
+.navbar-brand,.about{
+    font-weight: 200;
+}
+
+h1 {
+    font-weight: 100;
+}
+
+th{
+    font-weight: 400;
+    text-align: center;
+}
+
+table{
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 200;
+}
+
+label{
+    font-weight: 200;
+}
+
+.glyphicon::before{
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+}

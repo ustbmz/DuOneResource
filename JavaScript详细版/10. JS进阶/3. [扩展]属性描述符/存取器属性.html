@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var obj = {};
+
+        Object.defineProperty(obj, "x", {
+            //属性描述符
+            get: function() {
+                //当读取属性x时，运行的函数
+                console.log("读取属性x");
+                //该函数的返回值，将作为属性的值
+                return 2;
+            },
+            set: function(val) {
+                //当给该属性赋值时，运行的函数
+                //val：表示要赋的值
+                console.log("给属性赋值为" + val);
+            }
+        });
+
+        obj.x = 3; //相当于运行了 set(3)
+
+        console.log(obj.x);
+
+        // console.log(obj.x);
+
+        // obj.x = 1; //会运行一个函数
+        // console.log(obj.x); //会运行一个函数
+    </script>
+</body>
+
+</html>

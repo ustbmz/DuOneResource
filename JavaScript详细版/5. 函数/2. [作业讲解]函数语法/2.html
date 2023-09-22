@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="../../common/MyFunction.js"></script>
+    <script>
+        // function begin() {
+        //     var year = +prompt("请输入一个年份（1990~2100）");
+        //     if (isNaN(year) || year < 1990 || year > 2100) {
+        //         console.log("输入有误");
+        //         return;
+        //     }
+        //     //输入正确
+        //     for (var m = 1; m <= 12; m++) {
+        //         console.log(`${year}年${m}月：${getDays(year, m)}`);
+        //     }
+        // }
+
+        // begin();
+
+        (function begin() {
+            var year = +prompt("请输入一个年份（1990~2100）");
+            if (isNaN(year) || year < 1990 || year > 2100) {
+                console.log("输入有误");
+                return;
+            }
+            //输入正确
+            for (var m = 1; m <= 12; m++) {
+                console.log(`${year}年${m}月：${getDays(year, m)}`);
+            }
+        }());
+    </script>
+</body>
+
+</html>

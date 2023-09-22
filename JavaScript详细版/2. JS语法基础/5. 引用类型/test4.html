@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var obj1 = {
+            a: "123",
+            b: "456",
+            sub: {
+                s1: "abc",
+                s2: "bcd"
+            }
+        };
+        var temp = obj1.sub;
+        var obj2 = obj1;
+        obj2.sub = {
+            s1: "s",
+            s2: "ddd"
+        };
+
+        console.log(obj1.sub.s1, obj2.sub.s1, temp.s1);// s s abc
+        console.log(window);
+    </script>
+</body>
+
+</html>

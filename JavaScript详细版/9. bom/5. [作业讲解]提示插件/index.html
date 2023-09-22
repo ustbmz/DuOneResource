@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* .confirm{
+            background: red;
+        } */
+    </style>
+</head>
+
+<body>
+    <button>打开一个确认对话框</button>
+    <script src="../../plugin/confirm.js"></script>
+    <script>
+        var n = 0;
+        document.querySelector("button").onclick = function() {
+            n++;
+            //打开一个确认对话框
+            myPlugin.openConfirm("啊手动阀发生法撒法撒阀手动阀");
+        }
+    </script>
+</body>
+
+</html>

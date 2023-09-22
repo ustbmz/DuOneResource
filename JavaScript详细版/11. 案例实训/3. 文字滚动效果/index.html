@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            background: #b3effe;
+            height: 50px;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+
+        .left {
+            float: left;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .title::after{
+            content: "|";
+            margin-left: 20px;
+            font-size: 27px;
+            vertical-align: -2px;
+            color: #ccc;
+        }
+
+        .left ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin-left: 20px;
+            height: 30px;
+            overflow: hidden;
+        }
+
+        .left ul li{
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left title">
+            最新公告
+        </div>
+        <div class="left">
+            <ul>
+                <li>1. Lorem ipsum dolor sit.</li>
+                <li>2. Porro ea tempora enim!</li>
+                <li>3. Quasi blanditiis quisquam minus.</li>
+                <li>4. Nesciunt blanditiis iure nobis.</li>
+                <li>5. Illo, exercitationem? Voluptatem, nostrum?</li>
+            </ul>
+        </div>
+    </div>
+    <script src="../../plugin/helpers.js"></script>
+    <script src="../../plugin/animate.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

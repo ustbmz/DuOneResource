@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var len = +prompt("请输入斐波拉契数列的长度");
+        if (isNaN(len) || len < 0) {
+            console.log("输入有误");
+        } else {
+            //输入正确
+            var arr = [];
+            for (var i = 0; i < len; i++) {
+                if (i === 0 || i === 1) {
+                    arr[i] = 1;
+                } else {
+                    arr[i] = arr[i - 1] + arr[i - 2];
+                }
+            }
+
+            console.log(arr);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 等待用户操作（确定，取消），将用户操作的结果保存到变量result中
+        // 让用户输入一个数字，如果点击了取消，输出取消，如果点击了确定，根据输入的内容判断输入是否正确
+        var result = prompt("请输入你的年龄");
+        if (result === null) {
+            console.log("点击了取消");
+        } else {
+            result = +result; //转换为数字
+            if (isNaN(result)) {
+                //不是正常的数字
+                console.log("输入有误");
+            }
+            else{
+                console.log(result, typeof result);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 2px solid;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+    </div>
+    <script src="../../plugin/helpers.js"></script>
+    <script>
+        function createElement(container, name, props, styles, content) {
+            var ele = document.createElement(name);
+            container.appendChild(ele);
+
+            for (var prop in props) {
+                ele[prop] = props[prop];
+            }
+
+            for (var prop in styles) {
+                ele.style[prop] = styles[prop];
+            }
+            if (content) {
+                ele.innerHTML = content;
+            }
+        }
+        var div = document.querySelector(".container");
+        var create = myPlugin.curry(createElement, div, "div", {}, {
+            height: "100px",
+            background: "#008c8c",
+            margin: "30px",
+            color:"#fff"
+        });
+
+        create("asdfasdf");
+        create("2344");
+        create("asdfa4545sdf");
+        create("asdfa234324234sdf");
+
+        create("asdfa132112313sdf");
+        create("563456435634");
+        create("啊打发法是发啊手动阀啊");
+
+    </script>
+</body>
+
+</html>

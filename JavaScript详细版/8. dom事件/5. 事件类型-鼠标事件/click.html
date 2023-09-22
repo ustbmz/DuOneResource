@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button>点击</button>
+    </div>
+    
+    <script>
+        var btn = document.querySelector("button")
+        btn.onclick = function(){
+            console.log("被点击了!");
+        }
+
+        btn.ondblclick = function(){
+            console.log("被双击了!");
+        }
+
+        btn.onmousedown = function(){
+            console.log("按下！");
+        }
+
+        btn.onmouseup = function(){
+            console.log("抬起");
+        }
+
+        btn.onmousemove = function(){
+            console.log("移动");
+        }
+
+        btn.onmouseover = function(){
+            console.log("进入元素：over");
+        }
+
+        btn.onmouseout = function(){
+            console.log("离开元素：out");
+        }
+
+        btn.onmouseenter = function(){
+            console.log("进入元素：enter");
+        }
+
+        btn.onmouseleave = function(){
+            console.log("离开元素：leave");
+        }
+    </script>
+</body>
+</html>

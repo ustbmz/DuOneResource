@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        header {
+            width: 100%;
+            background: #333;
+            color: #eee;
+        }
+
+        nav {
+            overflow: hidden;
+        }
+
+        span {
+            float: left;
+            line-height: 50px;
+            margin: 0 15px;
+            cursor: pointer;
+        }
+
+        span.active {
+            color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <span>Lorem.</span>
+            <span>Explicabo.</span>
+            <span>Harum?</span>
+            <span>Delectus?</span>
+            <span>Commodi.</span>
+            <span>Ullam!</span>
+            <span>Tempora!</span>
+        </nav>
+    </header>
+
+    <script>
+        var spans = document.getElementsByTagName("span");
+        Array.from(spans).forEach(function(sp) {
+            sp.onclick = function(){
+                //去掉之前的所有具有active的类样式
+                var span = document.querySelector("span.active");
+                if(span){
+                    span.classList.remove("active");
+                }
+                this.classList.add("active");
+            }
+        })
+    </script>
+</body>
+
+</html>

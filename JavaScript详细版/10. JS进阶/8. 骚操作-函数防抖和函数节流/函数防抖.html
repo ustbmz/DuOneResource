@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <script src="../../plugin/helpers.js"></script>
+    <script>
+        //高阶函数：在函数内部返回一个新的函数
+        //函数防抖: debounce
+        // var handle = myPlugin.debounce(function(width) {
+        //     console.log(width);
+        // }, 1000);
+        // window.onresize = function() {
+        //     handle(document.documentElement.clientWidth);
+        // }
+
+        var inp = document.querySelector("input");
+        var handle = myPlugin.debounce(function(val, inp) {
+            console.log("搜索" + val);
+            console.log(inp);
+        }, 1000);
+        inp.oninput = function() {
+            handle(this.value, this);
+        }
+    </script>
+</body>
+
+</html>

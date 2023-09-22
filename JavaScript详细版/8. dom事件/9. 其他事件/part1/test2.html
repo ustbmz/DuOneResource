@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="https://www.taobao.com">
+        <p>
+            <input type="text" placeholder="请输入账号">
+        </p>
+        <button>按钮1</button>
+        <button>按钮2</button>
+    </form>
+
+    <script>
+        var form = document.querySelector("form");
+        var inp = document.querySelector("input");
+        form.onsubmit = function(e) {
+            console.log(e.bubbles)
+            if(!inp.value.trim()){
+                console.log("请输入账号");
+                e.preventDefault();
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var obj = {
+            firstName: "袁",
+            lastName: "进",
+            age: 18,
+            sayHello: function() {
+                console.log(`我叫${this.firstName}${this.lastName}，今年${this.age}岁了`);
+            }
+        };
+
+        var obj2 = obj;
+        obj = 234;
+
+        obj2.sayHello();
+
+
+
+        // obj.sayHello();
+
+        // obj.firstName = "姬";
+        // obj.lastName = "成";
+        // obj.age = 108;
+        // obj.sayHello();
+    </script>
+</body>
+
+</html>

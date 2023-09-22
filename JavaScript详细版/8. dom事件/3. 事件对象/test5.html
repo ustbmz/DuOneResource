@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <button>点击</button>
+    </div>
+
+    <script>
+        var div1 = document.getElementById("div1");
+        var btn = document.querySelector("button");
+
+        div1.addEventListener("click", function(e){
+            console.log(e.eventPhase);
+        }, true)
+
+        div1.addEventListener("click", function(e){
+            console.log(e.eventPhase);
+        })
+
+        btn.onclick = function(e){
+            console.log(e.eventPhase);
+        }
+    </script>
+</body>
+
+</html>

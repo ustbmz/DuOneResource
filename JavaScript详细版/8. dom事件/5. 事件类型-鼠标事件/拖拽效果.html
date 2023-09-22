@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgb(247, 93, 93);
+            cursor: move;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+
+        p {
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- <p></p> -->
+    </div>
+
+    <script>
+        var div = document.querySelector("div");
+        div.onmousedown = function(e) {
+            if (e.button !== 0) { //如果不是鼠标左键
+                return;
+            }
+            var pageX = e.pageX;
+            var pageY = e.pageY;
+            var style = getComputedStyle(div);
+            var divLeft = parseFloat(style.left);
+            var divTop = parseFloat(style.top);
+            window.onmousemove = function(e) {
+                var disX = e.pageX - pageX;
+                var disY = e.pageY - pageY;
+                div.style.left = divLeft + disX + "px";
+                div.style.top = divTop + disY + "px";
+            }
+            window.onmouseup = window.onmouseleave = function(e) {
+                if (e.button === 0) {
+                    window.onmousemove = null; //移除鼠标移动事件
+                }
+            }
+        }
+
+        // var div = document.querySelector("div");
+        // var style = getComputedStyle(div);
+        // var divLeft = parseFloat(style.left);
+        // var divTop = parseFloat(style.top);
+        // div.onmousedown = function(e) {
+        //     if (e.button !== 0) { //如果不是鼠标左键
+        //         return;
+        //     }
+        //     window.onmousemove = function(e) {
+        //         divLeft += e.movementX;
+        //         divTop += e.movementY;
+        //         div.style.left = divLeft + "px";
+        //         div.style.top = divTop + "px";
+        //     }
+        //     window.onmouseup = window.onmouseleave = function(e) {
+        //         if (e.button === 0) {
+        //             window.onmousemove = null; //移除鼠标移动事件
+        //         }
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .noinput {
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text" class="noinput" value="请输入关键字">
+    </div>
+
+    <script>
+        var inp = document.querySelector("input")
+
+        inp.onfocus = function() {
+            if (this.value === this.defaultValue && this.className === "noinput") {
+                this.value = "";
+                this.className = "";
+            }
+        }
+
+        inp.onblur = function() {
+            if (!this.value) {
+                this.value = this.defaultValue;
+                this.className = "noinput";
+            }
+        }
+    </script>
+</body>
+
+</html>

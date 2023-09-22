@@ -1,0 +1,115 @@
+<mxfile>
+    <diagram id="D-b6FjrMMvCmlYkYCIq5" name="第 1 页">
+        <mxGraphModel dx="994" dy="-74" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="700" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="21" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontFamily=Roboto Mono;fontSize=15;arcSize=6;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="78" y="850" width="544" height="283" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="Promise 对象" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=15;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="294" y="814" width="112" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Roboto Mono;fontSize=15;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="113" y="929" width="139" height="168" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="unsettled" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=15;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="137" y="899" width="91" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="未决阶段" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=15;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="148" y="873" width="70" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Roboto Mono;fontSize=15;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="126.5" y="983" width="113" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="pending" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=15;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="146" y="1012" width="73" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="挂起状态" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=15;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="148" y="990" width="70" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Roboto Mono;fontSize=15;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="387" y="929" width="195" height="168" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="settled" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=15;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="420" y="899" width="73" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="已决阶段" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=15;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="421.5" y="877" width="70" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Roboto Mono;fontSize=15;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="939" width="113" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="完成状态" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=15;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="422" y="946" width="70" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="fulfilled" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=15;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="412" y="968" width="91" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Roboto Mono;fontSize=15;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="1027" width="113" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="失败状态" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=15;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="422" y="1031" width="70" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="rejected" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=15;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="417" y="1053" width="82" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="" style="shape=flexArrow;endArrow=classic;html=1;fontFamily=Roboto Mono;fontSize=15;fillColor=#f5f5f5;strokeColor=#666666;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" parent="1" edge="1" target="37" source="31">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="208" y="976" as="sourcePoint"/>
+                        <mxPoint x="334" y="1011" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="211" y="969"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="45" value="resolve(data)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=14;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="254" y="939" width="119" height="21" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="data" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Roboto Mono;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="503" y="952" width="46" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="reason" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Roboto Mono;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="503" y="1039" width="69" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="" style="shape=flexArrow;endArrow=classic;html=1;fontFamily=Roboto Mono;fontSize=15;fillColor=#f5f5f5;strokeColor=#666666;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="31" target="40">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="213.25" y="1070" as="sourcePoint"/>
+                        <mxPoint x="360" y="1056" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="211" y="1058"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="50" value="reject(reason)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=14;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="1030" width="128" height="21" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="" style="shape=flexArrow;endArrow=classic;html=1;fontFamily=Roboto Mono;fontSize=14;fillColor=#f5f5f5;strokeColor=#666666;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="576" y="968" as="sourcePoint"/>
+                        <mxPoint x="672" y="968" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="52" value="onFulfilled" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Roboto Mono;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="680" y="945.5" width="134" height="47" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="" style="shape=flexArrow;endArrow=classic;html=1;fontFamily=Roboto Mono;fontSize=14;fillColor=#f5f5f5;strokeColor=#666666;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="576" y="1056.5" as="sourcePoint"/>
+                        <mxPoint x="673" y="1057" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="54" value="onRejected" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Roboto Mono;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="679" y="1035.5" width="135" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="data" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Roboto Mono;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="673" y="921" width="46" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="reason" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Roboto Mono;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="673" y="1012" width="69" height="31" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <script>
+        var inp = document.querySelector("input")
+
+        inp.onkeydown = function(e) {
+            console.log("键盘按下了", e.code, e.key, e.keyCode)
+        }
+
+        // inp.onkeypress = function(e) {
+        //     console.log("键盘按下了！key press")
+        // }
+
+        // inp.onkeyup = function() {
+        //     console.log("键盘抬起了！key up")
+        // }
+    </script>
+</body>
+
+</html>

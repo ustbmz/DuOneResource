@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <textarea></textarea>
+    </div>
+
+    <script>
+        var txt = document.querySelector("textarea");
+
+        txt.onpaste = function(e) {
+            // e.preventDefault();
+            var clipboardData = e.clipboardData || window.clipboardData
+            var data = clipboardData.getData("text/plain");
+            data = "来自于粘贴：" + data;
+            clipboardData.setData("text/plain", data);
+
+            // clipboardData.clearData("text/plain");
+        }
+
+        txt.oncopy = function(e) {
+            // e.preventDefault();
+        }
+    </script>
+</body>
+
+</html>

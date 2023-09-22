@@ -1,0 +1,15 @@
+.content {
+    margin-top: 100px;
+}
+
+.navigation {
+    line-height: 50px;
+    margin: 0 10px;
+    font-weight: 400;
+}
+
+.navigation:hover {
+    color: #ccc;
+    text-decoration: none;
+}
+

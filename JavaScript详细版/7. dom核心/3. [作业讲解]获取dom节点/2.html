@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li><a href="">Lorem ipsum dolor sit.</a></li>
+            <li><a href="">Laboriosam esse voluptatibus accusamus!</a></li>
+            <li><a href="">Minima cumque alias numquam!</a></li>
+            <li><a href="">Beatae sit quod earum?</a></li>
+            <li><a href="">Doloremque vitae totam pariatur.</a></li>
+            <li><a href="">Autem ab iusto quae.</a></li>
+            <li><a href="">Mollitia accusamus iure maxime.</a></li>
+            <li><a href="">Sapiente vitae nostrum ex?</a></li>
+            <li><a href="">Aut quos est amet!</a></li>
+            <li><a href="">Laudantium dicta fuga debitis.</a></li>
+        </ul>
+    </div>
+
+    <div class="container2">
+        <span>asdfasfd</span>
+        <strong>asdfasdfgasdfa</strong>
+        <i>asadfasfas</i>
+        <p>aasdfdasf</p>
+        <div class="c3">
+            <p>dfgasdfasfaf</p>
+        </div>
+    </div>
+
+    <script>
+        function getDivContainer(dom) {
+            // var parent = dom.parentElement;
+            // while (parent && parent.nodeName !== "DIV") {
+            //     parent = parent.parentElement;
+            // }
+            // return parent;
+            for (var parent = dom.parentElement; parent && parent.nodeName !== "DIV"; parent = parent.parentElement) {}
+            return parent;
+        }
+
+        var div = getDivContainer(test);
+        console.log(div);
+    </script>
+</body>
+</html>

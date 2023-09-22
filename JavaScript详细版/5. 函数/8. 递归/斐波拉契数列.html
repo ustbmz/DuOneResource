@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //求斐波拉契数列第n位的值
+        //1  1  2  3  5  8  13  21  ...
+        //f(1): 1   f(2): 1
+        //f(3) = f(2) + f(1)    f(5) = f(4)+f(3)
+        //f(n) = f(n-1) + f(n-2)
+
+        //斐波拉契数列的第n位
+        function f(n) {
+            if (n === 1 || n === 2) {
+                return 1;
+            }
+            return f(n - 1) + f(n - 2);
+        }
+
+        console.log(f(5));
+    </script>
+</body>
+
+</html>

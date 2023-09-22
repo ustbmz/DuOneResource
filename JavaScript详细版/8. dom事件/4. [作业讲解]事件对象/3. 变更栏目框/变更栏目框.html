@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变更栏目框</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 390px;
+            height: 655px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .top{
+            width: 100%;
+            height: 10%;
+            border-bottom: 2px solid #ccc;
+        }
+        .content{
+            width: 100%;
+            height: 90%;
+        }
+        .top ul{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        li{
+            width: 25%;
+            height: 100%;
+            list-style: none;
+            text-align: center;
+            /* 将box-sizing设置为border-box，可以随意修改padding而不用修改盒子大小 */
+            box-sizing: border-box;
+            padding-top: 35px;
+            font-size: 18px;
+            color: #2c7bbb;
+            cursor: pointer;
+        }
+        li:hover{
+            color: #d32228;
+        }
+        .current{
+            border-bottom: 4px solid #d32228;
+            color: #d32228;
+        }
+        img{
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <ul>
+                <li data-src="images/1.png">电玩</li>
+                <li data-src="images/2.png" class="current">网游</li>
+                <li data-src="images/3.png">手游</li>
+                <li data-src="images/4.png">数码</li>
+            </ul>
+        </div>
+        <div class="content">
+            <img src="./images/1.png" alt="" width="390">
+        </div>
+    </div>
+    <script>
+        var ul = document.querySelector(".container .top ul");
+        var img = document.querySelector("img");
+        ul.onclick = function(e){
+            if(e.target.dataset.src){
+                document.querySelector("li.current").classList.remove("current");
+                img.src = e.target.dataset.src;
+                e.target.classList.add("current");
+            }
+        }
+    </script>
+</body>
+</html>

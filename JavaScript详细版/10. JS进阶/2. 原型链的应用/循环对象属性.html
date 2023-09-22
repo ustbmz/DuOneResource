@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var p = {
+            x: 123,
+            y: 456
+        };
+
+        var obj = Object.create(p);
+        obj.abc = "656432434af";
+        for (var prop in obj) {
+            // if (obj.hasOwnProperty(prop)) {
+            //     console.log(prop);
+            // }
+
+            console.log(prop);
+        }
+    </script>
+</body>
+
+</html>

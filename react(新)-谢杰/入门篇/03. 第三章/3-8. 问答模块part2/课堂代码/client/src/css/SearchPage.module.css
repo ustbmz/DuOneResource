@@ -1,0 +1,29 @@
+.searchPageContainer{
+    width: 90%;
+    /* height: 3000px; */
+    margin: 0 auto;
+    /* outline: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    background-color: #fff;
+}
+
+.leftSide{
+    width: 65%;
+    height: 100%;
+    /* outline: 1px solid #ccc; */
+}
+
+.rightSide{
+    width: 28%;
+    height: 100%;
+    /* outline: 1px solid #ccc; */
+}
+
+.noResult{
+    text-align: center;
+    font-weight: 200;
+    font-size: 36px;
+    margin-top: 100px;
+}

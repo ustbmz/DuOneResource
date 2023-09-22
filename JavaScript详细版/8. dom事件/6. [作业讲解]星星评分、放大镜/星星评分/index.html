@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .left {
+            float: left;
+            margin-left: 10px;
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="divstars" class="left">
+        <img src="images/empty.png" alt="">
+        <img src="images/empty.png" alt="">
+        <img src="images/empty.png" alt="">
+        <img src="images/empty.png" alt="">
+        <img src="images/empty.png" alt="">
+    </div>
+    <div id="divword" class="left">
+
+    </div>
+
+    <script>
+        var words = ["满意", "一般满意", "还不错", "很满意", "非常满意"];
+        var divstars = document.getElementById("divstars");
+        var divword = document.getElementById("divword");
+        var star = -1; //记录评分，点击的是第几个星星
+        divstars.onmouseover = function(e) {
+            if (e.target.tagName === "IMG") {
+                e.target.src = "images/shining.png";
+                //处理之前的
+                var prev = e.target.previousElementSibling;
+                while (prev) {
+                    prev.src = "images/shining.png";
+                    prev = prev.previousElementSibling;
+                }
+                //处理之后的
+                var next = e.target.nextElementSibling;
+                while (next) {
+                    next.src = "images/empty.png";
+                    next = next.nextElementSibling;
+                }
+                //处理文字
+                var index = Array.from(divstars.children).indexOf(e.target)
+                divword.innerHTML = words[index];
+            }
+        }
+
+        divstars.onclick = function(e) {
+            if (e.target.tagName === "IMG") {
+                star = Array.from(divstars.children).indexOf(e.target);
+            }
+        }
+
+        divstars.onmouseleave = function() {
+            divword.innerHTML = words[star] || "";
+            for (var i = 0; i < divstars.children.length; i++) {
+                if (i <= star) {
+                    divstars.children[i].src = "images/shining.png";
+                } else {
+                    divstars.children[i].src = "images/empty.png";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

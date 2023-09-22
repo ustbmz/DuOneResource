@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var r = 15;
+        for (var i = 1; i <= r; i++) {
+            // 输出1行
+            var str = "";
+            // 1. 拼接空格，数量为r-i
+            for (var j = 0; j < r - i; j++) {
+                str += " ";
+            }
+            // 2. 拼接星号，数量为2*i-1
+            for (var j = 0; j < 2 * i - 1; j++) {
+                str += "*";
+            }
+            console.log(str);
+
+        }
+    </script>
+</body>
+
+</html>

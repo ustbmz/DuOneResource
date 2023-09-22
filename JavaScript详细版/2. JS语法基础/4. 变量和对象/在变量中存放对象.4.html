@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var user = {
+            account: "abc",
+            pwd: "123456",
+            gender: "男",
+            isVip: false,
+            age: 18,
+            address: {
+                country: "中国",
+                city: "成都"
+            }
+        };
+        //用属性表达式读取用户的性别属性
+        var prop = "account";
+        // console.log(user.gender);
+        console.log(user[prop]);
+    </script>
+</body>
+
+</html>

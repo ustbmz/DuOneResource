@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var height = +prompt("请输入身高(cm)");
+        var weight = +prompt("请输入体重(kg)");
+        var gender = prompt("请输入性别（男，女）");
+        if (isNaN(height) || isNaN(weight) || gender !== "男" && gender !== "女") {
+            console.log("输入有误");
+        } else {
+            var standardWeight; //标准体重
+            if (gender === "男") {
+                standardWeight = (height - 80) * 0.7;
+            } else {
+                standardWeight = (height - 70) * 0.6;
+            }
+
+            if (weight < standardWeight * 0.9) {
+                console.log("你的身体偏瘦，请加强营养");
+            } else if (weight > standardWeight * 1.1) {
+                console.log("你的身体偏胖，请加强锻炼")
+            } else {
+                console.log("你的体重正常，请继续保持");
+            }
+        }
+    </script>
+</body>
+
+</html>
